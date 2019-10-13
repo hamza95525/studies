@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/01_cmake.dir/main.cpp.o  -o 01_cmake  -L/home/khamza/oop_2019_g2/googletest/build/lib -Wl,-rpath,/home/khamza/oop_2019_g2/googletest/build/lib libutiks.a -lpthread 
