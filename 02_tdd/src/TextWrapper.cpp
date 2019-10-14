@@ -1,11 +1,10 @@
 #include "TextWrapper.h"
-#include <iostream>
 #include <string>
 
-int TextWrapper::characters() {
+int TextWrapper::characters(std::string lancuch) {
     int nCount = 0;
-    std::string literki("abc defgh i");
-    for(int i=0; i<literki.length(); i++)
+
+    for(int i=0; i<lancuch.length(); i++)
     {
         nCount++;
     }
@@ -13,6 +12,7 @@ int TextWrapper::characters() {
     return nCount;
 }
 
-int TextWrapper::separate() {
-    
+int TextWrapper::separate(std::string lancuch) {
+    int Col = Columns;
+    std::string tekst = lancuch;
 }

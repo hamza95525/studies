@@ -18,7 +18,7 @@ TEST(TextWrapper, NumOfColumns){
 
 TEST(TextWrapper, CountLetters){
     auto wrapper = TextWrapper(5);
-    EXPECT_EQ(11,wrapper.characters());
+    EXPECT_EQ(5,wrapper.characters("Hello"));
 }
 
 TEST(TextWrapper, Separator){

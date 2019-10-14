@@ -1,3 +1,5 @@
+#include <iostream>
+#include <string>
 #pragma once
 
 class TextWrapper{
@@ -6,6 +8,7 @@ public:
     TextWrapper(int C){
         this->Columns = C;
     };
-    int characters();
-    int separate();
+
+    int characters(std::string lancuch);
+    int separate(std::string lancuch);
 };
