@@ -22,7 +22,7 @@ TEST(TextWrapper, ConstructorString){
 }
 
 TEST(TextWrapper, NumberOfCharacters){
-    auto wrapper = TextWrapper(5, "baracuda");
+    auto wrapper = TextWrapper(2, "abcdefgh");
     EXPECT_EQ(8, wrapper.nLength);
 }
 
