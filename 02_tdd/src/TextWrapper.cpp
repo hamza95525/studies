@@ -41,6 +41,7 @@ string TextWrapper::wrapping() {
             }
             else if (i % colNum ==0 && str.at(i) == ' ') {
                 str.replace(i, 1, "\n");
+                colNum = colNum+firstColNum+counter;
             }
         }
     }
