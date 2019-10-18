@@ -35,12 +35,12 @@ string TextWrapper::wrapping() {
 
     else {
         for (int i = 1; i < Length; i++) {
-            if (i % 2 == 0 && str.at(i) != ' ') {
+            if (i % colNum == 0 && str.at(i) != ' ') {
                 str.insert(i, "\n");
+                colNum = colNum+firstColNum+counter;
             }
-            else if (str.at(i) == ' ') {
+            else if (i % colNum ==0 && str.at(i) == ' ') {
                 str.replace(i, 1, "\n");
-                break;
             }
         }
     }
