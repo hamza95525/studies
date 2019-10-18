@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/02_tdd.dir/src/main.cpp.o  -o 02_tdd lib02_tdd_lib.a 

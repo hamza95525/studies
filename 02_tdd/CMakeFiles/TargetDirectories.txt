@@ -1,0 +1,7 @@
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/CMakeFiles/rebuild_cache.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/CMakeFiles/edit_cache.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/CMakeFiles/02_tdd_lib.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/CMakeFiles/02_tdd.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/test/CMakeFiles/rebuild_cache.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/test/CMakeFiles/02_tdd_test.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/test/CMakeFiles/edit_cache.dir

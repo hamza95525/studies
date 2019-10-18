@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/src/Dummy.cpp
+Dummy.h
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/src/Dummy.h
+
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/src/TextWrapper.cpp
+TextWrapper.h
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/02_tdd/src/TextWrapper.h
+string
+-
+iostream
+-
+
+include/Dummy.h
+string
+-
+
+include/TextWrapper.h
+string
+-
+
