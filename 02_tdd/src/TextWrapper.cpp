@@ -1,5 +1,6 @@
 #include "TextWrapper.h"
 #include <string>
+#include <iostream>
 
 
 string TextWrapper::wrapping() {
@@ -11,18 +12,21 @@ string TextWrapper::wrapping() {
         if( str == "" )
             return str;
         else {
-            for (int i = 1; i <= Length; i++)
-                if(i % 2 != 0)
+            for (int i = 0; i < Length; i++) {
+                if (i % 2 == 0)
                     str.insert(i, "\n");
+                std::cout << i << std::endl;
+            }
         }
     }
-    else if(colNum ==2){
+
+   /* else if(colNum ==2){
         for(int i=0;i<=Length; i++){
             if(i%2 == 0) {
                 str.insert(i, "\n");
             }
         }
-    }
+    }*/
 
     return str;
 
