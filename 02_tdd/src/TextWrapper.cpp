@@ -19,8 +19,8 @@ string TextWrapper::wrapping() {
         }
     }
     else{
-        for(int i=0; i<=(Length*(nCol+1))-1; i++){
-            if( i % 3 != 0)
+        for(int i=1; i<=Length; i++){
+            if( i % nCol == 0)
                 str.insert(i, "\n");
         }
     }
