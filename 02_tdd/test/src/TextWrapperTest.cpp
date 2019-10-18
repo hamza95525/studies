@@ -31,6 +31,23 @@ TEST(TextWrapper, Wrapping){
     EXPECT_EQ("", wrapper.wrapping());
 }
 
+TEST(TextWrapper, WrappingTest1){
+    auto wrapper = TextWrapper(1, "a");
+    EXPECT_EQ("a", wrapper.wrapping());
+}
+
+TEST(TextWrapper, WrappingTest2){
+    auto wrapper = TextWrapper(1, "ab");
+    EXPECT_EQ("a\nb", wrapper.wrapping());
+}
+
+TEST(TextWrapper, WrappingTest3){
+    auto wrapper = TextWrapper(1, "abc");
+    EXPECT_EQ("a\nb\nc", wrapper.wrapping());
+}
+
+
+
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
  * testy musza zachowywac sie tak samo przed i po refactoringu
  * zaczynamy od fazy czerwonej i teraz jak w niej jestesmy to dodajemy kawalek kodu zeby przejsc do fazy zielonej

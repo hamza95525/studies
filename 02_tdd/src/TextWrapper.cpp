@@ -13,9 +13,8 @@ string TextWrapper::wrapping() {
             return str;
         else {
             for (int i = 0; i < Length; i++) {
-                if (i % 2 == 0)
+                if (i % 2 != 0)
                     str.insert(i, "\n");
-                std::cout << i << std::endl;
             }
         }
     }
