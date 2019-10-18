@@ -19,14 +19,9 @@ string TextWrapper::wrapping() {
         }
     }
     else{
-        int SpaceLeft = Length;
-        for(int i=0; i<=Length; i++){
-            if(colNum + 1 > SpaceLeft){
+        for(int i=0; i<=(Length*(nCol+1))-1; i++){
+            if( i % 3 != 0)
                 str.insert(i, "\n");
-                SpaceLeft = Length - 1;
-            }
-            else
-                SpaceLeft -= colNum + 1;
         }
     }
 
