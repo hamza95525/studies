@@ -23,7 +23,7 @@ string TextWrapper::wrapping() {
         }
 
         else{
-            for (int i = 1; i <= Length; i++) {
+            for (int i = 1; i <= Length+1; i++) {
                 if (i % colNum == 0) {
                     str.insert(i, "\n");
                     colNum = colNum+firstColNum+counter;
