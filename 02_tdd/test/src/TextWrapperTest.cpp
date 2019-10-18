@@ -13,6 +13,7 @@ TEST(TextWrapper, HasColumnsGetter){
 
 TEST(TextWrapper, HasConstructor){
     auto wrapper = TextWrapper(5);
+    EXPECT_EQ(5, wrapper.nCol);
 }
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd

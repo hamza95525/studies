@@ -5,6 +5,8 @@
 class TextWrapper{
 public:
 
+
+
     int columns(){
         return 10;
     }
