@@ -23,7 +23,7 @@ public:
         nLength = Words.length();
     }
 
-    int wrapping(int colNum, string Abc, int Length);
+    string wrapping(int colNum, string str);
 
 
 };
