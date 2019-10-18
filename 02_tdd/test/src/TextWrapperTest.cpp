@@ -16,6 +16,10 @@ TEST(TextWrapper, HasConstructor){
     EXPECT_EQ(5, wrapper.nCol);
 }
 
+TEST(TextWrapper, ConstructorString){
+    auto wrapper = TextWrapper(5, "Hello, World!");
+}
+
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
  * testy musza zachowywac sie tak samo przed i po refactoringu
  * zaczynamy od fazy czerwonej i teraz jak w niej jestesmy to dodajemy kawalek kodu zeby przejsc do fazy zielonej
