@@ -76,6 +76,11 @@ TEST(TextWrapper, WrappingTest9){
     EXPECT_EQ("abc\ndef\ngh", wrapper.wrapping());
 }
 
+TEST(TextWrapper, WrappingTestX){
+    auto wrapper = TextWrapper(6, "aaabbbaaabbbaaabbbaaabbb");
+    EXPECT_EQ("aaabbb\naaabbb\naaabbb\naaabbb", wrapper.wrapping());
+}
+
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
  * testy musza zachowywac sie tak samo przed i po refactoringu
  * zaczynamy od fazy czerwonej i teraz jak w niej jestesmy to dodajemy kawalek kodu zeby przejsc do fazy zielonej
