@@ -8,6 +8,8 @@ string TextWrapper::wrapping() {
     string str = Words;
     int Length = nLength;
     int colNum = nCol;
+    int counter = 1;
+    int firstColNum = colNum;
 
 
     if ( colNum % 2 != 0 ) {
@@ -21,10 +23,10 @@ string TextWrapper::wrapping() {
         }
 
         else{
-            for (int i = 1; i < Length; i++) {
+            for (int i = 1; i <= Length; i++) {
                 if (i % colNum == 0) {
                     str.insert(i, "\n");
-                    colNum = colNum+colNum+1;
+                    colNum = colNum+firstColNum+counter;
                 }
             }
         }
