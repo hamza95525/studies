@@ -28,7 +28,7 @@ TEST(TextWrapper, NumberOfCharacters){
 
 TEST(TextWrapper, Wrapping){
     auto wrapper = TextWrapper(2, "");
-    EXPECT_EQ("", wrapper.wrapping(1, ""));
+    EXPECT_EQ("", wrapper.wrapping());
 }
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
