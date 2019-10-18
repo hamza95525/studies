@@ -12,7 +12,7 @@ TEST(TextWrapper, HasColumnsGetter){
 }
 
 TEST(TextWrapper, HasConstructor){
-    auto wrapper = TextWrapper(5);
+    auto wrapper = TextWrapper(5,"Hi, friends!");
     EXPECT_EQ(5, wrapper.nCol);
 }
 
