@@ -23,8 +23,10 @@ string TextWrapper::wrapping() {
             if( i % nCol == 0 && str.at(i) != ' ') {
                 str.insert(i, "\n");
             }
-            if(str.at(i) == ' ')
+            if(str.at(i) == ' ') {
                 str.replace(i, 1, "\n");
+                break;
+            }
         }
     }
 
