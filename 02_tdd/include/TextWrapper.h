@@ -7,6 +7,7 @@ public:
 
     int nCol;
     std::string Words;
+    int nLength = Words.length();
     TextWrapper(){
         nCol = 0;
         Words = "";

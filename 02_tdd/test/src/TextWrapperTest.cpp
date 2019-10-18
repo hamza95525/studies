@@ -24,7 +24,7 @@ TEST(TextWrapper, ConstructorString){
 
 TEST(TextWrapper, NumberOfCharacters){
     auto wrapper = TextWrapper(5, "baracuda");
-    EXPECT_EQ(8, wrapper.nLength);
+    EXPECT_EQ(6, wrapper.nLength);
 }
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
