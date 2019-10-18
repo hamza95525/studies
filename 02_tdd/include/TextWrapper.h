@@ -9,7 +9,7 @@ public:
     std::string Words;
     TextWrapper(){
         nCol = 0;
-        Words = "Hi! Hello!";
+        Words = "";
     }
 
     TextWrapper(int nCol, std::string Words){

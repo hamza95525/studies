@@ -18,6 +18,13 @@ TEST(TextWrapper, HasConstructor){
 
 TEST(TextWrapper, ConstructorString){
     auto wrapper = TextWrapper(5, "Hello, World!");
+    EXPECT_EQ("Hello, World!", wrapper.Words);
+}
+
+
+TEST(TextWrapper, NumberOfCharacters){
+    auto wrapper = TextWrapper(5, "baracuda");
+    EXPECT_EQ(8, wrapper.nLength);
 }
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
