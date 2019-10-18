@@ -46,11 +46,15 @@ TEST(TextWrapper, WrappingTest3){
     EXPECT_EQ("a\nb\nc", wrapper.wrapping());
 }
 
-TEST(TextWrapper, WrappingTest4){
+TEST(TextWrapper, WrappingTest5){ //i've made a mistake in commit, that should be 4 but in commit i called it 5 so it is 5 now
     auto wrapper = TextWrapper(2, "abc");
     EXPECT_EQ("ab\nc", wrapper.wrapping());
 }
 
+TEST(TextWrapper, WrappingTest4){
+    auto wrapper = TextWrapper(2,"ab cd");
+    EXPECT_EQ("ab\ncd", wrapper.wrapping());
+}
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
  * testy musza zachowywac sie tak samo przed i po refactoringu
