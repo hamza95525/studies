@@ -12,7 +12,7 @@ string TextWrapper::wrapping() {
         if( str == "" )
             return str;
         else {
-            for (int i = 0; i < Length; i++) {
+            for (int i = 0; i < (Length*2) - 1; i++) {
                 if (i % 2 != 0)
                     str.insert(i, "\n");
             }
