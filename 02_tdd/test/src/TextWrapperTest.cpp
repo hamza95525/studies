@@ -6,10 +6,10 @@ TEST(TextWrapper, CreateInstance){
     auto wrapper = TextWrapper{};
 }
 
-TEST(TextWrapper, HasColumnsGetter){
+/*TEST(TextWrapper, HasColumnsGetter){
     auto wrapper = TextWrapper{};
     EXPECT_EQ(10, wrapper.columns());
-}
+}*/
 
 TEST(TextWrapper, HasConstructor){
     auto wrapper = TextWrapper(5,"Hi, friends!");
@@ -21,12 +21,15 @@ TEST(TextWrapper, ConstructorString){
     EXPECT_EQ("Hello, World!", wrapper.Words);
 }
 
-
 TEST(TextWrapper, NumberOfCharacters){
     auto wrapper = TextWrapper(5, "baracuda");
-    EXPECT_EQ(6, wrapper.nLength);
+    EXPECT_EQ(8, wrapper.nLength);
 }
 
+TEST(TextWrapper, Wrapping){
+    auto wrapper = TextWrapper(3, "deeppurple");
+    EXPECT_EQ(0, wrapper.wrapping());
+}
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
  * testy musza zachowywac sie tak samo przed i po refactoringu
  * zaczynamy od fazy czerwonej i teraz jak w niej jestesmy to dodajemy kawalek kodu zeby przejsc do fazy zielonej
