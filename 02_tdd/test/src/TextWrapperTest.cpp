@@ -6,24 +6,9 @@ TEST(TextWrapper, CreateInstance){
     auto wrapper = TextWrapper(6);
 }
 
-/*TEST(TextWrapper, HasColumnsGetter){
+TEST(TextWrapper, HasColumnsGetter){
     auto wrapper = TextWrapper{};
     EXPECT_EQ(10, wrapper.columns());
-}*/
-
-TEST(TextWrapper, NumOfColumns){
-    auto wrapper = TextWrapper(5);
-    EXPECT_EQ( 5, wrapper.Columns);
-}
-
-TEST(TextWrapper, CountLetters){
-    auto wrapper = TextWrapper(5);
-    EXPECT_EQ(5,wrapper.characters("Hello"));
-}
-
-TEST(TextWrapper, Separator){
-    auto wrapper = TextWrapper(5);
-    EXPECT_EQ(1, wrapper.separate());
 }
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd
