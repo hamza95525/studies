@@ -1,5 +1,8 @@
-#include <iostream>
-#include <string>
 #pragma once
 
-class TextWrapper{};
+class TextWrapper{
+public:
+    int columns(){
+        return 10;
+    }
+};

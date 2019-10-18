@@ -3,7 +3,7 @@
 
 
 TEST(TextWrapper, CreateInstance){
-    auto wrapper = TextWrapper(6);
+    auto wrapper = TextWrapper();
 }
 
 TEST(TextWrapper, HasColumnsGetter){
