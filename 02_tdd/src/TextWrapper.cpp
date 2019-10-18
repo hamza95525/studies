@@ -19,7 +19,15 @@ string TextWrapper::wrapping() {
         }
     }
     else{
-
+        int SpaceLeft = Length;
+        for(int i=0; i<=Length; i++){
+            if(colNum + 1 > SpaceLeft){
+                str.insert(i, "\n");
+                SpaceLeft = Length - 1;
+            }
+            else
+                SpaceLeft -= colNum + 1;
+        }
     }
 
     return str;

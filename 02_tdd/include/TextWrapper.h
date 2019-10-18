@@ -12,7 +12,7 @@ public:
     int nLength;
 
     TextWrapper(){
-        nCol = 0;
+        nCol = 1;
         Words = "";
         nLength = Words.length();
     }

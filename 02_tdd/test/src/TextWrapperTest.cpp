@@ -27,7 +27,7 @@ TEST(TextWrapper, NumberOfCharacters){
 }
 
 TEST(TextWrapper, Wrapping){
-    auto wrapper = TextWrapper(1, "");
+    auto wrapper = TextWrapper();
     EXPECT_EQ("", wrapper.wrapping());
 }
 
