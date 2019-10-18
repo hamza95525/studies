@@ -23,7 +23,7 @@ public:
         nLength = Words.length();
     }
 
-
+    int wrapping();
 
 
 };
