@@ -9,8 +9,8 @@ int main(int argc, char* argv[])
 
     std::cout << std::endl;
 
-    std::string Argument = "RAZDWATRZ";
-    auto wrap = TextWrapper(2, Argument);
+    std::string Argument = "hellohello";
+    auto wrap = TextWrapper(3, Argument);
     std::cout << wrap.wrapping() << std::endl;
 
 
