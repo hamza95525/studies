@@ -20,8 +20,11 @@ string TextWrapper::wrapping() {
     }
     else{
         for(int i=1; i<=Length; i++){
-            if( i % nCol == 0)
+            if( i % nCol == 0 && str.at(i) != ' ') {
                 str.insert(i, "\n");
+            }
+            if(str.at(i) == ' ')
+                str.replace(i, 1, "\n");
         }
     }
 
