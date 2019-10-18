@@ -46,6 +46,10 @@ TEST(TextWrapper, WrappingTest3){
     EXPECT_EQ("a\nb\nc", wrapper.wrapping());
 }
 
+TEST(TextWrapper, WrappingTest4){
+    auto wrapper = TextWrapper(2, "abc");
+    EXPECT_EQ("ab\nc", wrapper.wrapping());
+}
 
 
 /*refactoring - nie zmieniamy testow tylko poprawiamy jakies warningi, itd

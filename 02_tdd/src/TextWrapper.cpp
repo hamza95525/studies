@@ -18,14 +18,9 @@ string TextWrapper::wrapping() {
             }
         }
     }
+    else{
 
-   /* else if(colNum ==2){
-        for(int i=0;i<=Length; i++){
-            if(i%2 == 0) {
-                str.insert(i, "\n");
-            }
-        }
-    }*/
+    }
 
     return str;
 
