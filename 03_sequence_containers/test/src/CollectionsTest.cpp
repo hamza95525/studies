@@ -1,10 +1,11 @@
+#include <queue>
 #include "TestIncludes.h"
 
 // TODO: ...
 
 TEST(VectorInt, CreateInitialized) {
 
-    // TODO: ...
+    std::vector<int> vector{1,2,3};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_EQ(1, vector[0]);
@@ -14,12 +15,14 @@ TEST(VectorInt, CreateInitialized) {
 
 TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
-    // TODO: ...
+    std::vector<int> vector;
 
     ASSERT_EQ(0u, vector.size());
     ASSERT_TRUE(vector.empty());
 
-    // TODO: ...
+    vector.push_back(11);
+    vector.push_back(13);
+    vector.push_back(17);
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_DOUBLE_EQ(11, vector[0]);
@@ -29,7 +32,7 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
 TEST(VectorFloat, CreateUsingInitializerList) {
 
-    // TODO: ...
+    std::vector<int> vector{10,20,30};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(10, vector[0]);
@@ -39,7 +42,8 @@ TEST(VectorFloat, CreateUsingInitializerList) {
 
 TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
 
-    // TODO: ...
+    std::vector<int> vector{1,2,3};
+    vector.shrink_to_fit();
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(1, vector[0]);
@@ -47,7 +51,8 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
     EXPECT_FLOAT_EQ(3, vector[2]);
     EXPECT_EQ(vector.capacity(), vector.size());
 
-    // TODO: ...
+    vector.insert(vector.begin(), 4);
+    //vector.erase(vector.end());
 
     ASSERT_EQ(4u, vector.size());
     EXPECT_FLOAT_EQ(4, vector[0]);
@@ -56,7 +61,8 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
     EXPECT_FLOAT_EQ(3, vector[3]);
     EXPECT_GE(vector.capacity(), vector.size());
 
-    // TODO: ...
+
+    vector.shrink_to_fit();
 
     ASSERT_EQ(4u, vector.size());
     EXPECT_EQ(vector.capacity(), vector.size());
@@ -64,7 +70,8 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
 
 TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
-    // TODO: ...
+    std::vector<int> input{1,2,3};
+    std::vector<int> output;
 
     ASSERT_EQ(3u, input.size());
     EXPECT_EQ(1, input[0]);
@@ -73,7 +80,7 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
     ASSERT_TRUE(output.empty());
 
-    // TODO: ...
+    output.assign(input.begin()+1, input.end());
 
     ASSERT_EQ(2u, output.size());
     EXPECT_EQ(2, output[0]);
@@ -87,14 +94,14 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
 TEST(VectorFloat, EraseFrontValue) {
 
-    // TODO: ...
+    std::vector<int> vector{1,2,3};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(1, vector[0]);
     EXPECT_FLOAT_EQ(2, vector[1]);
     EXPECT_FLOAT_EQ(3, vector[2]);
 
-    // TODO: ...
+    vector.erase(vector.begin());
 
     ASSERT_EQ(2u, vector.size());
     EXPECT_FLOAT_EQ(2, vector[0]);
@@ -103,7 +110,10 @@ TEST(VectorFloat, EraseFrontValue) {
 
 TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 
-    // TODO: ...
+
+    std::vector<std::vector<std::vector<int> > > vector (2,std::vector<std::vector<int> >(2));
+
+    vector = {{{1,2},{3,4}},{{5,6},{7,8}}};
 
     ASSERT_EQ(2u, vector.size());
     ASSERT_EQ(2u, vector[0].size());
@@ -125,13 +135,18 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 
 TEST(ArrayInt, FillWithTheSameValue) {
 
-    // TODO: ...
+    std::array<int,1000> array;
+    for(int i = 0; i< 1000; i++){
+        array[i] = 0;
+    }
 
     for (auto i = 0u; i < 1000; i++) {
         ASSERT_EQ(0, array[i]);
     }
 
-    // TODO: ...
+    for(int i = 0; i< 1000; i++){
+        array[i] = 7;
+    }
 
     for (auto i = 0u; i < 1000; i++) {
         ASSERT_EQ(7, array[i]);
@@ -140,9 +155,13 @@ TEST(ArrayInt, FillWithTheSameValue) {
 
 TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
-    // TODO: ...
+    std::array<int, 4> array;
 
     static_assert(array.size() == 4, "Compilation error: wrong array size");
+
+    for(int i=0; i<4; i++){
+        array[i] = i+1;
+    }
 
     ASSERT_EQ(1u, array[0]);
     ASSERT_EQ(2u, array[1]);
@@ -152,7 +171,7 @@ TEST(ArrayInt, SizeDefinedAtCompileTime) {
 
 TEST(ArrayInt, Sort) {
 
-    // TODO: ...
+    std::array<int, 5> array{5,3,4,1,2};
 
     EXPECT_EQ(5, array[0]);
     EXPECT_EQ(3, array[1]);
@@ -160,7 +179,7 @@ TEST(ArrayInt, Sort) {
     EXPECT_EQ(1, array[3]);
     EXPECT_EQ(2, array[4]);
 
-    // TODO: ...
+    std::sort(array.begin(), array.end());
 
     EXPECT_EQ(1, array[0]);
     EXPECT_EQ(2, array[1]);
@@ -171,7 +190,7 @@ TEST(ArrayInt, Sort) {
 
 TEST(ArrayChar, CreateCopy) {
 
-    // TODO: ...
+    std::array<char, 5> arrayIn{'a', 'b', 'c', 'd', '\0'};
 
     ASSERT_EQ(5u, arrayIn.size());
     ASSERT_EQ('a', arrayIn[0]);
@@ -181,7 +200,7 @@ TEST(ArrayChar, CreateCopy) {
     ASSERT_EQ('\0', arrayIn[4]);
     EXPECT_STREQ("abcd", arrayIn.data());
 
-    // TODO: ...
+    std::array<char, 5> arrayOut = arrayIn;
 
     ASSERT_EQ(5u, arrayIn.size());
     EXPECT_STREQ("abcd", arrayIn.data());
@@ -191,12 +210,15 @@ TEST(ArrayChar, CreateCopy) {
 
 TEST(ListFloat, Sort) {
 
-    // TODO: ...
+    std::list<float> list(998, 1);
+    list.push_front(255);
+    list.push_back(13);
+
 
     ASSERT_EQ(1000, list.size());
     EXPECT_FALSE(std::is_sorted(list.begin(), list.end()));
 
-    // TODO: ...
+    list.sort();
 
     ASSERT_EQ(1000, list.size());
     EXPECT_TRUE(std::is_sorted(list.begin(), list.end()));
@@ -204,7 +226,8 @@ TEST(ListFloat, Sort) {
 
 TEST(ListInt, MergeSortedLists) {
 
-    // TODO: ...
+    std::list<int> a{1,3,5};
+    std::list<int> b{2,4,6};
 
     auto iter = a.begin();
     EXPECT_EQ(1, *(iter++));
@@ -217,7 +240,8 @@ TEST(ListInt, MergeSortedLists) {
     EXPECT_EQ(6, *(iter++));
     EXPECT_EQ(b.end(), iter);
 
-    // TODO: ...
+    a.merge(b);
+    a.sort();
 
     EXPECT_EQ(0, b.size());
     EXPECT_EQ(6, a.size());
@@ -233,7 +257,7 @@ TEST(ListInt, MergeSortedLists) {
 
 TEST(ForwardListFloat, InsertElementAfterIndex) {
 
-    // TODO: ...
+    std::forward_list<float> forwardList = {1,2,3,4};
 
     auto iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
@@ -242,7 +266,10 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
     EXPECT_EQ(4, *(iter++));
     EXPECT_EQ(forwardList.end(), iter);
 
-    // TODO: ...
+    auto it = forwardList.begin();
+    it++;
+
+    forwardList.insert_after(it, 10);
 
     iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
@@ -255,14 +282,14 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
 
 TEST(DequeInt, RemoveFirstElement) {
 
-    // TODO: ...
+    std::deque<int> deque = {1,2,3};
 
     ASSERT_EQ(3u, deque.size());
     EXPECT_FLOAT_EQ(1, deque[0]);
     EXPECT_FLOAT_EQ(2, deque[1]);
     EXPECT_FLOAT_EQ(3, deque[2]);
 
-    // TODO: ...
+    deque.pop_front();
 
     ASSERT_EQ(2u, deque.size());
     EXPECT_FLOAT_EQ(2, deque[0]);
@@ -271,57 +298,64 @@ TEST(DequeInt, RemoveFirstElement) {
 
 TEST(StackInt, PushAndPop) {
 
-    // TODO: ...
+    std::stack<int> stack;
 
     EXPECT_TRUE(stack.empty());
 
-    // TODO: ...
+    stack.push(1);
+    stack.push(2);
 
     ASSERT_EQ(2u, stack.size());
     EXPECT_EQ(2, stack.top());
 
-    // TODO: ...
+    stack.pop();
 
     ASSERT_EQ(1u, stack.size());
     EXPECT_EQ(1, stack.top());
 
-    // TODO: ...
+    stack.pop();
 
     ASSERT_EQ(0u, stack.size());
 }
 
 TEST(PriorityQueueChar, PushAndPop) {
 
-    // TODO: ...
+    std::priority_queue<char> priority_queue;
 
     ASSERT_TRUE(priority_queue.empty());
 
-    // TODO: ...
+    priority_queue.push(1);
+    priority_queue.push(3);
 
     ASSERT_EQ(2u, priority_queue.size());
     EXPECT_EQ(3, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
+    priority_queue.push(2);
+    priority_queue.push(3);
+    priority_queue.push(4);
 
     ASSERT_EQ(4u, priority_queue.size());
     EXPECT_EQ(4, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
 
     ASSERT_EQ(3u, priority_queue.size());
     EXPECT_EQ(3, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
 
     ASSERT_EQ(2u, priority_queue.size());
     EXPECT_EQ(2, priority_queue.top());
 
-    // TODO: ...
+    priority_queue.pop();
 
     ASSERT_EQ(1u, priority_queue.size());
     EXPECT_EQ(1, priority_queue.top());
 
     // TODO: ...
+
+    priority_queue.pop();
 
     ASSERT_TRUE(priority_queue.empty());
 }
