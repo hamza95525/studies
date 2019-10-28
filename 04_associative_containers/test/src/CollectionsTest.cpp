@@ -1,10 +1,33 @@
 #include "TestIncludes.h"
 
-// TODO: ....
+/*
+ *
+ * struct Foo{};
+ * struct FooComparator // a <b
+ * {
+ * bool operator()(const Foo& lhs, const Foo& rhs) constr {return false;}
+ *
+ * }
+ * std::set<Foo, FooComparator> set{};
+ *
+ * struct FooHash //has
+ * {
+ * std::size_t operator() (const Foo& foo) const noexcept {return 0;}
+ * };
+ *
+ * struct FooEqual // a==b
+ * {
+ * bool operator()(const Foo& lhs, const Foo& rhs) const {return false;};
+ * };
+ * std::unordered_set<Foo,FooHash,FooEqual> unordered_set{};
+ * */
+
 
 TEST(SetInt, RemoveElements) {
 
     // TODO: ....
+
+    std::set<int> set{1,2,3};
 
     ASSERT_EQ(3u, set.size());
     EXPECT_EQ(1u, set.count(1));
@@ -12,6 +35,9 @@ TEST(SetInt, RemoveElements) {
     EXPECT_EQ(1u, set.count(3));
 
     // TODO: ....
+    auto it = set.begin();
+    it++;
+    set.erase(it);
 
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(1));
@@ -21,24 +47,29 @@ TEST(SetInt, RemoveElements) {
 
 TEST(SetDouble, ElementsSortedWhenIterating) {
 
-    // TODO: ....
+    std::set<double> set;
 
     ASSERT_TRUE(set.empty());
 
     // TODO: ....
 
+    set.insert(3.3);
+    set.insert(2.2);
+
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(3.3));
     EXPECT_EQ(1u, set.count(2.2));
 
-    // TODO: ....
+    set.insert(4.4);
+    set.insert(1.1);
+
     ASSERT_EQ(4u, set.size());
     EXPECT_EQ(1u, set.count(3.3));
     EXPECT_EQ(1u, set.count(2.2));
     EXPECT_EQ(1u, set.count(4.4));
     EXPECT_EQ(1u, set.count(1.1));
 
-    // TODO: ....
+    set.insert(0.0);
 
     auto iter = set.begin();
     EXPECT_EQ(0.0, *iter++);
@@ -53,9 +84,15 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 
     struct Comparator {
         // TODO: ....
+        //a<b
+        bool operator()(const std::string& lhs, const std::string& rhs) const{
+            return lhs > rhs;
+        }
     };
 
     // TODO: ....
+
+    std::set<std::string, Comparator> set{"Bb","Ba", "Ab", "Aa"};
 
     auto iter = set.begin();
     EXPECT_EQ("Bb", *iter++);
@@ -64,7 +101,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
     EXPECT_EQ("Aa", *iter++);
     EXPECT_EQ(set.end(), iter);
 
-    // TODO: ....
+    set.insert("Ca");
 
     iter = set.begin();
     EXPECT_EQ("Ca", *iter++);
@@ -79,74 +116,86 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     struct Comparator {
-        // TODO: ....
+        bool operator()(const int& lhs, const int& rhs) const{
+            return (!(lhs>rhs)&&!(rhs>lhs));
+        }
     };
 
-    // TODO: ....
+    std::set<int, Comparator> set{};
 
     ASSERT_TRUE(set.empty());
 
-    // TODO: ....
+    set.insert(1);
 
     ASSERT_EQ(1u, set.size());
 
-    // TODO: ....
+    set.insert(2);
 
     ASSERT_EQ(1u, set.size());
 }
 
-TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInserted) {
+/*TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInserted) {
 
     struct Comparator {
-        // TODO: ....
+        bool operator()(const int& lhs, const int& rhs) const{
+            int a = lhs;
+            int b = rhs;
+            return a*b;
+        }
     };
 
-    // TODO: ....
+    std::set<int, Comparator> set{};
 
     ASSERT_TRUE(set.empty());
 
-    // TODO: ....
-
+    set.insert(4);
     ASSERT_EQ(1u, set.size());
 
-    // TODO: ....
+    set.insert(1);
 
     ASSERT_EQ(2u, set.size());
-}
+
+    auto it = set.begin();
+    std::cout<<*it<<std::endl;
+    it++;
+    std::cout<<*it<<std::endl;
+}*/
 
 TEST(SetValue, CustomTypeAndComparator) {
 
     struct Value {
-        // TODO: ....
+        int n; int m;
     };
 
     struct Comparator {
-        // TODO: ....
+        bool operator()(const Value& lhs, const Value& rhs) const{
+            return (rhs.n > lhs.n) || (rhs.m > lhs.m);
+        }
     };
 
-    // TODO: ....
+    std::set<Value, Comparator> set{};
 
     ASSERT_TRUE(set.empty());
 
-    // TODO: ....
+    set.insert({3,0});
 
     ASSERT_EQ(1u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
 
-    // TODO: ....
+    set.insert({6,0});
 
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
     EXPECT_EQ(1u, set.count(Value{6, 0}));
 
-    // TODO: ....
+    set.insert({3,3});
 
     ASSERT_EQ(3u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
     EXPECT_EQ(1u, set.count(Value{6, 0}));
     EXPECT_EQ(1u, set.count(Value{3, 3}));
 
-    // TODO: ....
+    set.insert({6,6});
 
     ASSERT_EQ(4u, set.size());
     EXPECT_EQ(1u, set.count(Value{3, 0}));
@@ -157,7 +206,7 @@ TEST(SetValue, CustomTypeAndComparator) {
 
 TEST(SetInt, ElementsGreaterThanGivenValue) {
 
-    // TODO: ....
+    std::set<int> set{1,2,3,4,5};
 
     ASSERT_EQ(5u, set.size());
     EXPECT_EQ(1u, set.count(1));
@@ -166,8 +215,9 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
     EXPECT_EQ(1u, set.count(4));
     EXPECT_EQ(1u, set.count(5));
 
-    // TODO: ....
-
+    set.erase(1);
+    set.erase(2);
+    auto iter = set.begin();
     EXPECT_EQ(3, *iter++);
     EXPECT_EQ(4, *iter++);
     EXPECT_EQ(5, *iter++);
@@ -176,7 +226,7 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
 
 TEST(MapStringString, CreateUsingInitializerList) {
 
-    // TODO: ....
+    std::map<std::string, std::string> map{{"CN", "China"}, {"GR", "Greece"}, {"FR", "France"}};
 
     ASSERT_EQ(3u, map.size());
     EXPECT_EQ("China", map["CN"]);
@@ -186,14 +236,31 @@ TEST(MapStringString, CreateUsingInitializerList) {
 
 TEST(MapMapStringInt, NestedCollections) {
 
-    // TODO: ....
+    std::map<std::string, std::map<std::string, int>> map;
+    std::map<std::string, int> data{};
 
     ASSERT_TRUE(map.empty());
 
-    // TODO: ....
+    data.insert({"1",12});
+    std::map<std::string, int> data2{};
+    data2.insert({"2",4});
+    std::map<std::string, int> data3{};
+    data3.insert({"3",2});
+    std::map<std::string, int> data4{};
+    data4.insert({"4",7});
+    auto iter = data.begin();
+
+    map.insert({ "count", data });
 
     ASSERT_EQ(1u, map.size());
     ASSERT_EQ(1u, map.count("count"));
+
+
+    map.insert({"2", 4});
+    map.insert({ "count", data3 });
+    map.insert({ "count", data4 });
+
+    std::cout<<map["count"]["1"]<<std::endl;
 
     ASSERT_EQ(4u, map["count"].size());
     EXPECT_EQ(12, map["count"]["1"]);
@@ -202,7 +269,7 @@ TEST(MapMapStringInt, NestedCollections) {
     EXPECT_EQ(7, map["count"]["4"]);
 }
 
-TEST(MultisetInt, RemoveRangeOfElements) {
+/*TEST(MultisetInt, RemoveRangeOfElements) {
 
     // TODO: ....
 
@@ -309,3 +376,4 @@ TEST(UnorderedSetInt, BucketsAndLoadFactor) {
     EXPECT_EQ(11u, unordered_set.bucket_count());
     EXPECT_FLOAT_EQ(11.0 / 11.0, unordered_set.load_factor());
 }
+*/
