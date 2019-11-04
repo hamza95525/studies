@@ -111,5 +111,13 @@ TEST(SmallTest, Clear) {
     }
 }
 
+TEST(SmallTest, Operator) {
+    Small small{};
+    small.randomize();
 
+    std::list<Small> list{};
+    list.push_back(small);
+
+    std::cout<<list.size()<<std::endl;
+}
 // TODO: Add tests for your operators implementation!
