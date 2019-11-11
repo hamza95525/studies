@@ -23,12 +23,26 @@ struct Medium {
     bool operator<(const Medium &rhs) const {
 
         // TODO: Implement me!
+        if(this > &rhs)
+            return false;
+        for(unsigned int i = 0; i < SIZE; i++){
+            if( data[i] < rhs.data[i] )
+                return true;
+        }
+
         return false;
     }
 
     bool operator==(const Medium &rhs) const {
 
         // TODO: Implement me!
+        if(this==&rhs)
+            return true;
+        for(unsigned int i=0; i<SIZE; i++){
+            if(data[i] != rhs.data[i])
+                return false;
+        }
+
         return true;
     }
 };
@@ -39,7 +53,7 @@ namespace std {
         std::size_t operator()(const Medium &d) const {
 
             // TODO: Implement me!
-            return 0;
+            return (std::hash<int>()(d.data[0]) % 2);
         }
     };
 }

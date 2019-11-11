@@ -108,5 +108,44 @@ TEST(LargeTest, Clear) {
     }
 }
 
+TEST(LargeTest, ComparatorsTest){
+    Large large_1{};
+    Large large_2{};
+
+    for(unsigned int i = 0; i<large_1.SIZE; i++){
+        large_1.data[i] = 1;
+        large_2.data[i] = 1;
+    }
+
+    ASSERT_TRUE(large_1 == large_2);
+
+    for(unsigned int i = 0; i<large_1.SIZE; i++){
+        large_1.data[i] = 1;
+        large_2.data[i] = 2;
+    }
+
+    ASSERT_TRUE(large_1 < large_2);
+
+    /*for(unsigned int i = 0; i<large_1.SIZE; i++){
+        large_1.data[i] = 2;
+        large_2.data[i] = 1;
+    }
+    ASSERT_TRUE(large_1 == large_2);
+
+    for(unsigned int i = 0; i<large_1.SIZE; i++){
+        large_1.data[i] = 3;
+        large_2.data[i] = 2;
+    }
+    ASSERT_TRUE(large_1 < large_2);*/
+}
+
+TEST(LargeTest, HashTest){
+    Large large{};
+    std::hash<Large> hashVal;
+
+    large.data[0] = 24;
+
+    EXPECT_EQ(4, hashVal(large));
+}
 
 // TODO: Add tests for your operators implementation!

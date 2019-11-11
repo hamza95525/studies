@@ -111,5 +111,31 @@ TEST(SmallTest, Clear) {
     }
 }
 
+TEST(SmallTest, CompratorsTest) {
+    Small small_1{};
+    Small small_2{};
+
+    small_1.data[0] = 1;
+    small_2.data[0] = 1;
+
+    ASSERT_TRUE(small_1 == small_2);
+
+    small_1.data[0] = 1;
+    small_2.data[0] = 12;
+
+    ASSERT_TRUE(small_1 < small_2);
+};
+
+TEST(SmallTest, HashTest){
+    Small small{};
+    std::hash<Small> hashVal;
+
+    small.data[0] = 3;
+
+    EXPECT_EQ(1, hashVal(small));
+    //EXPECT_EQ(4, hashVal(small));
+}
+
+
 
 // TODO: Add tests for your operators implementation!
