@@ -132,7 +132,7 @@ TEST(SmallTest, HashTest){
 
     small.data[0] = 3;
 
-    EXPECT_EQ(1, hashVal(small));
+    EXPECT_EQ(3, hashVal(small));
     //EXPECT_EQ(4, hashVal(small));
 }
 

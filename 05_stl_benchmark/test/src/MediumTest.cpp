@@ -136,12 +136,14 @@ TEST(MediumTest, ComparatorsTest){
 }
 
 TEST(MediumTest, HashTest){
-    Medium medium{};
+    Medium medium_1{};
+    Medium medium_2{};
     std::hash<Medium> hashVal;
 
-    medium.data[0] = 3;
+    medium_1.randomize();
+    medium_2.randomize();
 
-    EXPECT_EQ(1, hashVal(medium));
+    ASSERT_FALSE(hashVal(medium_1) == hashVal(medium_2));
 }
 
 

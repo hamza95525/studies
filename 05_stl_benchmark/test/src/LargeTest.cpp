@@ -140,12 +140,14 @@ TEST(LargeTest, ComparatorsTest){
 }
 
 TEST(LargeTest, HashTest){
-    Large large{};
+    Large large_1{};
+    Large large_2{};
     std::hash<Large> hashVal;
 
-    large.data[0] = 24;
+    large_1.randomize();
+    large_2.randomize();
 
-    EXPECT_EQ(4, hashVal(large));
+    ASSERT_FALSE(hashVal(large_1) == hashVal(large_2));
 }
 
 // TODO: Add tests for your operators implementation!
