@@ -29,10 +29,12 @@ struct Large {
             return false;*/
         for(unsigned int i = 0; i < SIZE; i++){
             if( data[i] < rhs.data[i] )
-                return true;
+                continue;
+            else
+                return false;
         }
 
-        return false;
+        return true;
     }
 
     bool operator==(const Large &rhs) const {
