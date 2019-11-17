@@ -28,9 +28,7 @@ struct Large {
        /* if(this > &rhs)
             return false;*/
         for(unsigned int i = 0; i < SIZE; i++){
-            if( data[i] < rhs.data[i] )
-                continue;
-            else
+            if( data[i] > rhs.data[i] )
                 return false;
         }
 

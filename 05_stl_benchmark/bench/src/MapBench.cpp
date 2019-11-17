@@ -6,164 +6,287 @@
 //======================================MAP BENCHMARKS=======================================================
 void MapAt(State& state)
 {
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
     std::map<Small, int> map{{{'a'}, 1}};
-    //std::map<Small, int> map{};  //what() map::at when map is empty
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.at({'a'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapAt);
+BENCHMARK(MapAt)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapOperator(State& state)
 {
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
     std::map<Small, int> map{{{'a'}, 1}};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state)
     {
         map[{'a'}] = 2;
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapOperator);
+BENCHMARK(MapOperator)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapEmpty(State& state)
 {
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
     std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.empty();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapEmpty);
+BENCHMARK(MapEmpty)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapSize(State& state)
 {
-    //std::map<Small, int> map{};
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
+
 
     for( auto _ : state)
     {
         map.size();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapSize);
+BENCHMARK(MapSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapMaxSize(State& state)
 {
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.max_size();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapMaxSize);
+BENCHMARK(MapMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapClear(State& state)
 {
-    //std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
     std::map<Small, int> map{};
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.clear();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapClear);
+BENCHMARK(MapClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapInsert(State& state)
 {
-    //std::map<Small, int> map{};
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
-    //as the size of map grows, time of inserting gets bigger
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.insert({{'d'}, 4});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapInsert);
+BENCHMARK(MapInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapErase(State& state)
 {
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
-    //std::map<Small, int> map{};
+    auto N = state.range();
+    auto size = (std::size_t)N;
+    //std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.erase({'a'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapErase);
+BENCHMARK(MapErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapSwap(State& state)
 {
-    std::map<Small, int> map_1{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
-    std::map<Small, int> map_2{{{'f'}, 6}, {{'e'}, 5 }, {{'d'}, 4}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map_1{};
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map_1.insert({{(char)j}, i});
+    }
+
+    std::map<Small, int> map_2{};
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map_2.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map_1.swap(map_2);
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapSwap);
+BENCHMARK(MapSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapCount(State& state)
 {
-    //std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}}; //bigger size == more time
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
     std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.count({'a'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapCount);
+BENCHMARK(MapCount)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapFind(State& state)
 {
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
-    //std::map<Small, int> map{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.find({'c'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapFind);
+BENCHMARK(MapFind)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapEqualRange(State& state)
 {
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
-    //std::map<Small, int> map{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.equal_range({'b'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapEqualRange);
+BENCHMARK(MapEqualRange)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapLowerBound(State& state)
 {
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.lower_bound({'c'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapLowerBound);
+BENCHMARK(MapLowerBound)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void MapUpperBound(State& state)
 {
-    std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::map<Small, int> map{};
+
+    for(size_t i = 0; i<size; i++)
+    {
+        auto j = rand()%size;
+        map.insert({{(char)j}, i});
+    }
 
     for( auto _ : state )
     {
         map.upper_bound({'a'});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(MapUpperBound);
+BENCHMARK(MapUpperBound)->RangeMultiplier(2)->Range(1, 1024)->Complexity();

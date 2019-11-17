@@ -7,84 +7,107 @@
 
 void ListFront(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state){
         list.front();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListFront);
+BENCHMARK(ListFront)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListBack(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.back();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListBack);
+BENCHMARK(ListBack)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListEmpty(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state)
     {
         list.empty();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListEmpty);
+BENCHMARK(ListEmpty)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListSize(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state)
     {
         list.size();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListSize);
+BENCHMARK(ListSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListMaxSize(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.max_size();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListMaxSize);
+BENCHMARK(ListMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListClear(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.clear();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListClear);
+BENCHMARK(ListClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListInsert(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
     auto iter = list.begin();
 
     for( auto _ : state )
     {
         list.insert(iter,{3});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListInsert);
+BENCHMARK(ListInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListErase(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
    // list.insert(list.begin(),{3});
 
     for( auto _ : state )
@@ -92,125 +115,154 @@ void ListErase(State& state)
         list.insert(list.begin(),{3}); //inserting element to have sth to erase, without that benchmark aborts due to, invalid pointer
         list.erase(list.begin());
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListErase);
+BENCHMARK(ListErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListPushBack(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.push_back({1});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListPushBack);
+BENCHMARK(ListPushBack)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListPopBack(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.push_back({1}); //pushing element to have sth to pop
         list.pop_back();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListPopBack);
+BENCHMARK(ListPopBack)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListPushFront(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.push_front({2});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListPushFront);
+BENCHMARK(ListPushFront)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListPopFront(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.push_front({1}); //pushing front element to have sth to pop, otherwise "free(): invalid pointer" given
         list.pop_front();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListPopFront);
+BENCHMARK(ListPopFront)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListResize(State& state)
 {
-    std::list<Small> list{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
-        list.resize(10);
+        list.resize(N);
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListResize);
+BENCHMARK(ListResize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListSwap(State& state)
 {
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
     //creating two different lists with different elements, to swap later one list with another
-    std::list<Small> list_1{};
+    std::list<Small> list_1(size);
     list_1.push_back({3});
 
-    std::list<Small> list_2{};
+    std::list<Small> list_2(size);
     list_2.push_back({1});
     for( auto _ : state )
     {
         list_2.swap(list_1);
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListSwap);
+BENCHMARK(ListSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListMerge(State& state)
 {
-    std::list<Small> list_1{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list_1(size);
     list_1.push_back({1});
 
-    std::list<Small> list_2{};
+    std::list<Small> list_2(size);
     list_2.push_back({2});
 
     for( auto _ : state )
     {
         list_2.merge(list_1);
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListMerge);
+BENCHMARK(ListMerge)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListSplice(State& state)
 {
-    std::list<Small> list_1{};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list_1(size);
     list_1.push_back({1});
 
-    std::list<Small> list_2{};
+    std::list<Small> list_2(size);
     list_2.push_back({2});
 
     for( auto _ : state )
     {
         list_1.splice(list_1.begin(), list_2);
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListSplice);
+BENCHMARK(ListSplice)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListRemove(State& state)
 {
-    std::list<Small> list{};
+    auto N= state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
     list.push_back({1});
 
     for( auto _ : state )
     {
         list.remove({1});
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListRemove);
+BENCHMARK(ListRemove)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListRemoveIf(State& state)
 {
+    auto N = state.range(0);
     std::list<Small> list{};
     list.push_back({6});
 
@@ -218,38 +270,48 @@ void ListRemoveIf(State& state)
     {
         list.remove_if([](Small d){ return d.data[0] > 5; });
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListRemoveIf);
+BENCHMARK(ListRemoveIf)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListReverse(State& state)
 {
-    std::list<Small> list{{1},{2}, {3}};// without element time is 4 ns, with 3 elements in it its 7.5ns, so it seems like it works correctly
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.reverse();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListReverse);
+BENCHMARK(ListReverse)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListUnique(State& state)
 {
-    std::list<Small> list{{2},{2},{2}};
+    auto N = state.range(0);
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
 
     for( auto _ : state )
     {
         list.unique();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListUnique);
+BENCHMARK(ListUnique)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 
 void ListSort(State& state)
 {
-    std::list<Small> list{{1}, {2}, {1}, {3}, {11}, {4}}; //more elements takes more time to sort
-    //std::list<Small> list{{1}, {2}, {1}};
+    auto N = state.range(0);
+    //std::list<Small> list{{1}, {2}, {1}, {3}, {11}, {4}}; //more elements takes more time to sort
+    auto size = (std::size_t)N;
+    std::list<Small> list(size);
     for( auto _ : state )
     {
         list.sort();
     }
+    state.SetComplexityN(N);
 }
-BENCHMARK(ListSort);
+BENCHMARK(ListSort)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
