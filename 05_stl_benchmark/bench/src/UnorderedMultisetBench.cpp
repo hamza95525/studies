@@ -54,11 +54,13 @@ void UnorderedMultisetClear(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::unordered_multiset<Small> unorderedMultiset{};
-    unorderedMultiset.reserve(size);
+
 
     for( auto _ : state )
     {
+        std::unordered_multiset<Small> unorderedMultiset{};
+        unorderedMultiset.reserve(size);
+
         unorderedMultiset.clear();
     }
     state.SetComplexityN(N);
@@ -69,12 +71,14 @@ void UnorderedMultisetInsert(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
+
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
 
     for( auto _ : state )
     {
-        unorderedMultiset.insert({'a'});
+        auto value = rand() % size;
+        unorderedMultiset.insert({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -92,7 +96,8 @@ void UnorderedMultisetErase(State& state)
 
     for( auto _ : state )
     {
-        unorderedMultiset.erase({{'a'}});
+        auto value = rand() % size;
+        unorderedMultiset.erase({{(char)value}});
     }
     state.SetComplexityN(N);
 }
@@ -102,6 +107,7 @@ void UnorderedMultisetSwap(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
+
     std::unordered_multiset<Small> unorderedMultiset_1{};
     unorderedMultiset_1.reserve(size);
 
@@ -122,12 +128,14 @@ void UnorderedMultisetCount(State& state)
    // std::unordered_multiset<Small> unorderedMultiset{}; //bigger size == more time
     auto N = state.range(0);
     auto size = (std::size_t)N;
+
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
 
     for( auto _ : state )
     {
-        unorderedMultiset.count({'a'});
+        auto value = rand() % size;
+        unorderedMultiset.count({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -144,7 +152,8 @@ void UnorderedMultisetFind(State& state)
 
     for( auto _ : state )
     {
-        unorderedMultiset.find({'b'});
+        auto value = rand() % size;
+        unorderedMultiset.find({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -161,7 +170,8 @@ void UnorderedMultisetEqualRange(State& state)
 
     for( auto _ : state )
     {
-        unorderedMultiset.equal_range({{'b'}});
+        auto value = rand() % size;
+        unorderedMultiset.equal_range({{(char)value}});
     }
     state.SetComplexityN(N);
 }
@@ -173,12 +183,13 @@ void UnorderedMultisetRehash(State& state)
     //std::unordered_multiset<Small> unorderedMultiset{};
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::unordered_multiset<Small> unorderedMultiset{};
-    unorderedMultiset.reserve(size);
 
     for( auto _ : state )
     {
-        auto value = rand()%200;
+        std::unordered_multiset<Small> unorderedMultiset{};
+        unorderedMultiset.reserve(size);
+
+        auto value = rand()%size;
         unorderedMultiset.rehash(value);
     }
     state.SetComplexityN(N);
@@ -191,13 +202,11 @@ void UnorderedMultisetReserve(State& state)
     //std::unordered_multiset<Small> unorderedMultiset{};
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::unordered_multiset<Small> unorderedMultiset{};
-    unorderedMultiset.reserve(size);
 
     for( auto _ : state )
     {
-        auto value = rand() % 256;
-        unorderedMultiset.reserve(value);
+        std::unordered_multiset<Small> unorderedMultiset{};
+        unorderedMultiset.reserve(size);
     }
     state.SetComplexityN(N);
 }

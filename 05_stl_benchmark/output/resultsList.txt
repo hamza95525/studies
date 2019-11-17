@@ -1,0 +1,276 @@
+-------------------------------------------------------------
+Benchmark                   Time             CPU   Iterations
+-------------------------------------------------------------
+ListFront/1              20.2 ns         20.2 ns     34819733
+ListFront/2              20.3 ns         20.3 ns     34397221
+ListFront/4              22.7 ns         22.5 ns     34366572
+ListFront/8              22.4 ns         22.3 ns     31203728
+ListFront/16             21.0 ns         21.0 ns     32147928
+ListFront/32             21.1 ns         21.1 ns     31564501
+ListFront/64             20.6 ns         20.6 ns     34283221
+ListFront/128            20.3 ns         20.3 ns     33948652
+ListFront/256            20.2 ns         20.2 ns     34697841
+ListFront/512            20.3 ns         20.3 ns     34638347
+ListFront/1024           20.3 ns         20.3 ns     34729946
+ListFront_BigO          20.85 (1)       20.83 (1)  
+ListFront_RMS               4 %             4 %    
+ListBack/1               20.9 ns         20.9 ns     33511532
+ListBack/2               21.0 ns         21.0 ns     33511710
+ListBack/4               21.0 ns         21.0 ns     33637460
+ListBack/8               21.0 ns         21.0 ns     33203950
+ListBack/16              22.9 ns         22.9 ns     29897104
+ListBack/32              21.5 ns         21.5 ns     30593828
+ListBack/64              21.4 ns         21.4 ns     33124356
+ListBack/128             21.1 ns         21.1 ns     33699615
+ListBack/256             21.2 ns         21.2 ns     32684849
+ListBack/512             20.9 ns         20.9 ns     32771732
+ListBack/1024            21.0 ns         21.0 ns     33713865
+ListBack_BigO           21.26 (1)       21.25 (1)  
+ListBack_RMS                3 %             3 %    
+ListEmpty/1              2.62 ns         2.62 ns    274816863
+ListEmpty/2              2.49 ns         2.49 ns    281870407
+ListEmpty/4              2.49 ns         2.49 ns    282388741
+ListEmpty/8              2.49 ns         2.49 ns    274837813
+ListEmpty/16             2.49 ns         2.49 ns    281787796
+ListEmpty/32             2.48 ns         2.48 ns    280625158
+ListEmpty/64             2.50 ns         2.50 ns    283121911
+ListEmpty/128            2.48 ns         2.48 ns    283539185
+ListEmpty/256            2.50 ns         2.50 ns    282638246
+ListEmpty/512            2.51 ns         2.50 ns    280399713
+ListEmpty/1024           2.48 ns         2.48 ns    281900249
+ListEmpty_BigO           2.50 (1)        2.50 (1)  
+ListEmpty_RMS               2 %             2 %    
+ListSize/1               7.80 ns         7.80 ns     89865046
+ListSize/2               7.81 ns         7.81 ns     89707355
+ListSize/4               7.79 ns         7.79 ns     89762796
+ListSize/8               7.80 ns         7.80 ns     89089374
+ListSize/16              7.80 ns         7.80 ns     89840554
+ListSize/32              7.80 ns         7.80 ns     89822092
+ListSize/64              7.79 ns         7.79 ns     89715768
+ListSize/128             7.80 ns         7.80 ns     89773214
+ListSize/256             7.80 ns         7.80 ns     89686821
+ListSize/512             7.80 ns         7.80 ns     90015666
+ListSize/1024            7.80 ns         7.80 ns     89829537
+ListSize_BigO            7.80 (1)        7.80 (1)  
+ListSize_RMS                0 %             0 %    
+ListMaxSize/1            8.39 ns         8.39 ns     83031168
+ListMaxSize/2            8.32 ns         8.32 ns     83751301
+ListMaxSize/4            8.32 ns         8.32 ns     84226789
+ListMaxSize/8            8.33 ns         8.33 ns     84175559
+ListMaxSize/16           8.30 ns         8.30 ns     84773501
+ListMaxSize/32           8.30 ns         8.30 ns     83691215
+ListMaxSize/64           8.33 ns         8.33 ns     83381067
+ListMaxSize/128          8.34 ns         8.34 ns     84143708
+ListMaxSize/256          8.29 ns         8.29 ns     85764344
+ListMaxSize/512          8.30 ns         8.30 ns     83597261
+ListMaxSize/1024         8.34 ns         8.34 ns     84906472
+ListMaxSize_BigO         8.32 (1)        8.32 (1)  
+ListMaxSize_RMS             0 %             0 %    
+ListClear/1               181 ns          181 ns      3877606
+ListClear/2               280 ns          280 ns      2505257
+ListClear/4               494 ns          494 ns      1409291
+ListClear/8               951 ns          951 ns       737041
+ListClear/16             1834 ns         1834 ns       382276
+ListClear/32             3484 ns         3484 ns       200381
+ListClear/64             6742 ns         6742 ns       103262
+ListClear/128           13281 ns        13281 ns        52775
+ListClear/256           26314 ns        26313 ns        26591
+ListClear/512           52493 ns        52483 ns        13320
+ListClear/1024         104943 ns       104941 ns         6670
+ListClear_BigO         102.54 N        102.53 N    
+ListClear_RMS               1 %             1 %    
+ListInsert/1              119 ns          119 ns      5788128
+ListInsert/2              105 ns          105 ns      6888772
+ListInsert/4              101 ns          101 ns      6953285
+ListInsert/8              102 ns          102 ns      6922955
+ListInsert/16             102 ns          102 ns      6808952
+ListInsert/32             103 ns          103 ns      6842274
+ListInsert/64             102 ns          102 ns      6774507
+ListInsert/128            104 ns          104 ns      6849553
+ListInsert/256            104 ns          104 ns      6767501
+ListInsert/512            107 ns          107 ns      6854605
+ListInsert/1024           105 ns          105 ns      6811106
+ListInsert_BigO        104.79 (1)      104.78 (1)  
+ListInsert_RMS              5 %             5 %    
+ListErase/1               155 ns          155 ns      4512425
+ListErase/2               155 ns          155 ns      4529137
+ListErase/4               155 ns          155 ns      4514741
+ListErase/8               155 ns          155 ns      4516515
+ListErase/16              155 ns          155 ns      4527467
+ListErase/32              155 ns          155 ns      4528063
+ListErase/64              155 ns          155 ns      4525614
+ListErase/128             155 ns          155 ns      4536855
+ListErase/256             155 ns          155 ns      4531340
+ListErase/512             155 ns          155 ns      4511980
+ListErase/1024            155 ns          155 ns      4532052
+ListErase_BigO         154.74 (1)      154.73 (1)  
+ListErase_RMS               0 %             0 %    
+ListPushBack/1           95.1 ns         95.0 ns      7891903
+ListPushBack/2           89.7 ns         89.7 ns      7865514
+ListPushBack/4           95.3 ns         95.3 ns      7594914
+ListPushBack/8           89.4 ns         89.4 ns      7865010
+ListPushBack/16          95.8 ns         95.8 ns      7562648
+ListPushBack/32          90.3 ns         90.3 ns      7879678
+ListPushBack/64          94.5 ns         94.5 ns      7623015
+ListPushBack/128         90.4 ns         90.4 ns      7809312
+ListPushBack/256         89.9 ns         89.9 ns      7522860
+ListPushBack/512         90.1 ns         90.1 ns      7792548
+ListPushBack/1024        93.4 ns         93.4 ns      7857578
+ListPushBack_BigO       92.17 (1)       92.16 (1)  
+ListPushBack_RMS            3 %             3 %    
+ListPopBack/1             292 ns          291 ns      2403757
+ListPopBack/2             291 ns          291 ns      2401914
+ListPopBack/4             291 ns          291 ns      2400499
+ListPopBack/8             291 ns          291 ns      2399852
+ListPopBack/16            291 ns          291 ns      2405753
+ListPopBack/32            291 ns          291 ns      2403588
+ListPopBack/64            292 ns          292 ns      2397341
+ListPopBack/128           292 ns          292 ns      2402254
+ListPopBack/256           291 ns          291 ns      2398428
+ListPopBack/512           292 ns          292 ns      2402682
+ListPopBack/1024          292 ns          292 ns      2400054
+ListPopBack_BigO       291.56 (1)      291.52 (1)  
+ListPopBack_RMS             0 %             0 %    
+ListPushFront/1          91.6 ns         91.6 ns      7857376
+ListPushFront/2          91.5 ns         91.5 ns      7744883
+ListPushFront/4          90.5 ns         90.5 ns      7822476
+ListPushFront/8          89.9 ns         89.8 ns      7856194
+ListPushFront/16         91.5 ns         91.5 ns      7828207
+ListPushFront/32         90.6 ns         90.6 ns      7781540
+ListPushFront/64         91.9 ns         91.9 ns      7793380
+ListPushFront/128        90.3 ns         90.3 ns      7716448
+ListPushFront/256        92.9 ns         92.9 ns      7743025
+ListPushFront/512        90.3 ns         90.3 ns      7564903
+ListPushFront/1024       93.6 ns         93.6 ns      7722984
+ListPushFront_BigO      91.32 (1)       91.31 (1)  
+ListPushFront_RMS           1 %             1 %    
+ListPopFront/1            149 ns          149 ns      4720417
+ListPopFront/2            149 ns          149 ns      4722292
+ListPopFront/4            148 ns          148 ns      4697596
+ListPopFront/8            148 ns          148 ns      4726314
+ListPopFront/16           149 ns          149 ns      4717910
+ListPopFront/32           148 ns          148 ns      4727120
+ListPopFront/64           149 ns          149 ns      4728020
+ListPopFront/128          148 ns          148 ns      4679802
+ListPopFront/256          148 ns          148 ns      4735332
+ListPopFront/512          149 ns          149 ns      4727233
+ListPopFront/1024         148 ns          148 ns      4717547
+ListPopFront_BigO      148.47 (1)      148.45 (1)  
+ListPopFront_RMS            0 %             0 %    
+ListResize/1              252 ns          252 ns      2763461
+ListResize/2              377 ns          377 ns      1858924
+ListResize/4              650 ns          650 ns      1077932
+ListResize/8             1145 ns         1145 ns       611004
+ListResize/16            2143 ns         2143 ns       328066
+ListResize/32            4045 ns         4045 ns       172723
+ListResize/64            7754 ns         7753 ns        90589
+ListResize/128          15133 ns        15133 ns        46373
+ListResize/256          29939 ns        29934 ns        23457
+ListResize/512          59964 ns        59963 ns        11605
+ListResize/1024        119129 ns       119128 ns         5891
+ListResize_BigO        116.56 N        116.56 N    
+ListResize_RMS              1 %             1 %    
+ListSwap/1               25.8 ns         25.8 ns     27118899
+ListSwap/2               25.5 ns         25.5 ns     27134444
+ListSwap/4               25.5 ns         25.5 ns     27134737
+ListSwap/8               25.5 ns         25.5 ns     27119144
+ListSwap/16              25.5 ns         25.5 ns     27376007
+ListSwap/32              25.5 ns         25.5 ns     27412283
+ListSwap/64              25.6 ns         25.6 ns     27349345
+ListSwap/128             25.6 ns         25.6 ns     27430918
+ListSwap/256             25.6 ns         25.6 ns     27434341
+ListSwap/512             25.5 ns         25.5 ns     27277506
+ListSwap/1024            25.6 ns         25.6 ns     27125814
+ListSwap_BigO           25.56 (1)       25.56 (1)  
+ListSwap_RMS                0 %             0 %    
+ListMerge/1               412 ns          412 ns      1694989
+ListMerge/2               637 ns          637 ns      1100357
+ListMerge/4              1153 ns         1153 ns       608448
+ListMerge/8              2090 ns         2090 ns       335688
+ListMerge/16             3979 ns         3978 ns       175894
+ListMerge/32             7814 ns         7814 ns        89631
+ListMerge/64            15471 ns        15466 ns        45531
+ListMerge/128           30317 ns        30316 ns        23071
+ListMerge/256           60044 ns        60038 ns        11697
+ListMerge/512          120520 ns       120517 ns         5813
+ListMerge/1024         241848 ns       241823 ns         2878
+ListMerge_BigO         235.99 N        235.97 N    
+ListMerge_RMS               1 %             1 %    
+ListSplice/1              384 ns          384 ns      1823701
+ListSplice/2              576 ns          576 ns      1217362
+ListSplice/4             1033 ns         1032 ns       677866
+ListSplice/8             1848 ns         1848 ns       377463
+ListSplice/16            3505 ns         3505 ns       198518
+ListSplice/32            6778 ns         6777 ns       103299
+ListSplice/64           13333 ns        13332 ns        52665
+ListSplice/128          26399 ns        26398 ns        26498
+ListSplice/256          52617 ns        52611 ns        13314
+ListSplice/512         105546 ns       105526 ns         6641
+ListSplice/1024        212727 ns       212723 ns         3292
+ListSplice_BigO        207.33 N        207.32 N    
+ListSplice_RMS              1 %             1 %    
+ListRemove/1             33.4 ns         33.4 ns     20972557
+ListRemove/2             33.4 ns         33.4 ns     20953568
+ListRemove/4             33.4 ns         33.4 ns     20953903
+ListRemove/8             33.5 ns         33.5 ns     20904420
+ListRemove/16            33.4 ns         33.4 ns     20943986
+ListRemove/32            33.4 ns         33.4 ns     20960111
+ListRemove/64            33.4 ns         33.4 ns     20954811
+ListRemove/128           33.5 ns         33.5 ns     20976285
+ListRemove/256           33.4 ns         33.4 ns     20807006
+ListRemove/512           33.6 ns         33.6 ns     20795664
+ListRemove/1024          33.4 ns         33.4 ns     20636444
+ListRemove_BigO         33.43 (1)       33.43 (1)  
+ListRemove_RMS              0 %             0 %    
+ListRemoveIf/1           39.9 ns         39.9 ns     17558471
+ListRemoveIf/2           62.0 ns         61.9 ns     11335993
+ListRemoveIf/4            105 ns          105 ns      6654937
+ListRemoveIf/8            203 ns          203 ns      3450592
+ListRemoveIf/16           376 ns          376 ns      1868653
+ListRemoveIf/32           718 ns          718 ns       974721
+ListRemoveIf/64          1406 ns         1406 ns       493887
+ListRemoveIf/128         2777 ns         2777 ns       252054
+ListRemoveIf/256         5529 ns         5529 ns       126812
+ListRemoveIf/512        11044 ns        11044 ns        63449
+ListRemoveIf/1024       22051 ns        22051 ns        31730
+ListRemoveIf_BigO       21.55 N         21.55 N    
+ListRemoveIf_RMS            1 %             1 %    
+ListReverse/1             169 ns          169 ns      4103729
+ListReverse/2             266 ns          266 ns      2643811
+ListReverse/4             474 ns          474 ns      1472425
+ListReverse/8             975 ns          974 ns       768755
+ListReverse/16           1758 ns         1758 ns       392274
+ListReverse/32           3422 ns         3422 ns       204888
+ListReverse/64           6778 ns         6776 ns       104041
+ListReverse/128         13346 ns        13346 ns        52483
+ListReverse/256         26514 ns        26513 ns        26364
+ListReverse/512         53115 ns        53115 ns        13180
+ListReverse/1024       107778 ns       107777 ns         6505
+ListReverse_BigO       104.88 N        104.88 N    
+ListReverse_RMS             1 %             1 %    
+ListUnique/1             22.9 ns         22.9 ns     30560723
+ListUnique/2             50.1 ns         50.1 ns     10000000
+ListUnique/4              103 ns          103 ns      6777132
+ListUnique/8              199 ns          199 ns      3086747
+ListUnique/16             412 ns          412 ns      1591379
+ListUnique/32             893 ns          893 ns       782934
+ListUnique/64            1754 ns         1754 ns       416853
+ListUnique/128           3438 ns         3437 ns       208528
+ListUnique/256           6845 ns         6845 ns       100770
+ListUnique/512          13946 ns        13943 ns        50900
+ListUnique/1024         28033 ns        28030 ns        24950
+ListUnique_BigO         27.31 N         27.31 N    
+ListUnique_RMS              1 %             1 %    
+ListSort/1               4.21 ns         4.21 ns    165920464
+ListSort/2               2570 ns         2569 ns       273434
+ListSort/4               3135 ns         3135 ns       222861
+ListSort/8               4280 ns         4280 ns       163216
+ListSort/16              6750 ns         6749 ns       104904
+ListSort/32             12136 ns        12136 ns        59068
+ListSort/64             26151 ns        26138 ns        31405
+ListSort/128            43744 ns        43743 ns        16048
+ListSort/256            89092 ns        89091 ns         7923
+ListSort/512           182050 ns       182042 ns         3858
+ListSort/1024          377800 ns       377722 ns         1859
+ListSort_BigO          365.28 N        365.22 N    
+ListSort_RMS                4 %             4 %    

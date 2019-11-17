@@ -8,17 +8,18 @@ void MapAt(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{{{'a'}, 1}};
+    std::map<Small, int> map{};
 
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
-    for( auto _ : state )
+    for( auto _ : state)
     {
-        map.at({'a'});
+        auto value = rand() % size;
+        map.at({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -28,17 +29,19 @@ void MapOperator(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{{{'a'}, 1}};
+    std::map<Small, int> map{};
 
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state)
     {
-        map[{'a'}] = 2;
+        auto value = rand() % size;
+        auto t = rand() % size;
+        map[{(char)value}] = t;
     }
     state.SetComplexityN(N);
 }
@@ -53,7 +56,7 @@ void MapEmpty(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
@@ -73,9 +76,8 @@ void MapSize(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
-
 
     for( auto _ : state)
     {
@@ -94,7 +96,7 @@ void MapMaxSize(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
@@ -109,15 +111,16 @@ void MapClear(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    for(size_t i = 0; i<size; i++)
-    {
-        auto j = rand()%size;
-        map.insert({{(char)j}, i});
-    }
 
     for( auto _ : state )
     {
+        std::map<Small, int> map{};
+        for(size_t i = 0; i<size; i++)
+        {
+            auto j = rand()%size;
+            map.insert({{(char)i}, j});
+        }
+
         map.clear();
     }
     state.SetComplexityN(N);
@@ -128,17 +131,21 @@ void MapInsert(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
+
     std::map<Small, int> map{};
 
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.insert({{'d'}, 4});
+        auto value = rand() % size;
+        auto t = rand() % size;
+
+        map.insert({{(char)value}, t});
     }
     state.SetComplexityN(N);
 }
@@ -148,18 +155,19 @@ void MapErase(State& state)
 {
     auto N = state.range();
     auto size = (std::size_t)N;
-    //std::map<Small, int> map{{{'a'}, 1}, {{'b'}, 2 }, {{'c'}, 3}};
+
     std::map<Small, int> map{};
 
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.erase({'a'});
+        auto value = rand() % size;
+        map.erase({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -169,18 +177,19 @@ void MapSwap(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
+
     std::map<Small, int> map_1{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map_1.insert({{(char)j}, i});
+        map_1.insert({{(char)i}, j});
     }
 
     std::map<Small, int> map_2{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map_2.insert({{(char)j}, i});
+        map_2.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
@@ -200,12 +209,13 @@ void MapCount(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.count({'a'});
+        auto value = rand() % size;
+        map.count({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -220,12 +230,13 @@ void MapFind(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.find({'c'});
+        auto value = rand() % size;
+        map.find({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -240,12 +251,13 @@ void MapEqualRange(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.equal_range({'b'});
+        auto value = rand() % size;
+        map.equal_range({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -260,12 +272,13 @@ void MapLowerBound(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.lower_bound({'c'});
+        auto value = rand() % size;
+        map.lower_bound({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -280,12 +293,13 @@ void MapUpperBound(State& state)
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
-        map.insert({{(char)j}, i});
+        map.insert({{(char)i}, j});
     }
 
     for( auto _ : state )
     {
-        map.upper_bound({'a'});
+        auto value = rand() % size;
+        map.upper_bound({(char)value});
     }
     state.SetComplexityN(N);
 }
