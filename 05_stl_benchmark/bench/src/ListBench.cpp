@@ -97,7 +97,8 @@ void ListInsert(State& state)
 
     for( auto _ : state )
     {
-        list.insert(iter,{3});
+        auto value = rand() % size;
+        list.insert(iter,{(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -112,7 +113,8 @@ void ListErase(State& state)
 
     for( auto _ : state )
     {
-        list.insert(list.begin(),{3}); //inserting element to have sth to erase, without that benchmark aborts due to, invalid pointer
+        auto value = rand() % size;
+        list.insert(list.begin(),{(char)value}); //inserting element to have sth to erase, without that benchmark aborts due to, invalid pointer
         list.erase(list.begin());
     }
     state.SetComplexityN(N);
@@ -127,7 +129,8 @@ void ListPushBack(State& state)
 
     for( auto _ : state )
     {
-        list.push_back({1});
+        auto value = rand() % size;
+        list.push_back({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -141,7 +144,8 @@ void ListPopBack(State& state)
 
     for( auto _ : state )
     {
-        list.push_back({1}); //pushing element to have sth to pop
+        auto value = rand() % size;
+        list.push_back({(char) value}); //pushing element to have sth to pop
         list.pop_back();
     }
     state.SetComplexityN(N);
@@ -156,7 +160,8 @@ void ListPushFront(State& state)
 
     for( auto _ : state )
     {
-        list.push_front({2});
+        auto value = rand() % size;
+        list.push_front({(char)value});
     }
     state.SetComplexityN(N);
 }
@@ -170,7 +175,8 @@ void ListPopFront(State& state)
 
     for( auto _ : state )
     {
-        list.push_front({1}); //pushing front element to have sth to pop, otherwise "free(): invalid pointer" given
+        auto value = rand() % size;
+        list.push_front({(char) value}); //pushing front element to have sth to pop, otherwise "free(): invalid pointer" given
         list.pop_front();
     }
     state.SetComplexityN(N);
@@ -185,7 +191,8 @@ void ListResize(State& state)
 
     for( auto _ : state )
     {
-        list.resize(N);
+        auto value = rand() % size;
+        list.resize(value);
     }
     state.SetComplexityN(N);
 }
