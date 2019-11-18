@@ -18,7 +18,10 @@ void MapAt(State& state)
 
     for( auto _ : state)
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.at({(char)value});
     }
     state.SetComplexityN(N);
@@ -39,8 +42,11 @@ void MapOperator(State& state)
 
     for( auto _ : state)
     {
-        auto value = rand() % size;
-        auto t = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+            auto t = rand() % size;
+        state.ResumeTiming();
+
         map[{(char)value}] = t;
     }
     state.SetComplexityN(N);
@@ -114,12 +120,14 @@ void MapClear(State& state)
 
     for( auto _ : state )
     {
-        std::map<Small, int> map{};
-        for(size_t i = 0; i<size; i++)
-        {
-            auto j = rand()%size;
-            map.insert({{(char)i}, j});
-        }
+        state.PauseTiming();
+            std::map<Small, int> map{};
+            for(size_t i = 0; i<size; i++)
+            {
+                auto j = rand()%size;
+                map.insert({{(char)i}, j});
+            }
+        state.ResumeTiming();
 
         map.clear();
     }
@@ -142,10 +150,13 @@ void MapInsert(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
-        auto t = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+            auto t = rand() % size;
+        state.ResumeTiming();
 
         map.insert({{(char)value}, t});
+
     }
     state.SetComplexityN(N);
 }
@@ -166,7 +177,10 @@ void MapErase(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.erase({(char)value});
     }
     state.SetComplexityN(N);
@@ -214,7 +228,10 @@ void MapCount(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.count({(char)value});
     }
     state.SetComplexityN(N);
@@ -235,7 +252,10 @@ void MapFind(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.find({(char)value});
     }
     state.SetComplexityN(N);
@@ -256,7 +276,10 @@ void MapEqualRange(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.equal_range({(char)value});
     }
     state.SetComplexityN(N);
@@ -277,7 +300,10 @@ void MapLowerBound(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.lower_bound({(char)value});
     }
     state.SetComplexityN(N);
@@ -298,7 +324,10 @@ void MapUpperBound(State& state)
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         map.upper_bound({(char)value});
     }
     state.SetComplexityN(N);

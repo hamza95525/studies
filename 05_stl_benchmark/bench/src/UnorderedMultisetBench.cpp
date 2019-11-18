@@ -12,6 +12,11 @@ void UnorderedMultisetEmpty(State& state)
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
 
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
+
     for( auto _ : state )
     {
         unorderedMultiset.empty();
@@ -26,6 +31,10 @@ void UnorderedMultisetSize(State& state)
     auto size = (std::size_t)N;
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
 
     for ( auto _ : state )
     {
@@ -41,6 +50,10 @@ void UnorderedMultisetMaxSize(State& state)
     auto size = (std::size_t)N;
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
 
     for( auto _ : state )
     {
@@ -58,8 +71,14 @@ void UnorderedMultisetClear(State& state)
 
     for( auto _ : state )
     {
-        std::unordered_multiset<Small> unorderedMultiset{};
-        unorderedMultiset.reserve(size);
+        state.PauseTiming();
+            std::unordered_multiset<Small> unorderedMultiset{};
+            unorderedMultiset.reserve(size);
+            for(auto i = 0; i<size; i++)
+            {
+                unorderedMultiset.insert({(char)i});
+            }
+        state.ResumeTiming();
 
         unorderedMultiset.clear();
     }
@@ -74,11 +93,22 @@ void UnorderedMultisetInsert(State& state)
 
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         unorderedMultiset.insert({(char)value});
+
+        state.PauseTiming();
+            unorderedMultiset.erase({{(char)value}});
+        state.ResumeTiming();
     }
     state.SetComplexityN(N);
 }
@@ -93,10 +123,18 @@ void UnorderedMultisetErase(State& state)
     auto size = (std::size_t)N;
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+            unorderedMultiset.insert({(char)value});
+        state.ResumeTiming();
+
         unorderedMultiset.erase({{(char)value}});
     }
     state.SetComplexityN(N);
@@ -110,9 +148,17 @@ void UnorderedMultisetSwap(State& state)
 
     std::unordered_multiset<Small> unorderedMultiset_1{};
     unorderedMultiset_1.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset_1.insert({(char)i});
+    }
 
     std::unordered_multiset<Small> unorderedMultiset_2{};
     unorderedMultiset_2.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset_2.insert({(char)i});
+    }
 
     for( auto _ : state )
     {
@@ -131,10 +177,16 @@ void UnorderedMultisetCount(State& state)
 
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
         unorderedMultiset.count({(char)value});
     }
     state.SetComplexityN(N);
@@ -149,10 +201,17 @@ void UnorderedMultisetFind(State& state)
     auto size = (std::size_t)N;
     std::unordered_multiset<Small> unorderedMultiset{};
     unorderedMultiset.reserve(size);
+    for(auto i = 0; i<size; i++)
+    {
+        unorderedMultiset.insert({(char)i});
+    }
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         unorderedMultiset.find({(char)value});
     }
     state.SetComplexityN(N);
@@ -165,12 +224,19 @@ void UnorderedMultisetEqualRange(State& state)
     //std::unordered_multiset<Small> unorderedMultiset{};
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::unordered_multiset<Small> unorderedMultiset{};
-    unorderedMultiset.reserve(size);
 
     for( auto _ : state )
     {
-        auto value = rand() % size;
+        state.PauseTiming();
+            std::unordered_multiset<Small> unorderedMultiset{};
+            unorderedMultiset.reserve(size);
+            for(auto i = 0; i<size; i++)
+            {
+                unorderedMultiset.insert({(char)i});
+            }
+            auto value = rand() % size;
+        state.ResumeTiming();
+
         unorderedMultiset.equal_range({{(char)value}});
     }
     state.SetComplexityN(N);
@@ -186,10 +252,16 @@ void UnorderedMultisetRehash(State& state)
 
     for( auto _ : state )
     {
-        std::unordered_multiset<Small> unorderedMultiset{};
-        unorderedMultiset.reserve(size);
+        state.PauseTiming();
+            std::unordered_multiset<Small> unorderedMultiset{};
+            unorderedMultiset.reserve(size);
+            for(auto i = 0; i<size; i++)
+            {
+                unorderedMultiset.insert({(char)i});
+            }
+            auto value = rand()%size;
+        state.ResumeTiming();
 
-        auto value = rand()%size;
         unorderedMultiset.rehash(value);
     }
     state.SetComplexityN(N);
@@ -205,8 +277,16 @@ void UnorderedMultisetReserve(State& state)
 
     for( auto _ : state )
     {
-        std::unordered_multiset<Small> unorderedMultiset{};
-        unorderedMultiset.reserve(size);
+        state.PauseTiming();
+            std::unordered_multiset<Small> unorderedMultiset{};
+            unorderedMultiset.reserve(size);
+            for(auto i = 0; i<size; i++)
+            {
+                unorderedMultiset.insert({(char)i});
+            }
+            auto value = rand()%size;
+        state.ResumeTiming();
+        unorderedMultiset.reserve(value);
     }
     state.SetComplexityN(N);
 }
