@@ -105,4 +105,46 @@ TEST(MediumTest, Clear) {
     }
 }
 
+TEST(MediumTest, ComparatorsTest){
+    Medium medium_1{};
+    Medium medium_2{};
+
+    for(unsigned int i = 0; i < medium_1.SIZE; i++){
+        medium_1.data[i] = 1;
+        medium_2.data[i] = 1;
+    }
+
+    ASSERT_TRUE(medium_1 == medium_2);
+
+    for(unsigned int i = 0; i < medium_1.SIZE; i++){
+        medium_1.data[i] = 2;
+        medium_2.data[i] = 3;
+    }
+
+    ASSERT_TRUE(medium_1 < medium_2);
+
+    /*for(unsigned int i = 0; i < medium_1.SIZE; i++){
+        medium_1.data[i] = 2;
+        medium_2.data[i] = 3;
+    }
+    ASSERT_TRUE(medium_1 == medium_2);
+    for(unsigned int i = 0; i < medium_1.SIZE; i++){
+        medium_1.data[i] = 4;
+        medium_2.data[i] = 3;
+    }
+    ASSERT_TRUE(medium_1 < medium_2);*/
+}
+
+TEST(MediumTest, HashTest){
+    Medium medium_1{};
+    Medium medium_2{};
+    std::hash<Medium> hashVal;
+
+    medium_1.randomize();
+    medium_2.randomize();
+
+    ASSERT_FALSE(hashVal(medium_1) == hashVal(medium_2));
+}
+
+
 // TODO: Add tests for your operators implementation!

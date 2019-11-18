@@ -25,12 +25,24 @@ struct Large {
     bool operator<(const Large &rhs) const {
 
         // TODO: Implement me!
-        return false;
+       /* if(this > &rhs)
+            return false;*/
+        for(unsigned int i = 0; i < SIZE; i++){
+            if( data[i] > rhs.data[i] )
+                return false;
+        }
+
+        return true;
     }
 
     bool operator==(const Large &rhs) const {
 
         // TODO: Implement me!
+        for(unsigned int i=0; i<SIZE; i++){
+            if(data[i] != rhs.data[i])
+                return false;
+        }
+
         return true;
     }
 };
@@ -39,9 +51,12 @@ namespace std {
     template<>
     struct hash<Large> {
         std::size_t operator()(const Large &d) const {
-
             // TODO: Implement me!
-            return 0;
+            double hash = 1;
+            for(unsigned int i = 0; i< d.SIZE; i++){
+                hash = hash * d.data[i] + d.SIZE;
+            }
+            return (std::hash<double>()(hash));
         }
     };
 }

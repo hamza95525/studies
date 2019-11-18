@@ -15,4 +15,4 @@ static void Dummy_Integrate(State& state) {
     state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(Dummy_Integrate)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity(); // 2 do piatej, 2 do osiemnastej
+BENCHMARK(Dummy_Integrate)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
