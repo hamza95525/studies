@@ -100,10 +100,7 @@ void UnorderedMultisetInsert(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
-            auto value = rand() % size;
-        state.ResumeTiming();
-
+        auto value = rand() % size;
         unorderedMultiset.insert({(char)value});
 
         state.PauseTiming();
@@ -130,8 +127,8 @@ void UnorderedMultisetErase(State& state)
 
     for( auto _ : state )
     {
+        auto value = rand() % size;
         state.PauseTiming();
-            auto value = rand() % size;
             unorderedMultiset.insert({(char)value});
         state.ResumeTiming();
 
@@ -175,18 +172,18 @@ void UnorderedMultisetCount(State& state)
     auto N = state.range(0);
     auto size = (std::size_t)N;
 
-    std::unordered_multiset<Small> unorderedMultiset{};
-    unorderedMultiset.reserve(size);
-    for(auto i = 0; i<size; i++)
-    {
-        unorderedMultiset.insert({(char)i});
-    }
-
     for( auto _ : state )
     {
+        auto value = rand() % size;
         state.PauseTiming();
-            auto value = rand() % size;
+            std::unordered_multiset<Small> unorderedMultiset{};
+            unorderedMultiset.reserve(size);
+            for(auto i = 0; i<size; i++)
+            {
+                unorderedMultiset.insert({(char)i});
+            }
         state.ResumeTiming();
+
         unorderedMultiset.count({(char)value});
     }
     state.SetComplexityN(N);
@@ -208,10 +205,7 @@ void UnorderedMultisetFind(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
-            auto value = rand() % size;
-        state.ResumeTiming();
-
+        auto value = rand() % size;
         unorderedMultiset.find({(char)value});
     }
     state.SetComplexityN(N);

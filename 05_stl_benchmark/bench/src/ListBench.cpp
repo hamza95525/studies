@@ -14,7 +14,7 @@ void ListFront(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state){
@@ -33,7 +33,7 @@ void ListBack(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
@@ -53,7 +53,7 @@ void ListEmpty(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state)
@@ -73,7 +73,7 @@ void ListSize(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state)
@@ -93,7 +93,7 @@ void ListMaxSize(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
@@ -117,7 +117,7 @@ void ListClear(State& state)
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list.push_back( {(char)value});
+                list.push_back( {{(char)value}});
             }
         state.ResumeTiming();
 
@@ -136,15 +136,12 @@ void ListInsert(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
-
     for( auto _ : state )
     {
-        state.PauseTiming();
-            auto iter = list.begin();
-            auto value = rand() % size;
-        state.ResumeTiming();
+        auto iter = list.begin();
+        auto value = rand() % size;
 
         list.insert(iter++, {(char)value});
 
@@ -166,19 +163,19 @@ void ListErase(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
     {
-        state.PauseTiming();
-            auto value = rand() % size;
-            auto iter = list.begin();
-            list.insert(iter,{(char)value}); //inserting element to have sth to erase, without that benchmark aborts due to, invalid pointer
-            iter++;
-        state.ResumeTiming();
+        auto value = rand() % size;
+        auto iter = list.begin();
 
+        state.PauseTiming();
+            list.insert(iter,{(char)value}); //inserting element to have sth to erase, without that benchmark aborts due to, invalid pointer
+        state.ResumeTiming();
         list.erase(iter);
+        iter++;
     }
     state.SetComplexityN(N);
 }
@@ -192,13 +189,13 @@ void ListPushBack(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_front( {(char)value});
+        list.push_front( {{(char)value}});
     }
 
     for( auto _ : state )
     {
+        auto value = rand() % size;
         state.PauseTiming();
-            auto value = rand() % size;
             list.pop_back();
         state.ResumeTiming();
 
@@ -217,14 +214,14 @@ void ListPopBack(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_front( {(char)value});
+        list.push_front( {{(char)value}});
     }
 
     for( auto _ : state )
     {
+        auto value = rand() % size;
         state.PauseTiming();
-            auto value = rand() % size;
-            list.push_back({(char)value});
+            list.push_back({{(char)value}});
         state.ResumeTiming();
 
         list.pop_back();
@@ -242,13 +239,13 @@ void ListPushFront(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
     {
+        auto value = rand() % size;
         state.PauseTiming();
-            auto value = rand() % size;
             list.pop_front();
         state.ResumeTiming();
 
@@ -269,17 +266,17 @@ void ListPopFront(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
     {
+        auto value = rand() % size;
         state.PauseTiming();
-            auto value = rand() % size;
             list.pop_front();
         state.ResumeTiming();
 
-        list.push_front({(char)value});
+        list.push_front({{(char)value}});
     }
     state.SetComplexityN(N);
 }
@@ -294,14 +291,12 @@ void ListResize(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
     {
-        state.PauseTiming();
-            auto value = rand() % size;
-        state.ResumeTiming();
+        auto value = rand() % size;
         list.resize(value);
     }
     state.SetComplexityN(N);
@@ -314,7 +309,17 @@ void ListSwap(State& state)
     auto size = (std::size_t)N;
     //creating two different lists with different elements, to swap later one list with another
     std::list<Small> list_1(size);
+    for(auto i = 0; i<size; i++)
+    {
+        auto value = rand()%size;
+        list_1.push_back( {{(char)value}});
+    }
     std::list<Small> list_2(size);
+    for(auto i = 0; i<size; i++)
+    {
+        auto value = rand()%size;
+        list_2.push_back( {{(char)value}});
+    }
 
     for( auto _ : state )
     {
@@ -336,13 +341,13 @@ void ListMerge(State& state)
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list_1.push_back( {(char)value});
+                list_1.push_back( {{(char)value}});
             }
             std::list<Small> list_2(size);
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list_2.push_back( {(char)value});
+                list_2.push_back( {{(char)value}});
             }
         state.ResumeTiming();
 
@@ -364,13 +369,13 @@ void ListSplice(State& state)
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list_1.push_back( {(char)value});
+                list_1.push_back( {{(char)value}});
             }
             std::list<Small> list_2(size);
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list_2.push_back( {(char)value});
+                list_2.push_back( {{(char)value}});
             }
         state.ResumeTiming();
 
@@ -384,20 +389,26 @@ void ListRemove(State& state)
 {
     auto N= state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
+   /* std::list<Small> list(size);
 
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
         list.push_back( {(char)value});
-    }
+    }*/
 
     for( auto _ : state )
     {
-        state.PauseTiming();
-            auto value = rand() % size;
-        state.ResumeTiming();
+        //state.PauseTiming();
+        std::list<Small> list(size);
 
+        for(auto i = 0; i<size; i++)
+        {
+            auto value = rand()%size;
+            list.push_back( {{(char)value}});
+        }
+        //state.ResumeTiming();
+        auto value = rand() % size;
         list.remove({(char)value});
     }
     state.SetComplexityN(N);
@@ -413,7 +424,7 @@ void ListRemoveIf(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
@@ -437,7 +448,7 @@ void ListReverse(State& state)
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list.push_back( {(char)value});
+                list.push_back( {{(char)value}});
             }
 
         state.ResumeTiming();
@@ -457,7 +468,7 @@ void ListUnique(State& state)
     for(auto i = 0; i<size; i++)
     {
         auto value = rand()%size;
-        list.push_back( {(char)value});
+        list.push_back( {{(char)value}});
     }
 
     for( auto _ : state )
@@ -471,18 +482,16 @@ BENCHMARK(ListUnique)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
 void ListSort(State& state)
 {
     auto N = state.range(0);
-    //std::list<Small> list{{1}, {2}, {1}, {3}, {11}, {4}}; //more elements takes more time to sort
     auto size = (std::size_t)N;
 
     for( auto _ : state )
     {
         state.PauseTiming();
             std::list<Small> list(size);
-
             for(auto i = 0; i<size; i++)
             {
                 auto value = rand()%size;
-                list.push_back( {(char)value});
+                list.push_back( {{(char)value}});
             }
         state.ResumeTiming();
         list.sort();
