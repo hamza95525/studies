@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(06_observer_pattern)
 
 set(HEADERS include/Dummy.h)
-set(SOURCES src/Dummy.cpp include/Obsevable.h include/Observer.h include/Displacement.h include/Acceleration.h include/Speed.h)
+set(SOURCES src/Dummy.cpp include/Obsevable.h include/Observer.h include/Displacement.h include/Acceleration.h include/Speed.h src/Observable.cpp src/Displacement.cpp src/Acceleration.cpp src/Speed.cpp)
 
 add_library(06_observer_pattern_lib ${HEADERS} ${SOURCES})
 target_include_directories(06_observer_pattern_lib PUBLIC include)

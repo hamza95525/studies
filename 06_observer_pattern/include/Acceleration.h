@@ -13,7 +13,7 @@ private:
     float firstValue;
     float secondValue;
     float thirdValue;
-
 public:
+    void notify(float d) override;
     float get();
 };

@@ -3,8 +3,9 @@
 //
 #pragma once
 #include "Observer.h"
+#include <set>
 
-class Observable : public Observer
+class Observable
 {
 private:
     std::set<Observer*> observers;

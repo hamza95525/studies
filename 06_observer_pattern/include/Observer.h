@@ -3,5 +3,6 @@
 //
 #pragma once
 class Observer{
+public:
     virtual void notify(float) = 0;
 };

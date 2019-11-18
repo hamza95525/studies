@@ -13,4 +13,6 @@ private:
     float secondValue;
 public:
     float get();
+    void notify(float d) override;
 };
+
