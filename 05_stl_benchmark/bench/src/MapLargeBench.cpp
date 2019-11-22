@@ -30,7 +30,7 @@ void MapLargeAt(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapLargeAt)->RangeMultiplier(2)->Range(1, 2<<13)->Complexity();
+BENCHMARK(MapLargeAt)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
 
 void MapLargeOperator(State& state)
 {
@@ -54,7 +54,7 @@ void MapLargeOperator(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapLargeOperator)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity(); //int przyjmuje tylko 256
+BENCHMARK(MapLargeOperator)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity(); //int przyjmuje tylko 256
 
 void MapLargeEmpty(State& state)
 {
@@ -143,7 +143,7 @@ void MapLargeClear(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapLargeClear)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(MapLargeClear)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void MapLargeInsert(State& state)
 {

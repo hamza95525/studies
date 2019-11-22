@@ -126,17 +126,18 @@ void ListLargeErase(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         m.randomize();
         auto iter = list.begin();
         list.insert(iter,m); //inserting element to have sth to erase, without that benchmark aborts due to, invalid pointer
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list.erase(iter));
+        ClobberMemory();
         iter++;
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeErase)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(ListLargeErase)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void ListLargePushBack(State& state)
 {
@@ -157,7 +158,7 @@ void ListLargePushBack(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargePushBack)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(ListLargePushBack)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void ListLargePopBack(State& state)
 {
@@ -168,17 +169,17 @@ void ListLargePopBack(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         m.randomize();
         list.push_back(m);
-        state.ResumeTiming();
+        //state.ResumeTiming();
 
         list.pop_back();
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargePopBack)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(ListLargePopBack)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void ListLargePushFront(State& state)
 {
@@ -189,10 +190,10 @@ void ListLargePushFront(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         m.randomize();
         list.pop_front();
-        state.ResumeTiming();
+        //state.ResumeTiming();
 
         list.push_front(m);
         ClobberMemory();
@@ -200,7 +201,7 @@ void ListLargePushFront(State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargePushFront)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(ListLargePushFront)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void ListLargePopFront(State& state)
 {
@@ -212,17 +213,17 @@ void ListLargePopFront(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         auto value = rand() % size;
         list.push_front(m);
-        state.ResumeTiming();
+        //state.ResumeTiming();
 
         list.pop_front();
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargePopFront)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(ListLargePopFront)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void ListLargeResize(State& state)
 {
@@ -231,11 +232,11 @@ void ListLargeResize(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         auto value = rand() % size;
         std::list<Large> list(size);
 
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list);
 
         list.resize(value);
@@ -243,7 +244,7 @@ void ListLargeResize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeResize)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
+BENCHMARK(ListLargeResize)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
 
 void ListLargeSwap(State& state)
 {
@@ -301,7 +302,7 @@ void ListLargeMerge(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeMerge)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity();
+BENCHMARK(ListLargeMerge)->RangeMultiplier(2)->Range(1, 2<<2)->Complexity();
 
 void ListLargeSplice(State& state)
 {
@@ -318,7 +319,7 @@ void ListLargeSplice(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         list_1.clear();
         std::list<Large> list_2{};
         for(auto i = 0; i<size; i++)
@@ -326,7 +327,7 @@ void ListLargeSplice(State& state)
             m.randomize();
             list_2.push_back( m);
         }
-        state.ResumeTiming();
+        //state.ResumeTiming();
 
         DoNotOptimize(list_1); DoNotOptimize(list_2);
         list_1.splice(list_1.begin(), list_2);
@@ -334,7 +335,7 @@ void ListLargeSplice(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeSplice)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(ListLargeSplice)->RangeMultiplier(2)->Range(1, 2<<2)->Complexity();
 
 void ListLargeRemove(State& state)
 {
@@ -344,7 +345,7 @@ void ListLargeRemove(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         std::list<Large> list{};
 
         for(auto i = 0; i<size; i++)
@@ -352,14 +353,14 @@ void ListLargeRemove(State& state)
             m.randomize();
             list.push_back( m);
         }
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list);
         list.remove(m);
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeRemove)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
+BENCHMARK(ListLargeRemove)->RangeMultiplier(2)->Range(1, 2<<2)->Complexity();
 
 void ListLargeRemoveIf(State& state)
 {
@@ -369,7 +370,7 @@ void ListLargeRemoveIf(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         std::list<Large> list{};
 
         for(auto i = 0; i<size; i++)
@@ -377,14 +378,14 @@ void ListLargeRemoveIf(State& state)
             m.randomize();
             list.push_back( m);
         }
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list);
         list.remove_if([](Large d){ auto value = rand() % 256; return d.data[0] > value;});
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeRemoveIf)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
+BENCHMARK(ListLargeRemoveIf)->RangeMultiplier(2)->Range(1, 2<<2)->Complexity();
 
 void ListLargeReverse(State& state)
 {
@@ -394,7 +395,7 @@ void ListLargeReverse(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         std::list<Large> list{};
 
         for(auto i = 0; i<size; i++)
@@ -403,14 +404,14 @@ void ListLargeReverse(State& state)
             list.push_back( m);
         }
 
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list);
         list.reverse();
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeReverse)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
+BENCHMARK(ListLargeReverse)->RangeMultiplier(2)->Range(1, 2<<2)->Complexity();
 
 void ListLargeUnique(State& state)
 {
@@ -421,7 +422,7 @@ void ListLargeUnique(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         std::list<Large> list{};
 
         for(auto i = 0; i<size; i++)
@@ -429,14 +430,14 @@ void ListLargeUnique(State& state)
             m.randomize();
             list.push_back( m);
         }
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list);
         list.unique();
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeUnique)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity(); //liniowa, ale splycone do stalej
+BENCHMARK(ListLargeUnique)->RangeMultiplier(2)->Range(1, 2<<2)->Complexity(); //liniowa, ale splycone do stalej
 
 void ListLargeSort(State& state)
 {
@@ -446,18 +447,18 @@ void ListLargeSort(State& state)
 
     for( auto _ : state )
     {
-        state.PauseTiming();
+        //state.PauseTiming();
         std::list<Large> list{};
         for(auto i = 0; i<size; i++)
         {
             m.randomize();
             list.push_back( m);
         }
-        state.ResumeTiming();
+        //state.ResumeTiming();
         DoNotOptimize(list);
         list.sort();
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListLargeSort)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ListLargeSort)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();

@@ -1,0 +1,3 @@
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/rebuild_cache.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/05_stl_benchmark_bench.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/edit_cache.dir

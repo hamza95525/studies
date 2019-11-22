@@ -18,7 +18,7 @@ void UnorderedMediumMultisetEmpty(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetEmpty)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetEmpty)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetSize(State& state)
 {
@@ -33,7 +33,7 @@ void UnorderedMediumMultisetSize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetSize)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetMaxSize(State& state)
 {
@@ -48,7 +48,7 @@ void UnorderedMediumMultisetMaxSize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetMaxSize)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetMaxSize)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetClear(State& state)
 {
@@ -74,7 +74,7 @@ void UnorderedMediumMultisetClear(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetClear)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetClear)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetInsert(State& state)
 {
@@ -98,7 +98,7 @@ void UnorderedMediumMultisetInsert(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetInsert)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetInsert)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetErase(State& state)
 {
@@ -122,7 +122,7 @@ void UnorderedMediumMultisetErase(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetErase)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetErase)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetSwap(State& state)
 {
@@ -151,7 +151,7 @@ void UnorderedMediumMultisetSwap(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetSwap)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetSwap)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetCount(State& state)
 {
@@ -175,7 +175,7 @@ void UnorderedMediumMultisetCount(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetCount)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetCount)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetFind(State& state)
 {
@@ -194,7 +194,7 @@ void UnorderedMediumMultisetFind(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetFind)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(UnorderedMediumMultisetFind)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
 void UnorderedMediumMultisetEqualRange(State& state)
 {
@@ -237,7 +237,7 @@ void UnorderedMediumMultisetRehash(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetRehash)->RangeMultiplier(2)->Range(1, 2<<11)->Complexity();//patrzac na wyniki widac ze zlozonosc jest liniowa ale wynik jest "splycany" do stalego
+BENCHMARK(UnorderedMediumMultisetRehash)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();//patrzac na wyniki widac ze zlozonosc jest liniowa ale wynik jest "splycany" do stalego
 
 void UnorderedMediumMultisetReserve(State& state)
 {
@@ -261,4 +261,4 @@ void UnorderedMediumMultisetReserve(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMediumMultisetReserve)->RangeMultiplier(2)->Range(1, 2<<11)->Complexity(); //patrzac na wyniki widac ze zlozonosc jest liniowa ale wynik jest "splycany" do stalego
+BENCHMARK(UnorderedMediumMultisetReserve)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity(); //patrzac na wyniki widac ze zlozonosc jest liniowa ale wynik jest "splycany" do stalego

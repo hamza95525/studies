@@ -90,7 +90,7 @@ void ListMediumClear(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumClear)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity(); //zgodnie z wynikami widac ze liniowe ale splyca do stalej
+BENCHMARK(ListMediumClear)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity(); //zgodnie z wynikami widac ze liniowe ale splyca do stalej
 
 void ListMediumInsert(State& state)
 {
@@ -243,7 +243,7 @@ void ListMediumResize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumResize)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
+BENCHMARK(ListMediumResize)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
 
 void ListMediumSwap(State& state)
 {
@@ -334,7 +334,7 @@ void ListMediumSplice(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumSplice)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
+BENCHMARK(ListMediumSplice)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity(); //wiecej po prostu za dlugo sie robi
 
 void ListMediumRemove(State& state)
 {
@@ -360,8 +360,8 @@ void ListMediumRemove(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumRemove)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
-
+BENCHMARK(ListMediumRemove)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity();
+//WIDAC ZE WYNIKI TYCH BENCHY SA LINIOWE, ALE SA SPLYCANE DO CONST ORAZ LGN
 void ListMediumRemoveIf(State& state)
 {
     auto N = state.range(0);
@@ -385,7 +385,7 @@ void ListMediumRemoveIf(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumRemoveIf)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
+BENCHMARK(ListMediumRemoveIf)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity();
 
 void ListMediumReverse(State& state)
 {
@@ -411,7 +411,7 @@ void ListMediumReverse(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumReverse)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
+BENCHMARK(ListMediumReverse)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity();
 
 void ListMediumUnique(State& state)
 {
@@ -437,7 +437,7 @@ void ListMediumUnique(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumUnique)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity(); //liniowa, ale splycone do stalej
+BENCHMARK(ListMediumUnique)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity(); //liniowa, ale splycone do stalej
 
 void ListMediumSort(State& state)
 {
@@ -461,4 +461,4 @@ void ListMediumSort(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListMediumSort)->RangeMultiplier(2)->Range(1, 1024)->Complexity();
+BENCHMARK(ListMediumSort)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();

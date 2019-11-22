@@ -1,0 +1,473 @@
+------------------------------------------------------------------
+Benchmark                        Time             CPU   Iterations
+------------------------------------------------------------------
+MapSmallAt/1                  81.4 ns         81.4 ns      8406344
+MapSmallAt/2                  81.4 ns         81.4 ns      8651124
+MapSmallAt/4                  81.1 ns         81.1 ns      8630426
+MapSmallAt/8                  81.4 ns         81.4 ns      8620626
+MapSmallAt/16                 81.4 ns         81.4 ns      8633151
+MapSmallAt/32                 81.4 ns         81.4 ns      8400655
+MapSmallAt/64                 81.4 ns         81.4 ns      8644342
+MapSmallAt/128                81.2 ns         81.2 ns      8610427
+MapSmallAt/256                81.3 ns         81.3 ns      8634308
+MapSmallAt/512                81.2 ns         81.2 ns      8635772
+MapSmallAt/1024               81.1 ns         81.1 ns      8611823
+MapSmallAt/2048               81.3 ns         81.2 ns      8635079
+MapSmallAt/4096               81.1 ns         81.1 ns      8592380
+MapSmallAt/8192               81.3 ns         81.3 ns      8644118
+MapSmallAt/16384              81.2 ns         81.2 ns      8635581
+MapSmallAt_BigO              81.27 (1)       81.26 (1)  
+MapSmallAt_RMS                   0 %             0 %    
+MapSmallOperator/1             368 ns          368 ns      1891659
+MapSmallOperator/2             369 ns          369 ns      1896092
+MapSmallOperator/4             369 ns          369 ns      1895613
+MapSmallOperator/8             369 ns          369 ns      1899330
+MapSmallOperator/16            369 ns          369 ns      1898005
+MapSmallOperator/32            369 ns          369 ns      1896662
+MapSmallOperator/64            370 ns          370 ns      1897320
+MapSmallOperator/128           370 ns          370 ns      1894444
+MapSmallOperator/256           369 ns          369 ns      1898209
+MapSmallOperator_BigO       369.05 (1)      369.01 (1)  
+MapSmallOperator_RMS             0 %             0 %    
+MapSmallEmpty/1               5.01 ns         5.01 ns    140066074
+MapSmallEmpty/2               4.98 ns         4.98 ns    140129976
+MapSmallEmpty/4               4.99 ns         4.99 ns    140629989
+MapSmallEmpty/8               4.99 ns         4.99 ns    140168026
+MapSmallEmpty/16              5.00 ns         5.00 ns    140187406
+MapSmallEmpty/32              4.99 ns         4.99 ns    140574187
+MapSmallEmpty/64              4.98 ns         4.98 ns    140319946
+MapSmallEmpty/128             4.98 ns         4.98 ns    140742524
+MapSmallEmpty/256             4.98 ns         4.98 ns    140376562
+MapSmallEmpty/512             4.98 ns         4.98 ns    140255875
+MapSmallEmpty/1024            4.99 ns         4.99 ns    140342134
+MapSmallEmpty_BigO            4.99 (1)        4.99 (1)  
+MapSmallEmpty_RMS                0 %             0 %    
+MapSmallSize/1                4.95 ns         4.95 ns    141933479
+MapSmallSize/2                4.94 ns         4.94 ns    141827895
+MapSmallSize/4                4.92 ns         4.92 ns    142485014
+MapSmallSize/8                4.92 ns         4.92 ns    142269891
+MapSmallSize/16               4.92 ns         4.92 ns    142382676
+MapSmallSize/32               4.92 ns         4.92 ns    142678052
+MapSmallSize/64               4.91 ns         4.91 ns    142453196
+MapSmallSize/128              4.94 ns         4.94 ns    141329734
+MapSmallSize/256              4.95 ns         4.95 ns    141565521
+MapSmallSize/512              4.91 ns         4.91 ns    141759302
+MapSmallSize/1024             4.94 ns         4.94 ns    141848093
+MapSmallSize_BigO             4.93 (1)        4.93 (1)  
+MapSmallSize_RMS                 0 %             0 %    
+MapSmallMaxSize/1             11.3 ns         11.3 ns     61295159
+MapSmallMaxSize/2             11.3 ns         11.3 ns     61761672
+MapSmallMaxSize/4             11.3 ns         11.3 ns     61953795
+MapSmallMaxSize/8             11.3 ns         11.3 ns     61997216
+MapSmallMaxSize/16            11.3 ns         11.3 ns     61988783
+MapSmallMaxSize/32            11.3 ns         11.3 ns     61939824
+MapSmallMaxSize/64            11.3 ns         11.3 ns     62371689
+MapSmallMaxSize/128           11.4 ns         11.4 ns     61366945
+MapSmallMaxSize/256           11.4 ns         11.4 ns     61725226
+MapSmallMaxSize/512           11.3 ns         11.3 ns     61667984
+MapSmallMaxSize/1024          11.3 ns         11.3 ns     61737147
+MapSmallMaxSize_BigO         11.33 (1)       11.32 (1)  
+MapSmallMaxSize_RMS              0 %             0 %    
+MapSmallClear/1                286 ns          286 ns      2446122
+MapSmallClear/2                587 ns          587 ns      1195757
+MapSmallClear/4               1300 ns         1300 ns       539976
+MapSmallClear/8               2991 ns         2991 ns       234444
+MapSmallClear/16              6580 ns         6579 ns       106463
+MapSmallClear/32             14164 ns        14163 ns        49572
+MapSmallClear/64             29863 ns        29862 ns        23471
+MapSmallClear/128            61730 ns        61727 ns        11365
+MapSmallClear/256           124012 ns       124002 ns         5628
+MapSmallClear/512           241014 ns       240998 ns         2902
+MapSmallClear/1024          460876 ns       460826 ns         1518
+MapSmallClear_BigO          455.97 N        455.92 N    
+MapSmallClear_RMS                4 %             4 %    
+MapSmallInsert/1               837 ns          838 ns       839150
+MapSmallInsert/2               836 ns          837 ns       836724
+MapSmallInsert/4               836 ns          836 ns       837689
+MapSmallInsert/8               837 ns          838 ns       829036
+MapSmallInsert/16              837 ns          838 ns       837908
+MapSmallInsert/32              837 ns          838 ns       836138
+MapSmallInsert/64              837 ns          838 ns       835375
+MapSmallInsert/128             837 ns          838 ns       832986
+MapSmallInsert/256             836 ns          837 ns       836073
+MapSmallInsert/512             836 ns          837 ns       835865
+MapSmallInsert/1024            838 ns          839 ns       834353
+MapSmallInsert_BigO         836.81 (1)      837.56 (1)  
+MapSmallInsert_RMS               0 %             0 %    
+MapSmallErase/1                118 ns          118 ns      5936197
+MapSmallErase/2                118 ns          118 ns      5949590
+MapSmallErase/4                118 ns          118 ns      5957723
+MapSmallErase/8                118 ns          118 ns      5934093
+MapSmallErase/16               120 ns          120 ns      5961510
+MapSmallErase/32               118 ns          118 ns      5958091
+MapSmallErase/64               118 ns          118 ns      5861878
+MapSmallErase/128              118 ns          118 ns      5953473
+MapSmallErase/256              118 ns          118 ns      5921611
+MapSmallErase/512              118 ns          118 ns      5930537
+MapSmallErase/1024             118 ns          118 ns      5951588
+MapSmallErase_BigO          118.12 (1)      118.10 (1)  
+MapSmallErase_RMS                0 %             0 %    
+MapSmallSwap/1                81.9 ns         81.9 ns      8526967
+MapSmallSwap/2                82.0 ns         82.0 ns      8560448
+MapSmallSwap/4                81.9 ns         81.9 ns      8536923
+MapSmallSwap/8                82.0 ns         82.0 ns      8574385
+MapSmallSwap/16               81.9 ns         81.9 ns      8573491
+MapSmallSwap/32               81.9 ns         81.9 ns      8534038
+MapSmallSwap/64               81.8 ns         81.8 ns      8580874
+MapSmallSwap/128              82.0 ns         82.0 ns      8522362
+MapSmallSwap/256              81.9 ns         81.9 ns      8517922
+MapSmallSwap/512              81.8 ns         81.8 ns      8543689
+MapSmallSwap/1024             81.8 ns         81.8 ns      8567688
+MapSmallSwap_BigO            81.91 (1)       81.90 (1)  
+MapSmallSwap_RMS                 0 %             0 %    
+MapSmallCount/1                129 ns          129 ns      5760194
+MapSmallCount/2                159 ns          159 ns      4536736
+MapSmallCount/4                180 ns          180 ns      4328090
+MapSmallCount/8                203 ns          203 ns      3703909
+MapSmallCount/16               220 ns          220 ns      3058654
+MapSmallCount/32               260 ns          260 ns      2752198
+MapSmallCount/64               295 ns          295 ns      2374203
+MapSmallCount/128              335 ns          334 ns      2120947
+MapSmallCount/256              350 ns          350 ns      2001292
+MapSmallCount/512              395 ns          395 ns      1926934
+MapSmallCount/1024             383 ns          383 ns      1546236
+MapSmallCount_BigO           45.74 lgN       45.74 lgN  
+MapSmallCount_RMS               26 %            26 %    
+MapSmallFind/1                 126 ns          126 ns      5996174
+MapSmallFind/2                 147 ns          147 ns      4751645
+MapSmallFind/4                 165 ns          165 ns      4304297
+MapSmallFind/8                 188 ns          188 ns      3721829
+MapSmallFind/16                220 ns          220 ns      3203831
+MapSmallFind/32                248 ns          248 ns      2797012
+MapSmallFind/64                284 ns          284 ns      2468560
+MapSmallFind/128               318 ns          318 ns      2256452
+MapSmallFind/256               340 ns          340 ns      2057545
+MapSmallFind/512               352 ns          352 ns      1995648
+MapSmallFind/1024              355 ns          355 ns      1967829
+MapSmallFind_BigO            42.93 lgN       42.93 lgN  
+MapSmallFind_RMS                26 %            26 %    
+MapSmallEqualRange/1           106 ns          106 ns      6083744
+MapSmallEqualRange/2           135 ns          135 ns      5759188
+MapSmallEqualRange/4           163 ns          163 ns      4000048
+MapSmallEqualRange/8           183 ns          183 ns      3537649
+MapSmallEqualRange/16          242 ns          242 ns      2881405
+MapSmallEqualRange/32          278 ns          278 ns      2496494
+MapSmallEqualRange/64          330 ns          330 ns      2164289
+MapSmallEqualRange/128         366 ns          366 ns      1880371
+MapSmallEqualRange/256         409 ns          409 ns      1695929
+MapSmallEqualRange/512         436 ns          436 ns      1614740
+MapSmallEqualRange/1024        444 ns          444 ns      1573724
+MapSmallEqualRange_BigO      50.75 lgN       50.75 lgN  
+MapSmallEqualRange_RMS          19 %            19 %    
+MapSmallLowerBound/1          96.0 ns         96.0 ns      7537099
+MapSmallLowerBound/2           114 ns          114 ns      5853280
+MapSmallLowerBound/4           137 ns          137 ns      4990330
+MapSmallLowerBound/8           154 ns          154 ns      4116209
+MapSmallLowerBound/16          177 ns          177 ns      3976234
+MapSmallLowerBound/32          206 ns          206 ns      3454754
+MapSmallLowerBound/64          250 ns          250 ns      2783240
+MapSmallLowerBound/128         274 ns          274 ns      2509579
+MapSmallLowerBound/256         304 ns          304 ns      2299653
+MapSmallLowerBound/512         320 ns          320 ns      2195718
+MapSmallLowerBound/1024        325 ns          325 ns      2147729
+MapSmallLowerBound_BigO      37.87 lgN       37.87 lgN  
+MapSmallLowerBound_RMS          22 %            22 %    
+MapSmallUpperBound/1           100 ns          100 ns      7321964
+MapSmallUpperBound/2           118 ns          118 ns      6045584
+MapSmallUpperBound/4           119 ns          119 ns      5593668
+MapSmallUpperBound/8           155 ns          155 ns      4341555
+MapSmallUpperBound/16          184 ns          184 ns      3898620
+MapSmallUpperBound/32          215 ns          215 ns      3209898
+MapSmallUpperBound/64          242 ns          242 ns      2862048
+MapSmallUpperBound/128         283 ns          283 ns      2518608
+MapSmallUpperBound/256         303 ns          303 ns      2295994
+MapSmallUpperBound/512         320 ns          320 ns      2197066
+MapSmallUpperBound/1024        326 ns          326 ns      2148167
+MapSmallUpperBound_BigO      37.99 lgN       37.99 lgN  
+MapSmallUpperBound_RMS          22 %            22 %    
+MapMediumAt/1                20362 ns        20362 ns        34342
+MapMediumAt/2                20363 ns        20363 ns        34356
+MapMediumAt/4                20376 ns        20376 ns        34374
+MapMediumAt/8                20392 ns        20392 ns        34399
+MapMediumAt/16               20375 ns        20374 ns        34365
+MapMediumAt/32               20399 ns        20398 ns        34340
+MapMediumAt/64               20380 ns        20380 ns        34340
+MapMediumAt/128              20384 ns        20384 ns        34302
+MapMediumAt/256              20384 ns        20384 ns        34365
+MapMediumAt/512              20383 ns        20382 ns        34296
+MapMediumAt/1024             20369 ns        20369 ns        34342
+MapMediumAt/2048             20379 ns        20379 ns        34374
+MapMediumAt/4096             20383 ns        20382 ns        34374
+MapMediumAt/8192             20393 ns        20392 ns        34354
+MapMediumAt/16384            20407 ns        20406 ns        34339
+MapMediumAt_BigO          20381.99 (1)    20381.51 (1)  
+MapMediumAt_RMS                  0 %             0 %    
+MapMediumOperator/1          20392 ns        20391 ns        34356
+MapMediumOperator/2          20367 ns        20367 ns        34368
+MapMediumOperator/4          20374 ns        20374 ns        34292
+MapMediumOperator/8          20363 ns        20362 ns        34405
+MapMediumOperator/16         20360 ns        20360 ns        34376
+MapMediumOperator/32         20362 ns        20361 ns        34386
+MapMediumOperator/64         20346 ns        20345 ns        34360
+MapMediumOperator/128        20396 ns        20395 ns        34361
+MapMediumOperator/256        20355 ns        20355 ns        34390
+MapMediumOperator_BigO    20368.21 (1)    20367.73 (1)  
+MapMediumOperator_RMS            0 %             0 %    
+MapMediumEmpty/1              4.98 ns         4.98 ns    140563739
+MapMediumEmpty/2              4.98 ns         4.98 ns    140521051
+MapMediumEmpty/4              4.98 ns         4.98 ns    140215367
+MapMediumEmpty/8              4.98 ns         4.98 ns    140426174
+MapMediumEmpty/16             4.98 ns         4.98 ns    140448620
+MapMediumEmpty/32             4.98 ns         4.98 ns    140453187
+MapMediumEmpty/64             4.98 ns         4.98 ns    140464516
+MapMediumEmpty/128            4.99 ns         4.99 ns    140430075
+MapMediumEmpty/256            4.99 ns         4.99 ns    140326984
+MapMediumEmpty_BigO           4.98 (1)        4.98 (1)  
+MapMediumEmpty_RMS               0 %             0 %    
+MapMediumSize/1               4.96 ns         4.96 ns    140740611
+MapMediumSize/2               4.96 ns         4.96 ns    140695836
+MapMediumSize/4               4.97 ns         4.97 ns    141023451
+MapMediumSize/8               4.97 ns         4.97 ns    139205975
+MapMediumSize/16              4.96 ns         4.96 ns    139608710
+MapMediumSize/32              4.97 ns         4.97 ns    139931775
+MapMediumSize/64              4.97 ns         4.97 ns    140868614
+MapMediumSize/128             4.97 ns         4.97 ns    139128784
+MapMediumSize/256             4.97 ns         4.97 ns    141027518
+MapMediumSize_BigO            4.97 (1)        4.97 (1)  
+MapMediumSize_RMS                0 %             0 %    
+MapMediumMaxSize/1            11.3 ns         11.3 ns     61381642
+MapMediumMaxSize/2            11.3 ns         11.3 ns     61501753
+MapMediumMaxSize/4            11.3 ns         11.3 ns     61837650
+MapMediumMaxSize/8            11.3 ns         11.3 ns     62007244
+MapMediumMaxSize/16           11.3 ns         11.3 ns     62065217
+MapMediumMaxSize/32           11.3 ns         11.3 ns     61980665
+MapMediumMaxSize/64           11.3 ns         11.3 ns     61345480
+MapMediumMaxSize/128          11.3 ns         11.3 ns     61898601
+MapMediumMaxSize/256          11.3 ns         11.3 ns     61624234
+MapMediumMaxSize_BigO        11.32 (1)       11.32 (1)  
+MapMediumMaxSize_RMS             0 %             0 %    
+MapMediumClear/1             20660 ns        20659 ns        33941
+MapMediumClear/2             41113 ns        41112 ns        17022
+MapMediumClear/4             82035 ns        82033 ns         8544
+MapMediumClear/8            163751 ns       163747 ns         4277
+MapMediumClear/16           327184 ns       327178 ns         2140
+MapMediumClear/32           654208 ns       654195 ns         1071
+MapMediumClear/64          1308413 ns      1308383 ns          536
+MapMediumClear_BigO       20444.80 N      20444.35 N    
+MapMediumClear_RMS               0 %             0 %    
+MapMediumInsert/1            21174 ns        21175 ns        32980
+MapMediumInsert/2            21152 ns        21154 ns        33099
+MapMediumInsert/4            21161 ns        21162 ns        33090
+MapMediumInsert/8            21160 ns        21161 ns        33118
+MapMediumInsert/16           21158 ns        21159 ns        33117
+MapMediumInsert/32           21143 ns        21144 ns        32960
+MapMediumInsert/64           21147 ns        21149 ns        33104
+MapMediumInsert/128          21180 ns        21182 ns        33043
+MapMediumInsert/256          21173 ns        21175 ns        33111
+MapMediumInsert_BigO      21160.76 (1)    21162.25 (1)  
+MapMediumInsert_RMS              0 %             0 %    
+MapMediumErase/1             20355 ns        20355 ns        34436
+MapMediumErase/2             20356 ns        20356 ns        34314
+MapMediumErase/4             20349 ns        20348 ns        34408
+MapMediumErase/8             20354 ns        20354 ns        34424
+MapMediumErase/16            20369 ns        20368 ns        34305
+MapMediumErase/32            20370 ns        20370 ns        34387
+MapMediumErase/64            20371 ns        20371 ns        34445
+MapMediumErase/128           20347 ns        20346 ns        34383
+MapMediumErase/256           20352 ns        20351 ns        34399
+MapMediumErase_BigO       20358.15 (1)    20357.65 (1)  
+MapMediumErase_RMS               0 %             0 %    
+MapMediumSwap/1               81.0 ns         81.0 ns      8643486
+MapMediumSwap/2               81.0 ns         81.0 ns      8636484
+MapMediumSwap/4               81.0 ns         81.0 ns      8637465
+MapMediumSwap/8               81.0 ns         81.0 ns      8649114
+MapMediumSwap/16              81.0 ns         81.0 ns      8640906
+MapMediumSwap/32              81.0 ns         81.0 ns      8647907
+MapMediumSwap/64              80.9 ns         80.9 ns      8641579
+MapMediumSwap/128             81.0 ns         81.0 ns      8642333
+MapMediumSwap/256             81.0 ns         80.9 ns      8648908
+MapMediumSwap_BigO           80.99 (1)       80.99 (1)  
+MapMediumSwap_RMS                0 %             0 %    
+MapMediumCount/1             20381 ns        20381 ns        34254
+MapMediumCount/2             20373 ns        20372 ns        34378
+MapMediumCount/4             20377 ns        20377 ns        34359
+MapMediumCount/8             20392 ns        20392 ns        34226
+MapMediumCount/16            20374 ns        20374 ns        33848
+MapMediumCount/32            20383 ns        20382 ns        34397
+MapMediumCount/64            20385 ns        20385 ns        34430
+MapMediumCount/128           20377 ns        20377 ns        34378
+MapMediumCount/256           20386 ns        20385 ns        34393
+MapMediumCount_BigO       20380.89 (1)    20380.48 (1)  
+MapMediumCount_RMS               0 %             0 %    
+MapMediumFind/1              20356 ns        20356 ns        34379
+MapMediumFind/2              20382 ns        20382 ns        34390
+MapMediumFind/4              20366 ns        20366 ns        34393
+MapMediumFind/8              20369 ns        20369 ns        34379
+MapMediumFind/16             20354 ns        20353 ns        34366
+MapMediumFind/32             20378 ns        20377 ns        34361
+MapMediumFind/64             20387 ns        20386 ns        34334
+MapMediumFind/128            20364 ns        20364 ns        34407
+MapMediumFind/256            20367 ns        20367 ns        34380
+MapMediumFind_BigO        20369.29 (1)    20368.82 (1)  
+MapMediumFind_RMS                0 %             0 %    
+MapMediumEqualRange/1        20423 ns        20401 ns        34416
+MapMediumEqualRange/2        20379 ns        20379 ns        34387
+MapMediumEqualRange/4        20380 ns        20379 ns        34389
+MapMediumEqualRange/8        20389 ns        20388 ns        34252
+MapMediumEqualRange/16       20385 ns        20384 ns        34370
+MapMediumEqualRange/32       20376 ns        20376 ns        34397
+MapMediumEqualRange/64       20376 ns        20376 ns        34296
+MapMediumEqualRange/128      20372 ns        20371 ns        34377
+MapMediumEqualRange/256      20366 ns        20366 ns        34411
+MapMediumEqualRange_BigO   20382.93 (1)    20380.00 (1)  
+MapMediumEqualRange_RMS          0 %             0 %    
+MapMediumLowerBound/1        20358 ns        20334 ns        34446
+MapMediumLowerBound/2        20316 ns        20316 ns        34461
+MapMediumLowerBound/4        20339 ns        20338 ns        34466
+MapMediumLowerBound/8        20304 ns        20303 ns        34481
+MapMediumLowerBound/16       20325 ns        20324 ns        34519
+MapMediumLowerBound/32       20312 ns        20312 ns        34461
+MapMediumLowerBound/64       20302 ns        20302 ns        34475
+MapMediumLowerBound/128      20309 ns        20309 ns        34448
+MapMediumLowerBound/256      20320 ns        20320 ns        34478
+MapMediumLowerBound_BigO   20320.57 (1)    20317.51 (1)  
+MapMediumLowerBound_RMS          0 %             0 %    
+MapMediumUpperBound/1        20316 ns        20316 ns        34428
+MapMediumUpperBound/2        20329 ns        20328 ns        34452
+MapMediumUpperBound/4        20333 ns        20333 ns        34455
+MapMediumUpperBound/8        20307 ns        20307 ns        34472
+MapMediumUpperBound/16       20327 ns        20326 ns        34468
+MapMediumUpperBound/32       20317 ns        20316 ns        34441
+MapMediumUpperBound/64       20321 ns        20321 ns        34426
+MapMediumUpperBound/128      20353 ns        20353 ns        34409
+MapMediumUpperBound/256      20349 ns        20349 ns        34431
+MapMediumUpperBound_BigO   20328.09 (1)    20327.57 (1)  
+MapMediumUpperBound_RMS          0 %             0 %    
+MapLargeAt/1               8633822 ns      8633609 ns           81
+MapLargeAt/2               8640836 ns      8640711 ns           81
+MapLargeAt/4               8637717 ns      8637520 ns           81
+MapLargeAt/8               8634842 ns      8634784 ns           81
+MapLargeAt/16              8641912 ns      8641681 ns           81
+MapLargeAt/32              8643654 ns      8643379 ns           81
+MapLargeAt/64              8635033 ns      8634780 ns           81
+MapLargeAt/128             8624537 ns      8624314 ns           81
+MapLargeAt/256             8633014 ns      8632750 ns           81
+MapLargeAt/512             8635738 ns      8635542 ns           81
+MapLargeAt/1024            8639809 ns      8639517 ns           81
+MapLargeAt_BigO         8636446.84 (1)  8636235.17 (1)  
+MapLargeAt_RMS                   0 %             0 %    
+MapLargeOperator/1         8637218 ns      8636946 ns           81
+MapLargeOperator/2         8630667 ns      8630312 ns           81
+MapLargeOperator/4         8622624 ns      8622482 ns           81
+MapLargeOperator/8         8635010 ns      8634685 ns           81
+MapLargeOperator/16        8633261 ns      8633042 ns           81
+MapLargeOperator/32        8631346 ns      8631134 ns           81
+MapLargeOperator/64        8637279 ns      8637108 ns           81
+MapLargeOperator_BigO   8632486.34 (1)  8632244.27 (1)  
+MapLargeOperator_RMS             0 %             0 %    
+MapLargeEmpty/1               4.98 ns         4.98 ns    140593392
+MapLargeEmpty/2               4.98 ns         4.98 ns    140928850
+MapLargeEmpty/4               4.98 ns         4.98 ns    140571903
+MapLargeEmpty/8               4.98 ns         4.98 ns    140769707
+MapLargeEmpty/16              4.98 ns         4.98 ns    140525527
+MapLargeEmpty/32              4.97 ns         4.97 ns    140802614
+MapLargeEmpty/64              4.99 ns         4.99 ns    140420455
+MapLargeEmpty_BigO            4.98 (1)        4.98 (1)  
+MapLargeEmpty_RMS                0 %             0 %    
+MapLargeSize/1                4.96 ns         4.96 ns    141104955
+MapLargeSize/2                4.96 ns         4.96 ns    141094130
+MapLargeSize/4                4.96 ns         4.96 ns    141031026
+MapLargeSize/8                4.96 ns         4.96 ns    141172925
+MapLargeSize/16               4.96 ns         4.96 ns    141042540
+MapLargeSize/32               4.96 ns         4.96 ns    141119511
+MapLargeSize/64               4.96 ns         4.96 ns    140860153
+MapLargeSize_BigO             4.96 (1)        4.96 (1)  
+MapLargeSize_RMS                 0 %             0 %    
+MapLargeMaxSize/1             11.3 ns         11.3 ns     62091352
+MapLargeMaxSize/2             11.3 ns         11.3 ns     62079074
+MapLargeMaxSize/4             11.3 ns         11.3 ns     61958005
+MapLargeMaxSize/8             11.3 ns         11.3 ns     62042748
+MapLargeMaxSize/16            11.3 ns         11.3 ns     62065539
+MapLargeMaxSize/32            11.3 ns         11.3 ns     61943021
+MapLargeMaxSize/64            11.3 ns         11.3 ns     61856091
+MapLargeMaxSize_BigO         11.30 (1)       11.30 (1)  
+MapLargeMaxSize_RMS              0 %             0 %    
+MapLargeClear/1            8858489 ns      8858358 ns           79
+MapLargeClear/2           17622326 ns     17621773 ns           39
+MapLargeClear/4           35052217 ns     35052029 ns           20
+MapLargeClear/8           72246485 ns     72217153 ns           10
+MapLargeClear/16         145588137 ns    145507101 ns            5
+MapLargeClear_BigO      9066551.55 N    9062055.30 N    
+MapLargeClear_RMS                1 %             1 %    
+MapLargeInsert/1           9082521 ns      9080985 ns           77
+MapLargeInsert/2           9034464 ns      9032733 ns           77
+MapLargeInsert/4           9008295 ns      9006900 ns           78
+MapLargeInsert/8           8999166 ns      8997093 ns           78
+MapLargeInsert/16          8935284 ns      8934911 ns           79
+MapLargeInsert/32          8893351 ns      8893134 ns           78
+MapLargeInsert/64          9099180 ns      9099473 ns           79
+MapLargeInsert_BigO     9007465.77 (1)  9006461.36 (1)  
+MapLargeInsert_RMS               1 %             1 %    
+MapLargeErase/1            8628866 ns      8628513 ns           81
+MapLargeErase/2            8638861 ns      8638603 ns           81
+MapLargeErase/4            8642005 ns      8641540 ns           81
+MapLargeErase/8            8629083 ns      8628962 ns           81
+MapLargeErase/16           8624634 ns      8624347 ns           81
+MapLargeErase/32           8688919 ns      8688537 ns           81
+MapLargeErase/64           8629333 ns      8628941 ns           80
+MapLargeErase_BigO      8640243.07 (1)  8639920.39 (1)  
+MapLargeErase_RMS                0 %             0 %    
+MapLargeSwap/1                81.6 ns         81.6 ns      8585074
+MapLargeSwap/2                82.1 ns         82.1 ns      8598189
+MapLargeSwap/4                82.0 ns         82.0 ns      8588192
+MapLargeSwap/8                81.8 ns         81.8 ns      8557430
+MapLargeSwap/16               81.7 ns         81.7 ns      8559700
+MapLargeSwap/32               81.6 ns         81.6 ns      8508175
+MapLargeSwap/64               81.5 ns         81.5 ns      8578995
+MapLargeSwap_BigO            81.74 (1)       81.74 (1)  
+MapLargeSwap_RMS                 0 %             0 %    
+MapLargeCount/1            8655331 ns      8655082 ns           81
+MapLargeCount/2            8638205 ns      8637757 ns           81
+MapLargeCount/4            8642970 ns      8642600 ns           81
+MapLargeCount/8            8647466 ns      8647030 ns           81
+MapLargeCount/16           8688581 ns      8688209 ns           81
+MapLargeCount/32           8637768 ns      8637550 ns           81
+MapLargeCount/64           8630014 ns      8629826 ns           80
+MapLargeCount_BigO      8648618.98 (1)  8648293.60 (1)  
+MapLargeCount_RMS                0 %             0 %    
+MapLargeFind/1             8636526 ns      8636205 ns           81
+MapLargeFind/2             8636123 ns      8635855 ns           81
+MapLargeFind/4             8647452 ns      8647136 ns           81
+MapLargeFind/8             8638876 ns      8638507 ns           81
+MapLargeFind/16            8623363 ns      8623145 ns           81
+MapLargeFind/32            8636249 ns      8636073 ns           81
+MapLargeFind/64            8624659 ns      8624334 ns           81
+MapLargeFind_BigO       8634749.75 (1)  8634464.97 (1)  
+MapLargeFind_RMS                 0 %             0 %    
+MapLargeEqualRange/1       8702109 ns      8701787 ns           81
+MapLargeEqualRange/2       8636059 ns      8635826 ns           81
+MapLargeEqualRange/4       8624608 ns      8624287 ns           81
+MapLargeEqualRange/8       8622658 ns      8622408 ns           81
+MapLargeEqualRange/16      8627169 ns      8626989 ns           81
+MapLargeEqualRange/32      8645999 ns      8645619 ns           81
+MapLargeEqualRange/64      8620734 ns      8620488 ns           81
+MapLargeEqualRange_BigO 8639905.03 (1)  8639628.88 (1)  
+MapLargeEqualRange_RMS           0 %             0 %    
+MapLargeLowerBound/1       8628747 ns      8628187 ns           81
+MapLargeLowerBound/2       8626333 ns      8626142 ns           81
+MapLargeLowerBound/4       8622707 ns      8622592 ns           81
+MapLargeLowerBound/8       8618373 ns      8618119 ns           81
+MapLargeLowerBound/16      8632659 ns      8632080 ns           81
+MapLargeLowerBound/32      8633216 ns      8633157 ns           81
+MapLargeLowerBound/64      8634394 ns      8634101 ns           80
+MapLargeLowerBound_BigO 8628061.48 (1)  8627768.43 (1)  
+MapLargeLowerBound_RMS           0 %             0 %    
+MapLargeUpperBound/1       8636999 ns      8636725 ns           81
+MapLargeUpperBound/2       8635163 ns      8635056 ns           81
+MapLargeUpperBound/4       8635456 ns      8635267 ns           81
+MapLargeUpperBound/8       8637464 ns      8637317 ns           81
+MapLargeUpperBound/16      8637939 ns      8637707 ns           81
+MapLargeUpperBound/32      8633171 ns      8632844 ns           81
+MapLargeUpperBound/64      8628547 ns      8628209 ns           81
+MapLargeUpperBound_BigO 8634962.65 (1)  8634732.07 (1)  
+MapLargeUpperBound_RMS           0 %             0 %    
