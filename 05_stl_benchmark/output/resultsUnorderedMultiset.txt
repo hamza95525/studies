@@ -12,8 +12,8 @@ UnorderedMultisetEmpty/128             8.62 ns         8.54 ns     86186569
 UnorderedMultisetEmpty/256             9.54 ns         9.42 ns     76918350
 UnorderedMultisetEmpty/512             8.94 ns         8.93 ns     78807346
 UnorderedMultisetEmpty/1024            8.29 ns         8.29 ns     81768149
-UnorderedMultisetEmpty_BigO            8.53 (1)        8.50 (1)  
-UnorderedMultisetEmpty_RMS                6 %             5 %    
+UnorderedMultisetEmpty_BigO            8.53 (1)        8.50 (1)
+UnorderedMultisetEmpty_RMS                6 %             5 %
 UnorderedMultisetSize/1                5.01 ns         5.01 ns    100000000
 UnorderedMultisetSize/2                4.85 ns         4.85 ns    145726572
 UnorderedMultisetSize/4                4.80 ns         4.80 ns    144476026
@@ -25,8 +25,8 @@ UnorderedMultisetSize/128              4.72 ns         4.72 ns    148364431
 UnorderedMultisetSize/256              4.82 ns         4.81 ns    147017921
 UnorderedMultisetSize/512              4.74 ns         4.74 ns    146953647
 UnorderedMultisetSize/1024             4.72 ns         4.72 ns    149281074
-UnorderedMultisetSize_BigO             4.80 (1)        4.80 (1)  
-UnorderedMultisetSize_RMS                 2 %             2 %    
+UnorderedMultisetSize_BigO             4.80 (1)        4.80 (1)
+UnorderedMultisetSize_RMS                 2 %             2 %
 UnorderedMultisetMaxSize/1             15.4 ns         15.4 ns     45003135
 UnorderedMultisetMaxSize/2             15.4 ns         15.4 ns     45496113
 UnorderedMultisetMaxSize/4             15.5 ns         15.5 ns     45554783
@@ -38,8 +38,8 @@ UnorderedMultisetMaxSize/128           15.6 ns         15.6 ns     45321654
 UnorderedMultisetMaxSize/256           15.5 ns         15.5 ns     44773178
 UnorderedMultisetMaxSize/512           15.6 ns         15.6 ns     44102373
 UnorderedMultisetMaxSize/1024          15.9 ns         15.9 ns     44941222
-UnorderedMultisetMaxSize_BigO         15.59 (1)       15.58 (1)  
-UnorderedMultisetMaxSize_RMS              1 %             1 %    
+UnorderedMultisetMaxSize_BigO         15.59 (1)       15.58 (1)
+UnorderedMultisetMaxSize_RMS              1 %             1 %
 UnorderedMultisetClear/1                945 ns          942 ns       826657
 UnorderedMultisetClear/2                935 ns          935 ns       730800
 UnorderedMultisetClear/4               1094 ns         1091 ns       717936
@@ -51,8 +51,8 @@ UnorderedMultisetClear/128             8217 ns         8165 ns        87549
 UnorderedMultisetClear/256            14654 ns        14590 ns        44672
 UnorderedMultisetClear/512            27231 ns        27142 ns        25355
 UnorderedMultisetClear/1024           51539 ns        51465 ns        12854
-UnorderedMultisetClear_BigO           51.47 N         51.36 N    
-UnorderedMultisetClear_RMS               11 %            11 %    
+UnorderedMultisetClear_BigO           51.47 N         51.36 N
+UnorderedMultisetClear_RMS               11 %            11 %
 UnorderedMultisetInsert/1               884 ns          886 ns       753928
 UnorderedMultisetInsert/2               876 ns          878 ns       751988
 UnorderedMultisetInsert/4               878 ns          880 ns       797876
@@ -64,8 +64,8 @@ UnorderedMultisetInsert/128             886 ns          889 ns       781290
 UnorderedMultisetInsert/256             885 ns          887 ns       803791
 UnorderedMultisetInsert/512             888 ns          890 ns       801501
 UnorderedMultisetInsert/1024            891 ns          893 ns       785596
-UnorderedMultisetInsert_BigO         885.02 (1)      886.92 (1)  
-UnorderedMultisetInsert_RMS               0 %             0 %    
+UnorderedMultisetInsert_BigO         885.02 (1)      886.92 (1)
+UnorderedMultisetInsert_RMS               0 %             0 %
 UnorderedMultisetErase/1                871 ns          872 ns       796029
 UnorderedMultisetErase/2                900 ns          901 ns       855981
 UnorderedMultisetErase/4                887 ns          887 ns       748599
@@ -77,8 +77,8 @@ UnorderedMultisetErase/128              838 ns          839 ns       847396
 UnorderedMultisetErase/256              844 ns          845 ns       857135
 UnorderedMultisetErase/512              828 ns          828 ns       797149
 UnorderedMultisetErase/1024             887 ns          888 ns       816983
-UnorderedMultisetErase_BigO          868.11 (1)      868.88 (1)  
-UnorderedMultisetErase_RMS                3 %             3 %    
+UnorderedMultisetErase_BigO          868.11 (1)      868.88 (1)
+UnorderedMultisetErase_RMS                3 %             3 %
 UnorderedMultisetSwap/1                 219 ns          219 ns      2938547
 UnorderedMultisetSwap/2                 243 ns          243 ns      2897229
 UnorderedMultisetSwap/4                 221 ns          221 ns      3187693
@@ -90,8 +90,8 @@ UnorderedMultisetSwap/128               225 ns          225 ns      2998877
 UnorderedMultisetSwap/256               227 ns          227 ns      3141801
 UnorderedMultisetSwap/512               239 ns          239 ns      2933025
 UnorderedMultisetSwap/1024              227 ns          227 ns      2855002
-UnorderedMultisetSwap_BigO           234.40 (1)      234.31 (1)  
-UnorderedMultisetSwap_RMS                 5 %             5 %    
+UnorderedMultisetSwap_BigO           234.40 (1)      234.31 (1)
+UnorderedMultisetSwap_RMS                 5 %             5 %
 UnorderedMultisetCount/1                981 ns          982 ns       758341
 UnorderedMultisetCount/2               1089 ns         1083 ns       694086
 UnorderedMultisetCount/4               1137 ns         1137 ns       601673
@@ -103,8 +103,8 @@ UnorderedMultisetCount/128             7673 ns         7648 ns        96068
 UnorderedMultisetCount/256            14241 ns        14193 ns        51448
 UnorderedMultisetCount/512            25922 ns        25899 ns        26747
 UnorderedMultisetCount/1024           51664 ns        51603 ns        13698
-UnorderedMultisetCount_BigO           50.95 N         50.89 N    
-UnorderedMultisetCount_RMS               10 %            10 %    
+UnorderedMultisetCount_BigO           50.95 N         50.89 N
+UnorderedMultisetCount_RMS               10 %            10 %
 UnorderedMultisetFind/1                 111 ns          110 ns      6256973
 UnorderedMultisetFind/2                 107 ns          107 ns      6602205
 UnorderedMultisetFind/4                 108 ns          108 ns      6589382
@@ -116,8 +116,8 @@ UnorderedMultisetFind/128               110 ns          110 ns      6253856
 UnorderedMultisetFind/256               108 ns          108 ns      6055887
 UnorderedMultisetFind/512               113 ns          113 ns      6262394
 UnorderedMultisetFind/1024              107 ns          107 ns      6544886
-UnorderedMultisetFind_BigO           108.77 (1)      108.75 (1)  
-UnorderedMultisetFind_RMS                 2 %             2 %    
+UnorderedMultisetFind_BigO           108.77 (1)      108.75 (1)
+UnorderedMultisetFind_RMS                 2 %             2 %
 UnorderedMultisetEqualRange/1          1004 ns         1005 ns       718756
 UnorderedMultisetEqualRange/2          1161 ns         1159 ns       699657
 UnorderedMultisetEqualRange/4          1171 ns         1170 ns       544025
@@ -129,8 +129,8 @@ UnorderedMultisetEqualRange/128        7459 ns         7444 ns        86328
 UnorderedMultisetEqualRange/256       13683 ns        13662 ns        49654
 UnorderedMultisetEqualRange/512       26242 ns        26208 ns        26650
 UnorderedMultisetEqualRange/1024      55382 ns        55167 ns        13810
-UnorderedMultisetEqualRange_BigO      53.66 N         53.48 N    
-UnorderedMultisetEqualRange_RMS           9 %             8 %    
+UnorderedMultisetEqualRange_BigO      53.66 N         53.48 N
+UnorderedMultisetEqualRange_RMS           9 %             8 %
 UnorderedMultisetRehash/1               859 ns          861 ns       677618
 UnorderedMultisetRehash/2              1067 ns         1070 ns       663793
 UnorderedMultisetRehash/4              1021 ns         1022 ns       681063
@@ -142,8 +142,8 @@ UnorderedMultisetRehash/128            7483 ns         7457 ns        95038
 UnorderedMultisetRehash/256           13822 ns        13780 ns        48463
 UnorderedMultisetRehash/512           25667 ns        25651 ns        27283
 UnorderedMultisetRehash/1024          51236 ns        51174 ns        13981
-UnorderedMultisetRehash_BigO          50.43 N         50.37 N    
-UnorderedMultisetRehash_RMS               8 %             8 %    
+UnorderedMultisetRehash_BigO          50.43 N         50.37 N
+UnorderedMultisetRehash_RMS               8 %             8 %
 UnorderedMultisetReserve/1              852 ns          854 ns       797370
 UnorderedMultisetReserve/2             1060 ns         1062 ns       658800
 UnorderedMultisetReserve/4             1020 ns         1020 ns       685660
@@ -155,5 +155,5 @@ UnorderedMultisetReserve/128           7204 ns         7197 ns        97361
 UnorderedMultisetReserve/256          13323 ns        13318 ns        52491
 UnorderedMultisetReserve/512          25626 ns        25615 ns        27345
 UnorderedMultisetReserve/1024         50116 ns        50107 ns        13991
-UnorderedMultisetReserve_BigO         49.47 N         49.45 N    
-UnorderedMultisetReserve_RMS              8 %             8 %    
+UnorderedMultisetReserve_BigO         49.47 N         49.45 N
+UnorderedMultisetReserve_RMS              8 %             8 %

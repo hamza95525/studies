@@ -3,26 +3,26 @@
 //
 #include "BenchIncludes.h"
 
-//======================================LIST BENCHMARKS SMALL=======================================================
+//======================================LIST BENCHMARKS MEDIUM=======================================================
 
-void ListSmallFront(State& state)
+void ListMediumFront(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
+    std::list<Medium> list(size);
 
     for( auto _ : state){
         DoNotOptimize(list.front());
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallFront)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumFront)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallBack(State& state)
+void ListMediumBack(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
+    std::list<Medium> list(size);
 
     for( auto _ : state )
     {
@@ -30,13 +30,13 @@ void ListSmallBack(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallBack)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumBack)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallEmpty(State& state)
+void ListMediumEmpty(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
+    std::list<Medium> list(size);
 
     for( auto _ : state)
     {
@@ -44,13 +44,13 @@ void ListSmallEmpty(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallEmpty)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumEmpty)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallSize(State& state)
+void ListMediumSize(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
+    std::list<Medium> list(size);
 
     for( auto _ : state)
     {
@@ -58,22 +58,22 @@ void ListSmallSize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallSize)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumSize)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallMaxSize(State& state)
+void ListMediumMaxSize(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
+    std::list<Medium> list(size);
     for( auto _ : state )
     {
         DoNotOptimize(list.max_size());
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallMaxSize)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumMaxSize)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallClear(State& state)
+void ListMediumClear(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
@@ -81,7 +81,7 @@ void ListSmallClear(State& state)
     for( auto _ : state )
     {
         state.PauseTiming();
-        std::list<Small> list(size);
+        std::list<Medium> list(size);
         state.ResumeTiming();
         DoNotOptimize(list);
 
@@ -90,14 +90,14 @@ void ListSmallClear(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallClear)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumClear)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity(); //zgodnie z wynikami widac ze liniowe ale splyca do stalej
 
-void ListSmallInsert(State& state)
+void ListMediumInsert(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
-    Small m{};
+    std::list<Medium> list(size);
+    Medium m{};
 
     for( auto _ : state )
     {
@@ -114,15 +114,15 @@ void ListSmallInsert(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallInsert)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumInsert)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallErase(State& state)
+void ListMediumErase(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     // list.insert(list.begin(),{3});
-    std::list<Small> list(size);
-    Small m{};
+    std::list<Medium> list(size);
+    Medium m{};
 
     for( auto _ : state )
     {
@@ -136,14 +136,14 @@ void ListSmallErase(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallErase)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumErase)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallPushBack(State& state)
+void ListMediumPushBack(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
-    Small m{};
+    std::list<Medium> list(size);
+    Medium m{};
 
     for( auto _ : state )
     {
@@ -157,14 +157,14 @@ void ListSmallPushBack(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallPushBack)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumPushBack)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallPopBack(State& state)
+void ListMediumPopBack(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
-    Small m{};
+    std::list<Medium> list(size);
+    Medium m{};
 
     for( auto _ : state )
     {
@@ -178,14 +178,14 @@ void ListSmallPopBack(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallPopBack)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumPopBack)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallPushFront(State& state)
+void ListMediumPushFront(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::list<Small> list(size);
-    Small m{};
+    std::list<Medium> list(size);
+    Medium m{};
 
     for( auto _ : state )
     {
@@ -200,15 +200,15 @@ void ListSmallPushFront(State& state)
 
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallPushFront)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumPushFront)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallPopFront(State& state)
+void ListMediumPopFront(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
 
-    std::list<Small> list(size);
-    Small m{};
+    std::list<Medium> list(size);
+    Medium m{};
 
     for( auto _ : state )
     {
@@ -222,9 +222,9 @@ void ListSmallPopFront(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallPopFront)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumPopFront)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallResize(State& state)
+void ListMediumResize(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
@@ -233,7 +233,7 @@ void ListSmallResize(State& state)
     {
         state.PauseTiming();
         auto value = rand() % size;
-        std::list<Small> list(size);
+        std::list<Medium> list(size);
 
         state.ResumeTiming();
         DoNotOptimize(list);
@@ -243,22 +243,22 @@ void ListSmallResize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallResize)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumResize)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallSwap(State& state)
+void ListMediumSwap(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     //creating two different lists with different elements, to swap later one list with another
 
-    std::list<Small> list_1{};
-    Small m{};
+    std::list<Medium> list_1{};
+    Medium m{};
     for(auto i = 0; i<size; i++)
     {
         m.randomize();
         list_1.push_back( m);
     }
-    std::list<Small> list_2{};
+    std::list<Medium> list_2{};
     for(auto i = 0; i<size; i++)
     {
         m.randomize();
@@ -272,23 +272,23 @@ void ListSmallSwap(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallSwap)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumSwap)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallMerge(State& state)
+void ListMediumMerge(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
     for( auto _ : state )
     {
-        std::list<Small> list_1{};
+        std::list<Medium> list_1{};
         for(auto i = 0; i<size; i++)
         {
             m.randomize();
             list_1.push_back( m);
         }
-        std::list<Small> list_2{};
+        std::list<Medium> list_2{};
         for(auto i = 0; i<size; i++)
         {
             m.randomize();
@@ -301,15 +301,15 @@ void ListSmallMerge(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallMerge)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumMerge)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity();
 
-void ListSmallSplice(State& state)
+void ListMediumSplice(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
-    std::list<Small> list_1{};
+    std::list<Medium> list_1{};
     for(auto i = 0; i<size; i++)
     {
         m.randomize();
@@ -320,7 +320,7 @@ void ListSmallSplice(State& state)
     {
         state.PauseTiming();
         list_1.clear();
-        std::list<Small> list_2{};
+        std::list<Medium> list_2{};
         for(auto i = 0; i<size; i++)
         {
             m.randomize();
@@ -334,18 +334,19 @@ void ListSmallSplice(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallSplice)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumSplice)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity();
 
-void ListSmallRemove(State& state)
+void ListMediumRemove(State& state)
 {
     auto N= state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
     for( auto _ : state )
     {
         state.PauseTiming();
-        std::list<Small> list{};
+        auto value = rand() % size;
+        std::list<Medium> list{};
 
         for(auto i = 0; i<size; i++)
         {
@@ -354,23 +355,23 @@ void ListSmallRemove(State& state)
         }
         state.ResumeTiming();
         DoNotOptimize(list);
-        list.remove(m);
+        list.remove({(int)value});
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallRemove)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumRemove)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
 
-void ListSmallRemoveIf(State& state)
+void ListMediumRemoveIf(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
     for( auto _ : state )
     {
         state.PauseTiming();
-        std::list<Small> list{};
+        std::list<Medium> list{};
 
         for(auto i = 0; i<size; i++)
         {
@@ -379,23 +380,23 @@ void ListSmallRemoveIf(State& state)
         }
         state.ResumeTiming();
         DoNotOptimize(list);
-        list.remove_if([](Small d){ auto value = rand() % 256; return d.data[0] > value;});
+        list.remove_if([](Medium d){ auto value = rand() % 256; return d.data[0] > value;});
         ClobberMemory();
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallRemoveIf)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumRemoveIf)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
 
-void ListSmallReverse(State& state)
+void ListMediumReverse(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
     for( auto _ : state )
     {
         state.PauseTiming();
-        std::list<Small> list{};
+        std::list<Medium> list{};
 
         for(auto i = 0; i<size; i++)
         {
@@ -410,19 +411,19 @@ void ListSmallReverse(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallReverse)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
+BENCHMARK(ListMediumReverse)->RangeMultiplier(2)->Range(1, 2<<6)->Complexity();
 
-void ListSmallUnique(State& state)
+void ListMediumUnique(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
 
     for( auto _ : state )
     {
         state.PauseTiming();
-        std::list<Small> list{};
+        std::list<Medium> list{};
 
         for(auto i = 0; i<size; i++)
         {
@@ -436,18 +437,18 @@ void ListSmallUnique(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallUnique)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity(); //liniowa, ale splycone do stalej
+BENCHMARK(ListMediumUnique)->RangeMultiplier(2)->Range(1, 2<<4)->Complexity(); //liniowa, ale splycone do stalej
 
-void ListSmallSort(State& state)
+void ListMediumSort(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Medium m{};
 
     for( auto _ : state )
     {
         state.PauseTiming();
-        std::list<Small> list{};
+        std::list<Medium> list{};
         for(auto i = 0; i<size; i++)
         {
             m.randomize();
@@ -460,4 +461,4 @@ void ListSmallSort(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(ListSmallSort)->RangeMultiplier(2)->Range(1, 2<<13)->Complexity();
+BENCHMARK(ListMediumSort)->RangeMultiplier(2)->Range(1, 1024)->Complexity();

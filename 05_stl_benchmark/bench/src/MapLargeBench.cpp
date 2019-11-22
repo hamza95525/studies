@@ -6,13 +6,13 @@
 //
 #include "BenchIncludes.h"
 
-//======================================MAP BENCHMARKS SMALL=======================================================
-void MapSmallAt(State& state)
+//======================================MAP BENCHMARKS LARGE=======================================================
+void MapLargeAt(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
     m.randomize();
 
     for(size_t i = 0; i<size; i++)
@@ -30,14 +30,14 @@ void MapSmallAt(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallAt)->RangeMultiplier(2)->Range(1, 2<<13)->Complexity();
+BENCHMARK(MapLargeAt)->RangeMultiplier(2)->Range(1, 2<<13)->Complexity();
 
-void MapSmallOperator(State& state)
+void MapLargeOperator(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -54,14 +54,14 @@ void MapSmallOperator(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallOperator)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity(); //int przyjmuje tylko 256
+BENCHMARK(MapLargeOperator)->RangeMultiplier(2)->Range(1, 2<<7)->Complexity(); //int przyjmuje tylko 256
 
-void MapSmallEmpty(State& state)
+void MapLargeEmpty(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -76,14 +76,14 @@ void MapSmallEmpty(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallEmpty)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeEmpty)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallSize(State& state)
+void MapLargeSize(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -97,14 +97,14 @@ void MapSmallSize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallSize)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeSize)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallMaxSize(State& state)
+void MapLargeMaxSize(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -119,17 +119,17 @@ void MapSmallMaxSize(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallMaxSize)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeMaxSize)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallClear(State& state)
+void MapLargeClear(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    Small m{};
+    Large m{};
 
     for( auto _ : state )
     {
-        std::map<Small, int> map{};
+        std::map<Large, int> map{};
 
         for(size_t i = 0; i<size; i++)
         {
@@ -143,15 +143,15 @@ void MapSmallClear(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallClear)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
+BENCHMARK(MapLargeClear)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallInsert(State& state)
+void MapLargeInsert(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
 
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -175,15 +175,15 @@ void MapSmallInsert(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallInsert)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeInsert)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallErase(State& state)
+void MapLargeErase(State& state)
 {
     auto N = state.range();
     auto size = (std::size_t)N;
 
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -200,15 +200,15 @@ void MapSmallErase(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallErase)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeErase)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallSwap(State& state)
+void MapLargeSwap(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
 
-    std::map<Small, int> map_1{};
-    Small m{};
+    std::map<Large, int> map_1{};
+    Large m{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -216,7 +216,7 @@ void MapSmallSwap(State& state)
         map_1.insert({m, j});
     }
 
-    std::map<Small, int> map_2{};
+    std::map<Large, int> map_2{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -230,14 +230,14 @@ void MapSmallSwap(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallSwap)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeSwap)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallCount(State& state)
+void MapLargeCount(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -253,14 +253,14 @@ void MapSmallCount(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallCount)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeCount)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallFind(State& state)
+void MapLargeFind(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -275,14 +275,14 @@ void MapSmallFind(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallFind)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeFind)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallEqualRange(State& state)
+void MapLargeEqualRange(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
 
     for(size_t i = 0; i<size; i++)
     {
@@ -298,14 +298,14 @@ void MapSmallEqualRange(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallEqualRange)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeEqualRange)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallLowerBound(State& state)
+void MapLargeLowerBound(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -320,14 +320,14 @@ void MapSmallLowerBound(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallLowerBound)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeLowerBound)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
 
-void MapSmallUpperBound(State& state)
+void MapLargeUpperBound(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-    std::map<Small, int> map{};
-    Small m{};
+    std::map<Large, int> map{};
+    Large m{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -342,4 +342,4 @@ void MapSmallUpperBound(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(MapSmallUpperBound)->RangeMultiplier(2)->Range(1, 2<<8)->Complexity();
+BENCHMARK(MapLargeUpperBound)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
