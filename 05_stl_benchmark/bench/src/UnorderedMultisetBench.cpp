@@ -88,7 +88,7 @@ void UnorderedMultisetInsert(State& state)
     for( auto _ : state )
     {
         m.randomize();
-        unorderedMultiset.insert(m);
+        DoNotOptimize(unorderedMultiset.insert(m));
         ClobberMemory();
 
         state.PauseTiming();
@@ -261,4 +261,4 @@ void UnorderedMultisetReserve(State& state)
     }
     state.SetComplexityN(N);
 }
-BENCHMARK(UnorderedMultisetReserve)->RangeMultiplier(2)->Range(1, 2<<11)->Complexity(); //patrzac na wyniki widac ze zlozonosc jest liniowa ale wynik jest "splycany" do stalego
+BENCHMARK(UnorderedMultisetReserve)->RangeMultiplier(2)->Range(1, 2<<11)->Complexity();

@@ -140,8 +140,11 @@ TEST(MediumTest, HashTest){
     Medium medium_2{};
     std::hash<Medium> hashVal;
 
-    medium_1.randomize();
-    medium_2.randomize();
+    for(unsigned int i = 0; i < medium_1.SIZE; i++){
+        medium_1.data[i] = 2;
+        medium_2.data[i] = 3;
+    }
+
 
     ASSERT_FALSE(hashVal(medium_1) == hashVal(medium_2));
 }

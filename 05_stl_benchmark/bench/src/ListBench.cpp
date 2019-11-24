@@ -104,7 +104,7 @@ void ListSmallInsert(State& state)
         auto iter = list.begin();
         m.randomize();
 
-        list.insert(iter++, m);
+        DoNotOptimize(list.insert(iter++, m));
         ClobberMemory();
 
         state.PauseTiming();

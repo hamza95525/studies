@@ -165,7 +165,7 @@ void MapMediumInsert(State& state)
         m.randomize();
         auto t = rand() % size;
 
-        map.insert({m, t});
+        DoNotOptimize(map.insert({m, t}));
         ClobberMemory();
 
         state.PauseTiming();
@@ -195,7 +195,7 @@ void MapMediumErase(State& state)
     for( auto _ : state )
     {
         m.randomize();
-        map.erase(m);
+        DoNotOptimize(map.erase(m));
         ClobberMemory();
     }
     state.SetComplexityN(N);

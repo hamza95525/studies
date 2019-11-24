@@ -88,7 +88,7 @@ void UnorderedLargeMultisetInsert(State& state)
     for( auto _ : state )
     {
         m.randomize();
-        unorderedMultiset.insert(m);
+        DoNotOptimize(unorderedMultiset.insert(m));
         ClobberMemory();
 
         state.PauseTiming();

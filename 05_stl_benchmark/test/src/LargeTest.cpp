@@ -144,8 +144,10 @@ TEST(LargeTest, HashTest){
     Large large_2{};
     std::hash<Large> hashVal;
 
-    large_1.randomize();
-    large_2.randomize();
+    for(unsigned int i = 0; i<large_1.SIZE; i++){
+        large_1.data[i] = 1;
+        large_2.data[i] = 2;
+    }
 
     ASSERT_FALSE(hashVal(large_1) == hashVal(large_2));
 }
