@@ -3,7 +3,7 @@ project(07_abstract_factory_pattern)
 
 set(HEADERS include/Dummy.h)
 
-set(SOURCES src/Dummy.cpp)
+set(SOURCES src/Dummy.cpp include/Widget.h include/CheckBoxKdeWidget.h include/ListKdeWidget.h include/ButtonKdeWidget.h include/CheckBoxGnomeWidget.h include/ListGnomeWidget.h include/ButtonGnomeWidget.h include/KdeWidgetFactory.h include/WidgetFactory.h include/GnomeWidgetFactory.h include/Demo.h src/CheckBoxKdeWidget.cpp src/ListKdeWidget.cpp src/ButtonKdeWidget.cpp src/CheckBoxGnomeWidget.cpp src/ListGnomeWidget.cpp src/ButtonGnomeWidget.cpp src/KdeWidgetFactory.cpp src/GnomeWidgetFactory.cpp src/Demo.cpp)
 
 add_library(07_abstract_factory_pattern_lib ${HEADERS} ${SOURCES})
 target_include_directories(07_abstract_factory_pattern_lib PUBLIC include)
