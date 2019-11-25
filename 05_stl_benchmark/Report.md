@@ -7,9 +7,8 @@ nasza tablica składała się z jednego elementu.
 Implementacja w strukturach Medium i Large, była identyczna, ponieważ wystarczyło "przejść" w pętli po wszystkich
 elementach naszej tablicy. W operatorze równośći, podczas gdy napotkano elementy różniące się od siebie, jest zwracane 0,
 które informuje nas o tym, że porównywane struktury nie są sobie równe. W operatorze mniejszości, również "przechodzimy"
-pętlą po wszystkich elemntach tablicy i w momencie, gdy spotykają się dwie wartości, gdzie lewa jest większa od prawej zwracane 
-jest wartość FALSE, w przeciwnym wypadku zwrócona zostanie wartość TRUE, informująca nas o tym, że struktura po prawej stronie
-jest większa od struktury po stronie lewej.
+pętlą po wszystkich elemntach tablicy i w momencie, gdy spotykają się dwie wartości różne od siebie, to sprawdzamy czy prawa strona jest większa od lewej,
+i zwracamy wynik tego porównania, jeżeli liczby są równe przechodzimy do następnej pary. W przypadku gdy dwa obiekty są takie same, to zwracana jest wartość FALSE.
 Kolejnym zadaniem było utworzenie funkcji hashujących dla wyżej wymienionych struktur. Funkcja hashująca ma z definicji zwracać
 wartość przyporządkowaną dowolnie dużej liczbie. W tym przypadku w strukturze Small, zwrócony zostaje element znajdujący się w tablicy,
 gdyż jest to tablica jednoelementowa. W strukturach Medium i Small zostaje zwrócona wartość, która powstaje wskutek jej przemnożenia przez
@@ -150,7 +149,9 @@ zawartość konteneru nie jest modyfikowana, czas wykonywania pozostaje taki sam
 Nistety zdążyłem zrobić tylko jeden wykres, dla UnorderedMultiset w trybie Release, ale na nim widoczna jest "dominacja" czasu wykonywania funkcji ze strukturą typu Large, również należy zauważyć
 to co podkreślałem wcześniej, niewydajna funkcja hashująca ma swój wkład do czasu tworzenia nieuporządkowanych kontenerów sekwencyjnych.
 
-####UnorderedMultiset Release:
+###UnorderedMultiset Release:
 
-
-![alt text](output/UnAllR.png)
+Unordered Multiset Small        |  Unordered Multiset Medium | Unordered Multiset Large
+:-------------------------:|:-------------------------:|:--------------------------:
+![alt text](output/UnPlotClearR.png) |   ![alt text](output/UnPlotMediumClear.png) | ![alt text](output/UnPlotLargeClear.png)
+![alt text](output/UnPlotR.png) | ![alt text](output/UnPlotMedium.png) | ![alt text](output/UnPlotLarge.png)

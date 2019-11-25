@@ -28,11 +28,11 @@ struct Large {
        /* if(this > &rhs)
             return false;*/
         for(unsigned int i = 0; i < SIZE; i++){
-            if( data[i] > rhs.data[i] )
-                return false;
+            if( data[i] != rhs.data[i] )
+                return data[i] < rhs.data[i];
         }
 
-        return true;
+        return false;
     }
 
     bool operator==(const Large &rhs) const {
