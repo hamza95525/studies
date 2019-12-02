@@ -13,9 +13,10 @@ TEST(Universe, Create)
 
     Universe universe(time, space, observer);
 
-    EXPECT_CALL(time, create(true)).Times(AtLeast(1));
-    EXPECT_CALL(space, create(5)).Times(AtLeast(1));
-    EXPECT_CALL(observer, remember("How many dimensions there are?", "Answer")).Times(AtLeast(1));
+    EXPECT_CALL(time, create(true));
+    EXPECT_CALL(space, create(11));
+    EXPECT_CALL(observer, remember("How many dimensions there are?", std::to_string(11) ) ); //wstawiamy 11 na sztywno!
+    EXPECT_CALL(space,  dimensions()).WillOnce(Return(11));
 
     universe.create();
 }
@@ -28,12 +29,16 @@ TEST(Universe, Simulate)
 
     Universe universe{time, space, observer};
 
-    EXPECT_CALL(time, now()).Times(AtLeast(1));
-    EXPECT_CALL(time, flow()).Times(AtLeast(1));
-    EXPECT_CALL(observer, remember("How many dimensions there are?", "Answer")).Times(AtLeast(1));
+    EXPECT_CALL(time, now()).WillOnce(Return(9300000000)).WillOnce(Return(9900000000)).WillOnce(Return(13800000000)).WillOnce(Return(13800000001));
 
-    universe.simulate(2);
+    EXPECT_CALL(observer, remember("Is there planet Earth?", "Yes!"));
+    EXPECT_CALL(observer, remember("Does life exist?", "Yes!"));
+    EXPECT_CALL(observer, remember("Have People evolved?", "Yes!"));
 
+    EXPECT_CALL(time, flow()).WillRepeatedly(Return());
+
+
+    universe.simulate(13800000001);
 }
 
 /*class Interface{

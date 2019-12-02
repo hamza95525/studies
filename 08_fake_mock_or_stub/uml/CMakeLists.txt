@@ -1,9 +1,7 @@
 
 find_program(PLATUML plantuml)
 
-if (NOT PLATUML)
-    message(FATAL_ERROR "Missing PlatUML binary!")
-endif()
+
 
 set(DIAGRAM_PUML ${CMAKE_CURRENT_SOURCE_DIR}/class.puml)
 set(DIAGRAM_SVG ${CMAKE_CURRENT_BINARY_DIR}/class.svg)

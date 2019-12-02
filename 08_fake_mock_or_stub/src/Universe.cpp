@@ -1,6 +1,6 @@
 #include "Universe.h"
 
-Universe::Universe(TimeImpl &time, SpaceImpl &space, ObserverImpl &observer)
+Universe::Universe(Time &time, Space &space, Observer &observer)
     : time(time), space(space), observer(observer) {
 
 }
@@ -16,7 +16,7 @@ void Universe::simulate(long years) {
 
     long long now;
 
-    while ((now = time.now()) < years) {
+    while ( (now = time.now()) < years ) {
 
         if (now == 9300000000) {
             observer.remember("Is there planet Earth?", "Yes!");

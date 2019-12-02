@@ -7,13 +7,13 @@
 class Universe {
 public:
 
-    Universe(TimeImpl &time, SpaceImpl &space, ObserverImpl &observer);
+    Universe(Time &time, Space &space, Observer &observer);
 
     void create();
     void simulate(long years);
 
 private:
-    TimeImpl &time;
-    SpaceImpl &space;
-    ObserverImpl &observer;
+    Time &time;
+    Space &space;
+    Observer &observer;
 };
