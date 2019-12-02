@@ -5,6 +5,7 @@
 
 #include "TimeImpl.h"
 #include "Time.h"
+#include "TestIncludes.h"
 
 class TimeMock : public Time{
 public:

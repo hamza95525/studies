@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-
-struct Point {
+#include "Space.h"
+struct Point{
     std::vector<float> coordinates;
 };

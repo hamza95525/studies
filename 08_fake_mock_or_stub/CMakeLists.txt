@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(08_fake_mock_or_stub)
 
-set(HEADERS include/Point.h include/Space.h include/TimeImpl.h include/Universe.h include/Observer.h)
-set(SOURCES src/TimeImpl.cpp src/Space.cpp src/Universe.cpp src/Observer.cpp include/Time.h)
+set(HEADERS include/Point.h include/SpaceImpl.h include/TimeImpl.h include/Universe.h include/ObserverImpl.h)
+set(SOURCES src/TimeImpl.cpp src/SpaceImpl.cpp src/Universe.cpp src/ObserverImpl.cpp include/Time.h include/Observer.h include/Space.h)
 
 add_library(08_fake_mock_or_stub_lib ${HEADERS} ${SOURCES})
 target_include_directories(08_fake_mock_or_stub_lib PUBLIC include)

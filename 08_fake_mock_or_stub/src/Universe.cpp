@@ -1,6 +1,6 @@
 #include "Universe.h"
 
-Universe::Universe(TimeImpl &time, Space &space, Observer &observer)
+Universe::Universe(TimeImpl &time, SpaceImpl &space, ObserverImpl &observer)
     : time(time), space(space), observer(observer) {
 
 }
