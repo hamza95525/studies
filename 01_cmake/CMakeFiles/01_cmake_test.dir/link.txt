@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/01_cmake_test.dir/test.cpp.o  -o 01_cmake_test  -L/home/khamza/oop_2019_g2/googletest/build/lib -Wl,-rpath,/home/khamza/oop_2019_g2/googletest/build/lib -lgtest -lgtest_main libutiks.a -lpthread 
+/usr/bin/c++     CMakeFiles/01_cmake_test.dir/test.cpp.o  -o 01_cmake_test  -L/home/khamza/oop_2019_g2/googletest/build/lib -Wl,-rpath,/home/khamza/oop_2019_g2/googletest/build/lib -lgtest -lgtest_main libutiks.a -lpthread 

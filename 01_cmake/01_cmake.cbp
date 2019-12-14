@@ -8,145 +8,193 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="utiks">
-				<Option output="/home/khamza/Documents/OOP/01_cmake/libutiks.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option output="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/libutiks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/khamza/oop_2019_g2/googletest/googletest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 utiks"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 utiks"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="utiks/fast">
-				<Option output="/home/khamza/Documents/OOP/01_cmake/libutiks.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option output="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/libutiks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/khamza/oop_2019_g2/googletest/googletest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 utiks/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 utiks/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="01_cmake">
-				<Option output="/home/khamza/Documents/OOP/01_cmake/01_cmake" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option output="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/01_cmake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/khamza/oop_2019_g2/googletest/googletest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="01_cmake/fast">
-				<Option output="/home/khamza/Documents/OOP/01_cmake/01_cmake" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option output="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/01_cmake" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/khamza/oop_2019_g2/googletest/googletest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="01_cmake_test">
-				<Option output="/home/khamza/Documents/OOP/01_cmake/01_cmake_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option output="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/01_cmake_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/khamza/oop_2019_g2/googletest/googletest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake_test"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="01_cmake_test/fast">
-				<Option output="/home/khamza/Documents/OOP/01_cmake/01_cmake_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khamza/Documents/OOP/01_cmake"/>
+				<Option output="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/01_cmake_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/khamza/oop_2019_g2/googletest/googletest/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake_test/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/khamza/Documents/OOP/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 01_cmake_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/khamza/Documents/OOP/01_cmake/main.cpp">
+		<Unit filename="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/main.cpp">
 			<Option target="utiks"/>
 			<Option target="01_cmake"/>
 		</Unit>
-		<Unit filename="/home/khamza/Documents/OOP/01_cmake/main.h">
+		<Unit filename="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/main.h">
 			<Option target="01_cmake"/>
 			<Option target="01_cmake_test"/>
 		</Unit>
-		<Unit filename="/home/khamza/Documents/OOP/01_cmake/test.cpp">
+		<Unit filename="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/test.cpp">
 			<Option target="utiks"/>
 			<Option target="01_cmake_test"/>
 		</Unit>
-		<Unit filename="/home/khamza/Documents/OOP/01_cmake/CMakeLists.txt">
+		<Unit filename="/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

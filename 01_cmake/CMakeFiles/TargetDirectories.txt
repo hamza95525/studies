@@ -1,5 +1,5 @@
-/home/khamza/Documents/OOP/01_cmake/CMakeFiles/rebuild_cache.dir
-/home/khamza/Documents/OOP/01_cmake/CMakeFiles/utiks.dir
-/home/khamza/Documents/OOP/01_cmake/CMakeFiles/01_cmake.dir
-/home/khamza/Documents/OOP/01_cmake/CMakeFiles/edit_cache.dir
-/home/khamza/Documents/OOP/01_cmake/CMakeFiles/01_cmake_test.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/rebuild_cache.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/edit_cache.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/utiks.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/01_cmake.dir
+/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/01_cmake_test.dir

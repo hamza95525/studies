@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/utiks.dir/main.cpp.o"
   "CMakeFiles/utiks.dir/test.cpp.o"
-  "libutiks.pdb"
   "libutiks.a"
+  "libutiks.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

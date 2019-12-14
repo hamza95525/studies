@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/khamza/Documents/OOP/01_cmake/main.cpp" "/home/khamza/Documents/OOP/01_cmake/CMakeFiles/utiks.dir/main.cpp.o"
-  "/home/khamza/Documents/OOP/01_cmake/test.cpp" "/home/khamza/Documents/OOP/01_cmake/CMakeFiles/utiks.dir/test.cpp.o"
+  "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/main.cpp" "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/utiks.dir/main.cpp.o"
+  "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/test.cpp" "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/01_cmake/CMakeFiles/utiks.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
