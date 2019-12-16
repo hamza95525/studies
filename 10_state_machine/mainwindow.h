@@ -20,9 +20,13 @@ signals:
     void opened();
     void saved();
 
+    void done(); //ja wypisze na konsoli to ten sygnal(?)
+
 public slots:
     void open();
     void save();
+
+    void log(); //podpinam ten slot, ktory cos na konsole wypisuje
 
 private:
     Ui::MainWindow *ui;
