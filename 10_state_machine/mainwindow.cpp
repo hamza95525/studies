@@ -5,6 +5,7 @@
 #include <QHistoryState>
 #include <QFileDialog>
 #include <QDebug>
+#include <iostream>
 
 #include <QStateMachine> //tu caly framework do maszyny stanow
 
@@ -19,12 +20,15 @@ MainWindow::MainWindow(QWidget *parent) :
     // TODO: Create states
     auto unLocked = new QState(stateMachine);
     auto Locked = new QState(stateMachine);
+
     auto Startup = new QState(unLocked);
     auto Open = new QState(unLocked);
     auto Error = new QState(unLocked);
     auto View = new QState(unLocked);
     auto Edit = new QState(unLocked);
     auto Save = new QState(unLocked);
+
+    auto unLockedHistory = new QHistoryState(unLocked);
 
 
     // TODO: Set appropriate 'assignProperty'
@@ -65,7 +69,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // TODO: Set state transitions including this class events and slots
     unLocked->addTransition(ui->pbToggle, SIGNAL(clicked()), Locked);
-    Locked->addTransition(ui->pbToggle, SIGNAL(clicked()), unLocked);
+    Locked->addTransition(ui->pbToggle, SIGNAL(clicked()), unLockedHistory);
 
     Startup->addTransition(ui->pbOpen, SIGNAL(clicked(bool)), Open);
 
@@ -81,11 +85,13 @@ MainWindow::MainWindow(QWidget *parent) :
     Save->addTransition(this, SIGNAL(saved()), View);
     Save->addTransition(this, SIGNAL(error()), Error);
 
-    connect(Open, SIGNAL(entered()), this, SLOT(open())); //podpiece/wywolanie tej funkcji log()
+    connect(Open, SIGNAL(entered()), this, SLOT(open()));
     connect(Save, SIGNAL(entered()), this, SLOT(save()));
+
     // TODO: Set initial state
     stateMachine -> setInitialState(unLocked);
     unLocked->setInitialState(Startup);
+
     // TODO: Start state machine
     stateMachine->start();
 }
@@ -104,23 +110,35 @@ void MainWindow::open()
     QFile file( fileName );
 
     // TODO: Emit 'error' if opening failed
-    if(!file.exists()){
+    if(!file.open(QIODevice::ReadOnly)){
         emit error();
     }
     // TODO: Set text and emit 'opened' if suceeded
 
     else {
-
+        QTextStream in(&file);
+        ui->teText->setPlainText(in.readAll());
         emit opened();
     }
     // TODO: Save file name in 'fileName'
+    this->fileName = fileName;
 }
 
 void MainWindow::save()
 {
     // TODO: Open 'fileName' for writing
+    QFile file( this -> fileName);
+
     // TODO: Emit 'error' if opening failed
+    if(!file.open(QIODevice::WriteOnly)){
+        emit error();
+    }
     // TODO: Save file and emit 'saved' if succeeded
+    else {
+        QTextStream out(&file);
+        out << ui->teText->toPlainText();
+        emit saved();
+    }
 }
 
 void MainWindow::log()
