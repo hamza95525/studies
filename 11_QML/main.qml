@@ -15,12 +15,12 @@ Window {
 
     Displacement {
         id: displacement
-        changed: speed.get();
+        onChanged: speed.onChange(displacement.value);
     }
 
     Speed {
         id: speed
-        changed: acceleration.get();
+        onChanged: acceleration.onChange(speed.value);
     }
 
     Button {
@@ -32,6 +32,10 @@ Window {
         text: qsTr("Change")
         onClicked: function() {
             displacement.set(parseInt(textField.text));
+            speed.get();
+            label2.text = speed.value;
+            acceleration.get();
+            label3.text = acceleration.value;
         }
     }
 
@@ -39,7 +43,7 @@ Window {
         id: textField
         x: 97
         y: 102
-        text: qsTr(0)
+        text: qsTr("")
     }
 
     Label {

@@ -11,6 +11,14 @@ double Speed::get()
     return value;
 }
 
+void Speed::set(double v)
+{
+    first = second;
+    second = v;
+
+    emit changed(get());
+}
+
 void Speed::onChange(double v)
 {
     first = second;

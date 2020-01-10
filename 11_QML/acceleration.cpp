@@ -12,6 +12,14 @@ double Acceleration::get()
 
 }
 
+void Acceleration::set(double v)
+{
+    first = second;
+    second = v;
+
+    emit changed(get());
+}
+
 void Acceleration::onChange(double v)
 {
     first = second;
