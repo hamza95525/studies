@@ -11,14 +11,10 @@ set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11;cxx_alias_templates;cxx_alignas;cxx
 set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14;cxx_aggregate_default_initializers;cxx_attribute_deprecated;cxx_binary_literals;cxx_contextual_conversions;cxx_decltype_auto;cxx_digit_separators;cxx_generic_lambdas;cxx_lambda_init_captures;cxx_relaxed_constexpr;cxx_return_type_deduction;cxx_variable_templates")
 set(CMAKE_CXX17_COMPILE_FEATURES "cxx_std_17")
 set(CMAKE_CXX20_COMPILE_FEATURES "cxx_std_20")
-
 set(CMAKE_CXX_PLATFORM_ID "Linux")
 set(CMAKE_CXX_SIMULATE_ID "")
 set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
-
-
-
 set(CMAKE_AR "/usr/bin/ar")
 set(CMAKE_CXX_COMPILER_AR "/usr/bin/gcc-ar-9")
 set(CMAKE_RANLIB "/usr/bin/ranlib")
@@ -35,9 +31,7 @@ if(CMAKE_COMPILER_IS_CYGWIN)
   set(CYGWIN 1)
   set(UNIX 1)
 endif()
-
 set(CMAKE_CXX_COMPILER_ENV_VAR "CXX")
-
 if(CMAKE_COMPILER_IS_MINGW)
   set(MINGW 1)
 endif()
@@ -46,33 +40,23 @@ set(CMAKE_CXX_IGNORE_EXTENSIONS inl;h;hpp;HPP;H;o;O;obj;OBJ;def;DEF;rc;RC)
 set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;mm;CPP)
 set(CMAKE_CXX_LINKER_PREFERENCE 30)
 set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
-
 # Save compiler ABI information.
 set(CMAKE_CXX_SIZEOF_DATA_PTR "8")
 set(CMAKE_CXX_COMPILER_ABI "ELF")
 set(CMAKE_CXX_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
-
 if(CMAKE_CXX_SIZEOF_DATA_PTR)
   set(CMAKE_SIZEOF_VOID_P "${CMAKE_CXX_SIZEOF_DATA_PTR}")
 endif()
-
 if(CMAKE_CXX_COMPILER_ABI)
   set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_CXX_COMPILER_ABI}")
 endif()
-
 if(CMAKE_CXX_LIBRARY_ARCHITECTURE)
   set(CMAKE_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
 endif()
-
 set(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX "")
 if(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX)
   set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_CXX_CL_SHOWINCLUDES_PREFIX}")
 endif()
-
-
-
-
-
 set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")

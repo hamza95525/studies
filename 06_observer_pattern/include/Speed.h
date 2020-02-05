@@ -2,9 +2,7 @@
 // Created by student on 18.11.2019.
 //
 #pragma once
-
 #include "Observer.h"
-
 class Speed : public Observer{
 private:
     bool hasFirstValue;
@@ -15,4 +13,3 @@ public:
     float get();
     void notify(float d) override;
 };
-

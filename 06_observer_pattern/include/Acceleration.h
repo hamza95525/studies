@@ -2,9 +2,7 @@
 // Created by student on 18.11.2019.
 //
 #pragma once
-
 #include "Observer.h"
-
 class Acceleration : public Observer{
 private:
     bool hasFirstValue;

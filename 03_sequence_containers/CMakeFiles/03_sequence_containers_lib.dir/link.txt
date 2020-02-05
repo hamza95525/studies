@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib03_sequence_containers_lib.a  CMakeFiles/03_sequence_containers_lib.dir/src/Dummy.cpp.o
+/usr/bin/ranlib lib03_sequence_containers_lib.a

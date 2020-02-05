@@ -3,12 +3,9 @@
 //
 #include "ListKdeWidget.h"
 #include <iostream>
-
 ListKdeWidget::ListKdeWidget(int kdeVersion) {
     this->kdeVersion = kdeVersion;
 }
-
 void ListKdeWidget::draw() {
     std::cout<< "ListKdeWidget" << "( " << this->kdeVersion << " )" << std::endl;
 }
-

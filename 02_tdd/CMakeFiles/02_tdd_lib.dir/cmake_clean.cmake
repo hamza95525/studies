@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "lib02_tdd_lib.pdb"
   "lib02_tdd_lib.a"
 )
-
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
   include(CMakeFiles/02_tdd_lib.dir/cmake_clean_${lang}.cmake OPTIONAL)

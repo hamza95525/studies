@@ -1,9 +1,7 @@
 //
 // Created by khamza on 13.10.2019.
 //
-
 #include "main.h"
-
 int main()
 {
     auto dummY = Dummy{};

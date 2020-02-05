@@ -5,12 +5,9 @@
 #include "CheckBoxKdeWidget.h"
 #include "ListKdeWidget.h"
 #include "KdeWidgetFactory.h"
-
-
  KdeWidgetFactory::KdeWidgetFactory(int kdeVersion) {
     this->kdeVersion = kdeVersion;
 }
-
 std::shared_ptr<Widget> KdeWidgetFactory::create(std::string type) {
     if(type=="Button")
         return std::make_shared<ButtonKdeWidget>(this->kdeVersion);

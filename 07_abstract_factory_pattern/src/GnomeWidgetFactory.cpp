@@ -5,11 +5,9 @@
 #include "CheckBoxGnomeWidget.h"
 #include "ListGnomeWidget.h"
 #include "GnomeWidgetFactory.h"
-
 GnomeWidgetFactory::GnomeWidgetFactory(int gnomeVersion) {
     this->gnomeVersion = gnomeVersion;
 }
-
 std::shared_ptr<Widget> GnomeWidgetFactory::create(std::string type) {
     if(type=="Button")
         return std::make_shared<ButtonGnomeWidget>(this->gnomeVersion);

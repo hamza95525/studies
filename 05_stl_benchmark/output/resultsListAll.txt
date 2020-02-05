@@ -495,7 +495,6 @@ ListMediumSort/512       63376 ns        63351 ns        10712
 ListMediumSort/1024     143657 ns       143531 ns         4739
 ListMediumSort_BigO      14.13 NlgN      14.11 NlgN 
 ListMediumSort_RMS          12 %            12 %
-
 ----------------------------------------------------------------
 Benchmark                      Time             CPU   Iterations
 ----------------------------------------------------------------

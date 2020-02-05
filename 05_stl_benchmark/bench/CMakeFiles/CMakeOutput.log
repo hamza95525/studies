@@ -3,31 +3,20 @@ Compiling the C compiler identification source file "CMakeCCompilerId.c" succeed
 Compiler: /usr/bin/cc 
 Build flags: 
 Id flags:  
-
 The output was:
 0
-
-
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
-
 The C compiler identification is GNU, found in "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/3.13.4/CompilerIdC/a.out"
-
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
 Build flags: 
 Id flags:  
-
 The output was:
 0
-
-
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
-
 The CXX compiler identification is GNU, found in "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
-
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_7d4fb/fast"
 /usr/bin/make -f CMakeFiles/cmTC_7d4fb.dir/build.make CMakeFiles/cmTC_7d4fb.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -37,11 +26,8 @@ Linking C executable cmTC_7d4fb
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d4fb.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_7d4fb.dir/testCCompiler.c.o  -o cmTC_7d4fb 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_f4129/fast"
 /usr/bin/make -f CMakeFiles/cmTC_f4129.dir/build.make CMakeFiles/cmTC_f4129.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -65,8 +51,6 @@ COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f4129' '-mtune=generic' '-march=
  /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxQk2v6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f4129 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_f4129.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f4129' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp]
@@ -152,13 +136,8 @@ Parsed C implicit link information from above output:
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
   implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
-
-
-
-
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_74d2e/fast"
 /usr/bin/make -f CMakeFiles/cmTC_74d2e.dir/build.make CMakeFiles/cmTC_74d2e.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -168,17 +147,12 @@ Linking C executable cmTC_74d2e
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74d2e.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_74d2e.dir/feature_tests.c.o  -o cmTC_74d2e 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: C_FEATURE:1c_function_prototypes
     Feature record: C_FEATURE:1c_restrict
     Feature record: C_FEATURE:1c_static_assert
     Feature record: C_FEATURE:1c_variadic_macros
-
-
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_0751f/fast"
 /usr/bin/make -f CMakeFiles/cmTC_0751f.dir/build.make CMakeFiles/cmTC_0751f.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -188,17 +162,12 @@ Linking C executable cmTC_0751f
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0751f.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_0751f.dir/feature_tests.c.o  -o cmTC_0751f 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: C_FEATURE:1c_function_prototypes
     Feature record: C_FEATURE:1c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:1c_variadic_macros
-
-
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_3469e/fast"
 /usr/bin/make -f CMakeFiles/cmTC_3469e.dir/build.make CMakeFiles/cmTC_3469e.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -208,15 +177,12 @@ Linking C executable cmTC_3469e
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3469e.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_3469e.dir/feature_tests.c.o  -o cmTC_3469e 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: C_FEATURE:1c_function_prototypes
     Feature record: C_FEATURE:0c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_69eac/fast"
 /usr/bin/make -f CMakeFiles/cmTC_69eac.dir/build.make CMakeFiles/cmTC_69eac.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -226,11 +192,8 @@ Linking CXX executable cmTC_69eac
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69eac.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_69eac.dir/testCXXCompiler.cxx.o  -o cmTC_69eac 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_2def3/fast"
 /usr/bin/make -f CMakeFiles/cmTC_2def3.dir/build.make CMakeFiles/cmTC_2def3.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -254,8 +217,6 @@ COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2def3' '-shared-libgcc' '-mtune=
  /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoV7lrG.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2def3 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_2def3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2def3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp]
@@ -337,13 +298,8 @@ Parsed CXX implicit link information from above output:
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
   implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
-
-
-
-
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_a1ddc/fast"
 /usr/bin/make -f CMakeFiles/cmTC_a1ddc.dir/build.make CMakeFiles/cmTC_a1ddc.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -353,8 +309,6 @@ Linking CXX executable cmTC_a1ddc
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1ddc.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_a1ddc.dir/feature_tests.cxx.o  -o cmTC_a1ddc 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -412,11 +366,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_5ec12/fast"
 /usr/bin/make -f CMakeFiles/cmTC_5ec12.dir/build.make CMakeFiles/cmTC_5ec12.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -426,8 +377,6 @@ Linking CXX executable cmTC_5ec12
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ec12.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_5ec12.dir/feature_tests.cxx.o  -o cmTC_5ec12 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -485,11 +434,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_6d2ba/fast"
 /usr/bin/make -f CMakeFiles/cmTC_6d2ba.dir/build.make CMakeFiles/cmTC_6d2ba.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -499,8 +445,6 @@ Linking CXX executable cmTC_6d2ba
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d2ba.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_6d2ba.dir/feature_tests.cxx.o  -o cmTC_6d2ba 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -558,11 +502,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_5307d/fast"
 /usr/bin/make -f CMakeFiles/cmTC_5307d.dir/build.make CMakeFiles/cmTC_5307d.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -572,8 +513,6 @@ Linking CXX executable cmTC_5307d
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5307d.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_5307d.dir/feature_tests.cxx.o  -o cmTC_5307d 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -631,11 +570,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_a80a7/fast"
 /usr/bin/make -f CMakeFiles/cmTC_a80a7.dir/build.make CMakeFiles/cmTC_a80a7.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -645,8 +581,6 @@ Linking CXX executable cmTC_a80a7
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a80a7.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_a80a7.dir/feature_tests.cxx.o  -o cmTC_a80a7 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:0cxx_alias_templates
     Feature record: CXX_FEATURE:0cxx_alignas
@@ -709,31 +643,20 @@ Compiling the C compiler identification source file "CMakeCCompilerId.c" succeed
 Compiler: /usr/bin/cc 
 Build flags: 
 Id flags:  
-
 The output was:
 0
-
-
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
-
 The C compiler identification is GNU, found in "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/3.13.4/CompilerIdC/a.out"
-
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
 Build flags: 
 Id flags:  
-
 The output was:
 0
-
-
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
-
 The CXX compiler identification is GNU, found in "/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
-
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_e94d0/fast"
 /usr/bin/make -f CMakeFiles/cmTC_e94d0.dir/build.make CMakeFiles/cmTC_e94d0.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -743,11 +666,8 @@ Linking C executable cmTC_e94d0
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e94d0.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_e94d0.dir/testCCompiler.c.o  -o cmTC_e94d0 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_12e41/fast"
 /usr/bin/make -f CMakeFiles/cmTC_12e41.dir/build.make CMakeFiles/cmTC_12e41.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -771,8 +691,6 @@ COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_12e41' '-mtune=generic' '-march=
  /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJHXkSs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_12e41 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_12e41.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_12e41' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp]
@@ -858,13 +776,8 @@ Parsed C implicit link information from above output:
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
   implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
-
-
-
-
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_e5de6/fast"
 /usr/bin/make -f CMakeFiles/cmTC_e5de6.dir/build.make CMakeFiles/cmTC_e5de6.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -874,17 +787,12 @@ Linking C executable cmTC_e5de6
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5de6.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_e5de6.dir/feature_tests.c.o  -o cmTC_e5de6 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: C_FEATURE:1c_function_prototypes
     Feature record: C_FEATURE:1c_restrict
     Feature record: C_FEATURE:1c_static_assert
     Feature record: C_FEATURE:1c_variadic_macros
-
-
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_ea94f/fast"
 /usr/bin/make -f CMakeFiles/cmTC_ea94f.dir/build.make CMakeFiles/cmTC_ea94f.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -894,17 +802,12 @@ Linking C executable cmTC_ea94f
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea94f.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_ea94f.dir/feature_tests.c.o  -o cmTC_ea94f 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: C_FEATURE:1c_function_prototypes
     Feature record: C_FEATURE:1c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:1c_variadic_macros
-
-
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_beb29/fast"
 /usr/bin/make -f CMakeFiles/cmTC_beb29.dir/build.make CMakeFiles/cmTC_beb29.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -914,15 +817,12 @@ Linking C executable cmTC_beb29
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_beb29.dir/link.txt --verbose=1
 /usr/bin/cc      -rdynamic CMakeFiles/cmTC_beb29.dir/feature_tests.c.o  -o cmTC_beb29 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: C_FEATURE:1c_function_prototypes
     Feature record: C_FEATURE:0c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_33ce4/fast"
 /usr/bin/make -f CMakeFiles/cmTC_33ce4.dir/build.make CMakeFiles/cmTC_33ce4.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -932,11 +832,8 @@ Linking CXX executable cmTC_33ce4
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33ce4.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_33ce4.dir/testCXXCompiler.cxx.o  -o cmTC_33ce4 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_7d5ab/fast"
 /usr/bin/make -f CMakeFiles/cmTC_7d5ab.dir/build.make CMakeFiles/cmTC_7d5ab.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -960,8 +857,6 @@ COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7d5ab' '-shared-libgcc' '-mtune=
  /usr/lib/gcc/x86_64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPyqt3O.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_7d5ab /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/8 -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/8/../../.. CMakeFiles/cmTC_7d5ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
 COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_7d5ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp]
@@ -1043,13 +938,8 @@ Parsed CXX implicit link information from above output:
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
   implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/8;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
-
-
-
-
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_f2125/fast"
 /usr/bin/make -f CMakeFiles/cmTC_f2125.dir/build.make CMakeFiles/cmTC_f2125.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -1059,8 +949,6 @@ Linking CXX executable cmTC_f2125
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2125.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_f2125.dir/feature_tests.cxx.o  -o cmTC_f2125 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -1118,11 +1006,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_57e90/fast"
 /usr/bin/make -f CMakeFiles/cmTC_57e90.dir/build.make CMakeFiles/cmTC_57e90.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -1132,8 +1017,6 @@ Linking CXX executable cmTC_57e90
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57e90.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_57e90.dir/feature_tests.cxx.o  -o cmTC_57e90 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -1191,11 +1074,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_cfc60/fast"
 /usr/bin/make -f CMakeFiles/cmTC_cfc60.dir/build.make CMakeFiles/cmTC_cfc60.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -1205,8 +1085,6 @@ Linking CXX executable cmTC_cfc60
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfc60.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_cfc60.dir/feature_tests.cxx.o  -o cmTC_cfc60 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -1264,11 +1142,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_11f9f/fast"
 /usr/bin/make -f CMakeFiles/cmTC_11f9f.dir/build.make CMakeFiles/cmTC_11f9f.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -1278,8 +1153,6 @@ Linking CXX executable cmTC_11f9f
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11f9f.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_11f9f.dir/feature_tests.cxx.o  -o cmTC_11f9f 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
@@ -1337,11 +1210,8 @@ make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_s
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_47861/fast"
 /usr/bin/make -f CMakeFiles/cmTC_47861.dir/build.make CMakeFiles/cmTC_47861.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
@@ -1351,8 +1221,6 @@ Linking CXX executable cmTC_47861
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47861.dir/link.txt --verbose=1
 /usr/bin/c++       -rdynamic CMakeFiles/cmTC_47861.dir/feature_tests.cxx.o  -o cmTC_47861 
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/bench/CMakeFiles/CMakeTmp'
-
-
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:0cxx_alias_templates
     Feature record: CXX_FEATURE:0cxx_alignas

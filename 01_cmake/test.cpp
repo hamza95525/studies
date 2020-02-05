@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
 #include "main.h"
-
 TEST(Dummy, Add)
 {
     auto dummy = Dummy{};

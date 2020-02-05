@@ -5,5 +5,4 @@
 #include <list>
 #include <map>
 #include <unordered_set>
-
 using namespace ::benchmark;

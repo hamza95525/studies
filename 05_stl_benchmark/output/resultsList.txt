@@ -274,11 +274,7 @@ ListSort/512           515810 ns       515718 ns         1338
 ListSort/1024         1081420 ns      1081383 ns          644
 ListSort_BigO         1040.06 N       1039.99 N    
 ListSort_RMS                6 %             6 %    
-
-
 //=====================Wyniki po zmodyfikowaniu zakresu w sorcie oraz zmianie w removeif i remove
-
-
 -------------------------------------------------------------
 Benchmark                   Time             CPU   Iterations
 -------------------------------------------------------------
@@ -555,7 +551,6 @@ ListSort/512           581263 ns       581746 ns         1256
 ListSort/1024         1294263 ns      1278078 ns          539
 ListSort_BigO          126.62 NlgN     125.38 NlgN
 ListSort_RMS                3 %             4 %
-
  ///RESIZE AFTER MOD
  Benchmark                Time             CPU   Iterations
  ----------------------------------------------------------

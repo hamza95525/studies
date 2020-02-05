@@ -5,7 +5,6 @@
 // Created by khamza on 16.11.2019.
 //
 #include "BenchIncludes.h"
-
 //======================================MAP BENCHMARKS LARGE=======================================================
 void MapLargeAt(State& state)
 {
@@ -14,15 +13,12 @@ void MapLargeAt(State& state)
     std::map<Large, int> map{};
     Large m{};
     m.randomize();
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
-
     for( auto _ : state)
     {
         m.randomize();
@@ -31,14 +27,12 @@ void MapLargeAt(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeAt)->RangeMultiplier(2)->Range(1, 2<<9)->Complexity();
-
 void MapLargeOperator(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
@@ -46,7 +40,6 @@ void MapLargeOperator(State& state)
         map.insert({m, j});
     }
     auto t = rand() % size;
-
     for( auto _ : state)
     {
         m.randomize();
@@ -55,21 +48,18 @@ void MapLargeOperator(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeOperator)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity(); //int przyjmuje tylko 256
-
 void MapLargeEmpty(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         DoNotOptimize(map.empty());
@@ -77,7 +67,6 @@ void MapLargeEmpty(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeEmpty)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeSize(State& state)
 {
     auto N = state.range(0);
@@ -90,7 +79,6 @@ void MapLargeSize(State& state)
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state)
     {
         DoNotOptimize(map.size());
@@ -98,21 +86,18 @@ void MapLargeSize(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeSize)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeMaxSize(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         DoNotOptimize(map.max_size());
@@ -120,17 +105,14 @@ void MapLargeMaxSize(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeMaxSize)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeClear(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     Large m{};
-
     for( auto _ : state )
     {
         std::map<Large, int> map{};
-
         for(size_t i = 0; i<size; i++)
         {
             auto j = rand()%size;
@@ -144,30 +126,24 @@ void MapLargeClear(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeClear)->RangeMultiplier(2)->Range(1, 2<<3)->Complexity();
-
 void MapLargeInsert(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();
         auto t = rand() % size;
-
         DoNotOptimize(map.insert({m, t}));
         ClobberMemory();
-
         state.PauseTiming();
         map.erase(m);
         state.ResumeTiming();
@@ -176,22 +152,18 @@ void MapLargeInsert(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeInsert)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeErase(State& state)
 {
     auto N = state.range();
     auto size = (std::size_t)N;
-
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();
@@ -201,12 +173,10 @@ void MapLargeErase(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeErase)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeSwap(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
-
     std::map<Large, int> map_1{};
     Large m{};
     for(size_t i = 0; i<size; i++)
@@ -215,14 +185,12 @@ void MapLargeSwap(State& state)
         m.randomize();
         map_1.insert({m, j});
     }
-
     std::map<Large, int> map_2{};
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         map_2.insert({m, j});
     }
-
     for( auto _ : state )
     {
         map_1.swap(map_2);
@@ -231,21 +199,18 @@ void MapLargeSwap(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeSwap)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeCount(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();
@@ -254,7 +219,6 @@ void MapLargeCount(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeCount)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeFind(State& state)
 {
     auto N = state.range(0);
@@ -267,7 +231,6 @@ void MapLargeFind(State& state)
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();
@@ -276,21 +239,18 @@ void MapLargeFind(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeFind)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeEqualRange(State& state)
 {
     auto N = state.range(0);
     auto size = (std::size_t)N;
     std::map<Large, int> map{};
     Large m{};
-
     for(size_t i = 0; i<size; i++)
     {
         auto j = rand()%size;
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();
@@ -299,7 +259,6 @@ void MapLargeEqualRange(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeEqualRange)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeLowerBound(State& state)
 {
     auto N = state.range(0);
@@ -312,7 +271,6 @@ void MapLargeLowerBound(State& state)
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();
@@ -321,7 +279,6 @@ void MapLargeLowerBound(State& state)
     state.SetComplexityN(N);
 }
 BENCHMARK(MapLargeLowerBound)->RangeMultiplier(2)->Range(1, 2<<5)->Complexity();
-
 void MapLargeUpperBound(State& state)
 {
     auto N = state.range(0);
@@ -334,7 +291,6 @@ void MapLargeUpperBound(State& state)
         m.randomize();
         map.insert({m, j});
     }
-
     for( auto _ : state )
     {
         m.randomize();

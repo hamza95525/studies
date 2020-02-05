@@ -1,6 +1,5 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_ac0b5/fast"
 /usr/bin/make -f CMakeFiles/cmTC_ac0b5.dir/build.make CMakeFiles/cmTC_ac0b5.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
@@ -15,11 +14,9 @@ collect2: error: ld returned 1 exit status
 make[1]: *** [CMakeFiles/cmTC_ac0b5.dir/build.make:87: cmTC_ac0b5] Error 1
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_ac0b5/fast] Error 2
-
 File /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
-
 int main(int argc, char** argv)
 {
   (void)argv;
@@ -30,10 +27,8 @@ int main(int argc, char** argv)
   return 0;
 #endif
 }
-
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_4a71b/fast"
 /usr/bin/make -f CMakeFiles/cmTC_4a71b.dir/build.make CMakeFiles/cmTC_4a71b.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
@@ -47,11 +42,8 @@ collect2: error: ld returned 1 exit status
 make[1]: *** [CMakeFiles/cmTC_4a71b.dir/build.make:87: cmTC_4a71b] Error 1
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_4a71b/fast] Error 2
-
-
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_ed2fb/fast"
 /usr/bin/make -f CMakeFiles/cmTC_ed2fb.dir/build.make CMakeFiles/cmTC_ed2fb.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
@@ -62,12 +54,10 @@ c++: error: unrecognized command line option '-Wshorten-64-to-32'
 make[1]: *** [CMakeFiles/cmTC_ed2fb.dir/build.make:66: CMakeFiles/cmTC_ed2fb.dir/src.cxx.o] Error 1
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_ed2fb/fast] Error 2
-
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_048da/fast"
 /usr/bin/make -f CMakeFiles/cmTC_048da.dir/build.make CMakeFiles/cmTC_048da.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
@@ -78,12 +68,10 @@ c++: error: unrecognized command line option '-wd654'
 make[1]: *** [CMakeFiles/cmTC_048da.dir/build.make:66: CMakeFiles/cmTC_048da.dir/src.cxx.o] Error 1
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_048da/fast] Error 2
-
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
 Change Dir: /home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp
-
 Run Build Command:"/usr/bin/make" "cmTC_44386/fast"
 /usr/bin/make -f CMakeFiles/cmTC_44386.dir/build.make CMakeFiles/cmTC_44386.dir/build
 make[1]: Entering directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
@@ -94,6 +82,5 @@ c++: error: unrecognized command line option '-Wthread-safety'; did you mean '-f
 make[1]: *** [CMakeFiles/cmTC_44386.dir/build.make:66: CMakeFiles/cmTC_44386.dir/src.cxx.o] Error 1
 make[1]: Leaving directory '/home/khamza/repos/oop_2019_g2_khamzat_sultanov/05_stl_benchmark/CMakeFiles/CMakeTmp'
 make: *** [Makefile:121: cmTC_44386/fast] Error 2
-
 Source file was:
 int main() { return 0; }
